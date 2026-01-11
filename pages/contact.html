@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Healing With Tia</title>
+    <meta name="description"
+        content="Get in touch with Healing With Tia. Book an appointment via WhatsApp or send us an email.">
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-leaf text-primary"></i> Healing With Tia</a>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="therapists.html">Therapists</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="text-primary">Contact</a>
+                <a href="https://wa.me/923001234567?text=Hello%2C+I+would+like+to+book+an+appointment"
+                    class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section bg-soft text-center">
+        <div class="container animate-on-scroll">
+            <h1>Get In Touch</h1>
+            <p>We are here to help. Reach out to us today.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: flex; gap: 4rem; flex-wrap: wrap;">
+
+                <!-- Contact Info -->
+                <div style="flex: 1; min-width: 300px;" class="animate-on-scroll">
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 2rem;">Please consider using WhatsApp for the fastest response regarding
+                        appointments.</p>
+
+                    <div style="margin-bottom: 2rem;">
+                        <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div class="icon-box"
+                                style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1.2rem;"><i
+                                    class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <div><a href="https://wa.me/923001234567?text=Hello%2C+I+would+like+to+book+an+appointment"
+                                        class="text-primary">+92 300 1234567</a></div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div class="icon-box"
+                                style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1.2rem;"><i
+                                    class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <div>help@healingwithtia.com</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div class="icon-box"
+                                style="width: 40px; height: 40px; margin-bottom: 0; font-size: 1.2rem;"><i
+                                    class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Working Hours</strong>
+                                <div>Mon - Sat: 10:00 AM - 08:00 PM (PKT)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-soft" style="border-left: 4px solid var(--color-primary);">
+                        <strong>Note:</strong> We are an online-only practice. All sessions are conducted via Zoom or
+                        Google Meet. We do not have a physical clinic for walk-ins.
+                    </div>
+                </div>
+
+                <!-- Simple Form -->
+                <div style="flex: 1; min-width: 300px;" class="animate-on-scroll delay-100">
+                    <h3>Send a Message</h3>
+                    <form style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" placeholder="Your Name"
+                            style="padding: 1rem; border: 1px solid #ddd; border-radius: var(--radius-sm); outline: none;">
+                        <input type="email" placeholder="Your Email"
+                            style="padding: 1rem; border: 1px solid #ddd; border-radius: var(--radius-sm); outline: none;">
+                        <select
+                            style="padding: 1rem; border: 1px solid #ddd; border-radius: var(--radius-sm); outline: none;">
+                            <option value="">Select Topic</option>
+                            <option value="appointment">Book Appointment</option>
+                            <option value="inquiry">General Inquiry</option>
+                            <option value="collaboration">Collaboration</option>
+                        </select>
+                        <textarea rows="5" placeholder="Your Message"
+                            style="padding: 1rem; border: 1px solid #ddd; border-radius: var(--radius-sm); outline: none;"></textarea>
+                        <button type="submit" class="btn btn-primary"
+                            onclick="alert('This is a demo. Please use WhatsApp for booking!'); return false;">Send
+                            Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Healing With Tia.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923001234567?text=Hello%2C+I+would+like+to+book+an+appointment" class="floating-whatsapp"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

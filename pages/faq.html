@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Healing With Tia</title>
+    <meta name="description"
+        content="Frequently asked questions about online therapy, payment methods, and confidentiality at Healing With Tia.">
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 1rem;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fas fa-leaf text-primary"></i> Healing With Tia</a>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="therapists.html">Therapists</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://wa.me/923001234567?text=Hello%2C+I+would+like+to+book+an+appointment"
+                    class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section bg-soft text-center">
+        <div class="container animate-on-scroll">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about starting therapy.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">Is my information confidential? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Absolutely. We follow strict ethical guidelines. Your identity and everything
+                    you share during sessions is 100% confidential and secure. We do not record sessions.</div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-100">
+                <div class="faq-question">How do online sessions work? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Once you book a slot, we will send you a secure link (Zoom or Google Meet). You
+                    can join from your phone or laptop. Ensure you have a good internet connection and a quiet space.
+                </div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-100">
+                <div class="faq-question">What are the payment methods? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">We accept payments via JazzCash, EasyPaisa, and direct Bank Transfer
+                    (Meezan/HBL). Payment is required before the session to confirm the slot.</div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-100">
+                <div class="faq-question">Can I stay anonymous? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes, if you prefer, you can use a nickname and keep your camera off for
+                    audio-only sessions. Your comfort is our priority.</div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-200">
+                <div class="faq-question">Do you prescribe medication? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Our psychologists provide therapy (talk therapy) and cannot prescribe meds.
+                    However, our Consultant Psychiatrist, Dr. Saad, is a medical doctor and can prescribe medication if
+                    necessary.</div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-200">
+                <div class="faq-question">Is therapy available in Urdu? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes, all our therapists are fluent in Urdu and English. Some also speak Punjabi
+                    and Pashto.</div>
+            </div>
+
+            <div class="faq-item animate-on-scroll delay-200">
+                <div class="faq-question">What if I have connection issues? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">We understand internet in Pakistan can be unstable. If a connection drops
+                    significantly, we can reschedule the remaining time or switch to a WhatsApp audio call.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Healing With Tia.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923001234567?text=Hello%2C+I+would+like+to+book+an+appointment" class="floating-whatsapp"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
