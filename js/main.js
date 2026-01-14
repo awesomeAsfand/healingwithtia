@@ -1,5 +1,5 @@
 /* 
-   Healing With Tia - Main JS
+   Healing with Attia - Main JS
 */
 
 document.addEventListener('DOMContentLoaded', () => {
