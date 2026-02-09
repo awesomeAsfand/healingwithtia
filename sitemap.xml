@@ -51,6 +51,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.healingwithattia.com/blog-exam-stress.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.healingwithattia.com/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
