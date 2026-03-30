@@ -8,104 +8,131 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-5HNGTSNP3B');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Healing with Attia</title>
+    <title>FAQ: Therapy for Anxiety, OCD, Marriage Counseling & Mental Health in Pakistan | Healing with Attia</title>
     <meta name="description"
-        content="Frequently asked questions about online therapy, payment methods, and confidentiality at Healing with Attia.">
+        content="Answers to common questions about therapy for anxiety, OCD therapy, marriage counseling, CBT, ADHD therapist, IFS therapy, therapy for depression, and all mental health services in Pakistan.">
     <link rel="canonical" href="https://www.healingwithattia.com/faq.html">
     <!-- Favicon -->
     <link rel="icon" href="images/logo1.png">
     <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        .faq-category { margin-bottom: 3rem; }
+        .faq-category-title {
+            font-family: 'Lora', serif;
+            color: var(--color-primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
         .faq-item {
             background: white;
             border-radius: var(--radius-sm);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 0.75rem;
             box-shadow: var(--shadow-sm);
             cursor: pointer;
             transition: all 0.3s;
+            border-left: 3px solid transparent;
         }
-
-        .faq-item:hover {
-            box-shadow: var(--shadow-md);
-        }
-
+        .faq-item:hover { box-shadow: var(--shadow-md); }
+        .faq-item.active { border-left-color: var(--color-primary); }
         .faq-question {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: #333;
+            gap: 1rem;
         }
-
+        .faq-question i { transition: transform 0.3s; flex-shrink: 0; color: var(--color-primary); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
         .faq-answer {
             display: none;
             margin-top: 1rem;
             color: #555;
             border-top: 1px solid #eee;
             padding-top: 1rem;
+            line-height: 1.85;
+            font-size: 0.98rem;
         }
-
-        .faq-item.active .faq-answer {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
+        .faq-item.active .faq-answer { display: block; animation: fadeIn 0.4s; }
+        .faq-answer ul { margin: 0.5rem 0 0.5rem 1.25rem; }
+        .faq-answer li { margin-bottom: 0.4rem; }
+        .faq-answer a { color: var(--color-primary); font-weight: 500; }
     </style>
-    <!-- Structured Data: FAQPage -->
+
+    <!-- FAQPage Schema — targets all 900%+ YoY keyword categories -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Is my information confidential?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. We follow strict ethical guidelines. Your identity and everything you share during sessions is 100% confidential and secure. We do not record sessions."
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is therapy for anxiety and how does it work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Therapy for anxiety — primarily Cognitive Behavioral Therapy (CBT) — helps you identify and change the thought patterns and avoidance behaviours that maintain anxiety. It is the most evidence-based treatment for all anxiety disorders. Online therapy for anxiety is available at Healing with Attia across Pakistan in Urdu and English." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is cognitive behavioral therapy for anxiety?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cognitive Behavioral Therapy (CBT) for anxiety teaches you to identify negative automatic thoughts, test them against reality, and replace them with more balanced thinking. It uses behavioural techniques like gradual exposure to reduce avoidance. CBT has the strongest research evidence of any psychological treatment for anxiety." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is OCD therapy and how does ERP work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OCD therapy uses Exposure and Response Prevention (ERP) — a specialised form of CBT. ERP exposes you to OCD triggers while preventing the compulsive response, teaching your brain that anxiety passes without the compulsion. ERP has a 60–80% success rate and is effective for all OCD types including religious OCD (waswasa)." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is marriage counseling and when should couples seek it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Marriage counseling (also called couple counselling or relationship counseling) helps couples improve communication, resolve conflict, and rebuild trust. Seek it when communication breaks down, trust is damaged, joint family interference threatens the marriage, or intimacy has significantly decreased." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an ADHD therapist do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An ADHD therapist helps adults and children develop practical strategies for managing attention, impulsivity, time management, and emotional regulation using CBT adapted for ADHD. ADHD therapy for adults is available at Healing with Attia." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is IFS therapy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "IFS (Internal Family Systems) therapy works with different 'parts' of yourself — like the inner critic or the frightened child — to heal trauma, shame, and low self-esteem. Attia Altaf uses IFS-informed techniques within an integrative approach." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is therapy for depression available online in Pakistan?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Healing with Attia offers online therapy for depression via Zoom across Pakistan in Urdu and English using evidence-based approaches like CBT and Integrative Therapy. No referral is needed." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is stress therapy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Stress therapy is professional counseling focused on building resilience and coping skills for chronic stress from work, finances, or relationships. It combines CBT, mindfulness, and assertiveness training and is especially effective for burnout." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find a mental health professional in Pakistan?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Book a WhatsApp consultation with Healing with Attia — no waiting list, fully online, in Urdu or English. You can also search Marham.pk and Oladoc.com. A psychotherapist is the right first step for anxiety, depression, relationship issues, or stress." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you treat narcissistic personality disorder?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We help people in relationships with narcissistic individuals recognise manipulation, set boundaries, and heal. We also work with those with narcissistic traits who want to develop empathy. Severe NPD requires long-term specialist care; we assess and refer where needed." }
         }
-      }, {
-        "@type": "Question",
-        "name": "How do online sessions work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Once you book a slot, we will send you a secure link (Zoom or Google Meet). You can join from your phone or laptop. Ensure you have a good internet connection and a quiet space."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What are the payment methods?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We accept payments via JazzCash, EasyPaisa, and direct Bank Transfer (Meezan/HBL). Payment is required before the session to confirm the slot."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can I stay anonymous?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, if you prefer, you can use a nickname and keep your camera off for audio-only sessions. Your comfort is our priority."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you prescribe medication?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our psychologists provide therapy (talk therapy) and cannot prescribe meds. However, our Consultant Psychiatrist, Dr. Saad, is a medical doctor and can prescribe medication if necessary."
-        }
-      }]
+      ]
     }
     </script>
 </head>
@@ -119,9 +146,8 @@
                 <a href="/">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <!-- <a href="therapists.html">Therapists</a> -->
                 <a href="blog.html">Blog</a>
-                <a href="faq.html">FAQ</a>
+                <a href="faq.html" class="text-primary">FAQ</a>
                 <a href="contact.html">Contact</a>
                 <a href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment"
                     class="btn btn-primary btn-sm">Book Now</a>
@@ -132,55 +158,242 @@
     <header class="section bg-soft text-center">
         <div class="container animate-on-scroll">
             <h1>Frequently Asked Questions</h1>
-            <p>Everything you need to know about starting therapy.</p>
+            <p style="font-size: 1.1rem; max-width: 640px; margin: 0.75rem auto 0;">
+                Answers to common questions about therapy for anxiety, OCD therapy, marriage counseling, ADHD therapy, CBT, and all mental health services in Pakistan.
+            </p>
         </div>
     </header>
 
     <section class="section">
-        <div class="container" style="max-width: 800px;">
+        <div class="container" style="max-width: 820px;">
 
-            <div class="faq-item animate-on-scroll">
-                <div class="faq-question">Is my information confidential? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Absolutely. We follow strict ethical guidelines. Your identity and everything
-                    you share during sessions is 100% confidential and secure. We do not record sessions.</div>
-            </div>
+            <!-- ─── CATEGORY 1: Therapy Types ─── -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">
+                    <i class="fas fa-brain" style="color: var(--color-primary);"></i> Therapy Types &amp; Treatments
+                </h2>
 
-            <div class="faq-item animate-on-scroll delay-100">
-                <div class="faq-question">How do online sessions work? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Once you book a slot, we will send you a secure link (Zoom or Google Meet). You
-                    can join from your phone or laptop. Ensure you have a good internet connection and a quiet space.
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is therapy for anxiety and how does CBT help? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>Therapy for anxiety</strong> — primarily Cognitive Behavioral Therapy (CBT) — identifies and changes the thought patterns and avoidance behaviours that keep anxiety going. It is the most evidence-based treatment for all anxiety types, including generalised anxiety, social anxiety, panic disorder, and health anxiety. Online therapy for anxiety is available at Healing with Attia across Pakistan, in Urdu and English.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is cognitive behavioral therapy (CBT) for anxiety? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>Cognitive Behavioral Therapy (CBT)</strong> is a structured, practical therapy that teaches you to:
+                        <ul>
+                            <li>Identify <em>negative automatic thoughts</em> that fuel anxiety</li>
+                            <li>Test those thoughts against reality (thought records)</li>
+                            <li>Gradually face feared situations to reduce avoidance (exposure)</li>
+                            <li>Use breathing and grounding techniques during panic</li>
+                        </ul>
+                        CBT for anxiety has the strongest research evidence of any psychological treatment and produces lasting change. <a href="blog-cbt-anxiety.html">Read our full CBT for Anxiety guide →</a>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is OCD therapy? How does ERP work? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        OCD therapy uses <strong>Exposure and Response Prevention (ERP)</strong> — a specialised form of CBT. ERP works by deliberately exposing you to OCD triggers while preventing the compulsive response, teaching your brain that anxiety fades on its own. ERP has a 60–80% success rate and is effective for all OCD types including <strong>religious OCD (waswasa)</strong>. <a href="blog-cbt-ocd.html">Read our full OCD &amp; ERP therapy guide →</a>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is therapy for depression? Is it different from medication? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>Therapy for depression</strong> — using CBT or Integrative Therapy — addresses the root causes: negative thought patterns, isolation, loss of meaning, and unresolved grief. Unlike medication, which reduces symptoms chemically, therapy builds lasting skills. For moderate-to-severe depression, a combination of therapy and psychiatry is often most effective. We can refer you to a psychiatrist if needed. No referral is required to start therapy.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What does an ADHD therapist do? Is ADHD therapy available for adults in Pakistan? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        An <strong>ADHD therapist</strong> helps adults and children develop practical strategies for managing attention, impulsivity, time management, and emotional regulation. ADHD therapy includes:
+                        <ul>
+                            <li>Psychoeducation about how ADHD affects the brain</li>
+                            <li>CBT techniques adapted specifically for ADHD</li>
+                            <li>Coaching skills: task-breaking, time-blocking, body doubling</li>
+                            <li>Emotional dysregulation and self-esteem work</li>
+                        </ul>
+                        Yes — ADHD therapy for adults is available at Healing with Attia. Many adults are diagnosed for the first time in their 20s or 30s, and therapy can be life-changing.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is IFS therapy (Internal Family Systems)? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>IFS therapy (Internal Family Systems)</strong> is a powerful approach that works with the different "parts" of yourself — for example, the inner critic, the perfectionist, or the frightened child within. It is particularly effective for trauma, shame, and deep-rooted low self-esteem. Attia Altaf uses IFS-informed techniques within an integrative approach, especially for clients working through early childhood experiences or identity struggles.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is stress therapy? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>Stress therapy</strong> is professional counseling focused on building resilience, coping skills, and sustainable boundaries for managing chronic stress — whether from work, finances, relationships, or family pressures. It typically combines CBT techniques, assertiveness training, and mindfulness. Stress therapy is particularly effective for <strong>workplace burnout</strong> and the financial pressures many Pakistani families are facing today.
+                    </div>
                 </div>
             </div>
 
-            <div class="faq-item animate-on-scroll delay-100">
-                <div class="faq-question">What are the payment methods? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">We accept payments via JazzCash, EasyPaisa, and direct Bank Transfer
-                    (Meezan/HBL). Payment is required before the session to confirm the slot.</div>
+            <!-- ─── CATEGORY 2: Marriage & Relationships ─── -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">
+                    <i class="fas fa-heart" style="color: var(--color-primary);"></i> Marriage &amp; Relationship Counseling
+                </h2>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What is marriage counseling and when should couples seek it? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <strong>Marriage counseling</strong> (also called <em>couple counselling</em> or <em>relationship counseling</em>) is professional therapy helping couples improve communication, resolve conflict, and rebuild trust and connection. Seek marriage counseling when:
+                        <ul>
+                            <li>Communication has broken down or regularly becomes hostile</li>
+                            <li>Trust has been damaged (infidelity, dishonesty)</li>
+                            <li>Joint family interference is threatening your relationship</li>
+                            <li>Intimacy has significantly decreased</li>
+                            <li>You are considering separation and want to explore all options first</li>
+                        </ul>
+                        The earlier you seek help, the better the outcomes — waiting until the relationship is in crisis makes recovery harder.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Does couple counselling work online? Can both partners join from different locations? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Yes — research confirms online couple counselling is as effective as in-person therapy. Both partners can join from the same device or from entirely different locations. This is especially useful for couples where one spouse works in another city or abroad. All you need is a quiet, private space and a stable internet connection.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Do you offer pre-marital counseling in Pakistan? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Yes. <strong>Pre-marital counseling</strong> is one of our most valuable services and is dramatically underused in Pakistan. It helps couples:
+                        <ul>
+                            <li>Build realistic expectations about married life</li>
+                            <li>Develop communication and conflict-resolution skills before issues escalate</li>
+                            <li>Discuss finances, joint family roles, and child-rearing values openly</li>
+                            <li>Identify potential incompatibilities while there is still time to address them</li>
+                        </ul>
+                        Pre-marital counseling is an investment in your future — not a sign of a problem.
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item animate-on-scroll delay-100">
-                <div class="faq-question">Can I stay anonymous? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Yes, if you prefer, you can use a nickname and keep your camera off for
-                    audio-only sessions. Your comfort is our priority.</div>
+            <!-- ─── CATEGORY 3: Mental Health Conditions ─── -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">
+                    <i class="fas fa-clipboard-list" style="color: var(--color-primary);"></i> Mental Health Conditions
+                </h2>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What mental health conditions do you specialise in? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        At Healing with Attia, we specialise in therapy for the following mental health conditions:
+                        <ul>
+                            <li><strong>Therapy for anxiety</strong> — GAD, social anxiety, panic disorder, health anxiety</li>
+                            <li><strong>OCD therapy</strong> (ERP) — including religious OCD / waswasa</li>
+                            <li><strong>Therapy for depression</strong></li>
+                            <li><strong>Marriage counseling</strong> and relationship counseling</li>
+                            <li><strong>ADHD therapy</strong> — adults &amp; teenagers</li>
+                            <li><strong>Stress therapy</strong> and burnout recovery</li>
+                            <li>Trauma and PTSD (EMDR-informed techniques)</li>
+                            <li>Low self-esteem, shame, and identity work (IFS therapy)</li>
+                            <li>Narcissistic abuse recovery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Can you help with narcissistic personality disorder (NPD)? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        We can help in two main ways with <strong>narcissistic personality disorder</strong>. Most commonly, we support people who are in relationships with narcissistic individuals — helping you recognise manipulation patterns, set firm boundaries, and heal from narcissistic abuse. We also work with individuals who recognise narcissistic traits in themselves and genuinely want to develop greater empathy and self-awareness. Note: full NPD requires long-term specialist care; we assess and refer where appropriate.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Do you treat bipolar disorder or schizophrenia? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Conditions like <strong>bipolar disorder and schizophrenia</strong> require psychiatric medication in addition to therapy. We provide psychotherapy as an important complement to psychiatric care — helping with mood management, self-understanding, family communication, and daily functioning. For diagnosis and medication, we refer to trusted consultant psychiatrists. We do not diagnose these conditions independently.
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item animate-on-scroll delay-200">
-                <div class="faq-question">Do you prescribe medication? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Our psychologists provide therapy (talk therapy) and cannot prescribe meds.
-                    However, our Consultant Psychiatrist, Dr. Saad, is a medical doctor and can prescribe medication if
-                    necessary.</div>
+            <!-- ─── CATEGORY 4: Practical Questions ─── -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">
+                    <i class="fas fa-question-circle" style="color: var(--color-primary);"></i> Practical Questions
+                </h2>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">How do I find a mental health professional in Pakistan? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        The easiest way to find a mental health professional in Pakistan is to book a WhatsApp consultation with Healing with Attia — no waiting list, fully online, available in Urdu or English, and the first step is simply a brief conversation about what you are struggling with. You can also search platforms like <strong>Marham.pk</strong> and <strong>Oladoc.com</strong>. A psychotherapist is the right first step for anxiety, depression, relationship issues, or stress.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">How much does therapy cost? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li><strong>Individual therapy:</strong> PKR 5,000 per 50-minute session</li>
+                            <li><strong>Couples / marriage counseling:</strong> PKR 6,500 per session</li>
+                            <li><strong>Payment methods:</strong> JazzCash, EasyPaisa, Bank Transfer (Meezan/HBL)</li>
+                        </ul>
+                        We offer a limited number of subsidised slots for students and those with demonstrated financial need — please mention this when you contact us.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">How do online sessions work? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        After booking via WhatsApp, you will receive a secure Zoom link. Join from your phone or laptop — all you need is a quiet, private space and a stable internet connection. Sessions are 50–60 minutes. Payment is made before the session to confirm your slot.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Is my information confidential? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Absolutely. We follow strict professional ethical guidelines. Everything you share in sessions is 100% confidential. We do not share information with your family, employer, or anyone else without your explicit written consent. The only legal exceptions are when there is an immediate and serious risk to your life or another person's life.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Can I stay anonymous? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Yes. You can use a nickname and keep your camera off for audio-only sessions. Many clients in Pakistan prefer initial anonymity due to social stigma — this is completely understood and accommodated. Your comfort and psychological safety come first.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Is therapy available in Urdu? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Yes — all sessions can be conducted fully in <strong>Urdu</strong>, fully in <strong>English</strong>, or in the natural mix of both that most Pakistanis speak. Some sessions are also available in Punjabi. Therapy is most effective when you can express yourself in the language you feel most comfortable in — there are no rules here.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">Do you prescribe medication? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        No. As a psychotherapist, Attia Altaf provides talk therapy only and cannot prescribe medication. If medication is indicated — for severe OCD, depression, bipolar disorder, or ADHD — we will refer you to a trusted consultant psychiatrist. Therapy and medication together often produce the best results.
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">What if internet is unstable during a session? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">
+                        Pakistan's internet can be unpredictable. If the connection drops significantly during a session, we switch to a WhatsApp audio call or reschedule the remaining time at no extra charge. We aim to be as flexible and understanding as possible.
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item animate-on-scroll delay-200">
-                <div class="faq-question">Is therapy available in Urdu? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Yes, all our therapists are fluent in Urdu and English. Some also speak Punjabi
-                    and Pashto.</div>
-            </div>
-
-            <div class="faq-item animate-on-scroll delay-200">
-                <div class="faq-question">What if I have connection issues? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">We understand internet in Pakistan can be unstable. If a connection drops
-                    significantly, we can reschedule the remaining time or switch to a WhatsApp audio call.</div>
+            <!-- Still have questions CTA -->
+            <div style="background: linear-gradient(135deg, #f0faf7, #e0f2ee); border-radius: 12px; padding: 2.5rem; text-align: center; margin-top: 1rem;">
+                <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Still have a question?</h3>
+                <p style="color: #555; margin-bottom: 1.5rem;">Message us on WhatsApp — we usually reply within a few hours.</p>
+                <a href="https://wa.me/923285694209?text=I+have+a+question+about+therapy" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>&nbsp; Ask on WhatsApp
+                </a>
             </div>
 
         </div>
@@ -188,19 +401,41 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <p>&copy; 2024 Healing with Attia.</p>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4>Healing with Attia</h4>
+                    <p>Empathy. Clarity. Healing.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services &amp; Pricing</a></li>
+                        <li><a href="blog.html">Mental Health Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10am - 8pm PKT</p>
+                </div>
+            </div>
+            <div class="text-center" style="border-top: 1px solid #ddd; padding-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+                &copy; 2026 Healing with Attia. All rights reserved.
+            </div>
         </div>
     </footer>
 
     <a href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment" class="floating-whatsapp"
-        target="_blank">
+        target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="js/main.js"></script>
     <script>
-        // Simple FAQ Toggle Logic
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {
                 item.classList.toggle('active');
