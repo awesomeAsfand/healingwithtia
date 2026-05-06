@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://www.healingwithattia.com/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://www.healingwithattia.com/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- CORE PAGES -->
   <url>
     <loc>https://www.healingwithattia.com/about.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/services.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/faq.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/blog.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.healingwithattia.com/contact.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- BLOG INDEX -->
   <url>
-    <loc>https://www.healingwithattia.com/blog-anxiety-pakistan.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.healingwithattia.com/blog.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- BLOG POSTS -->
   <url>
-    <loc>https://www.healingwithattia.com/blog-burnout-professionals.html</loc>
+    <loc>https://www.healingwithattia.com/blog-cbt-ocd.html</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-relationships-therapy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-rishta-stress.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-joint-family.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-exam-stress.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-parents-therapy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.healingwithattia.com/blog-financial-anxiety.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-cbt-anxiety.html</loc>
@@ -72,19 +53,51 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/blog-cbt-ocd.html</loc>
+    <loc>https://www.healingwithattia.com/blog-rishta-stress.html</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/faq.html</loc>
+    <loc>https://www.healingwithattia.com/blog-anxiety-pakistan.html</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/contact.html</loc>
+    <loc>https://www.healingwithattia.com/blog-burnout-professionals.html</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-relationships-therapy.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-joint-family.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-exam-stress.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-parents-therapy.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-financial-anxiety.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
