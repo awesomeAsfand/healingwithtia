@@ -42,62 +42,75 @@
   <!-- BLOG POSTS -->
   <url>
     <loc>https://www.healingwithattia.com/blog-cbt-ocd.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-cbt-anxiety.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/blog-rishta-stress.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <loc>https://www.healingwithattia.com/blog-anxiety-pakistan.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.healingwithattia.com/blog-anxiety-pakistan.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <loc>https://www.healingwithattia.com/blog-rishta-stress.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-burnout-professionals.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-relationships-therapy.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-joint-family.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-exam-stress.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-parents-therapy.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-financial-anxiety.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <!-- LEGAL PAGES -->
+  <url>
+    <loc>https://www.healingwithattia.com/privacy-policy.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healingwithattia.com/terms.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
