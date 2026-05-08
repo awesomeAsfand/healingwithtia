@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword Research Brief — Healing with Attia</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8f6f3; color: #2d2d2d; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #5a7a5c, #3d5e40); color: white; padding: 3rem 2rem; text-align: center; }
+  .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  .header p { opacity: 0.85; font-size: 1.05rem; }
+  .header .meta { margin-top: 1rem; font-size: 0.9rem; opacity: 0.7; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+  /* Summary boxes */
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .summary-box { background: white; border-radius: 10px; padding: 1.25rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .summary-box .num { font-size: 2rem; font-weight: 700; }
+  .summary-box .label { font-size: 0.8rem; color: #777; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .num.green { color: #2e7d32; }
+  .num.orange { color: #e65100; }
+  .num.red { color: #c62828; }
+  .num.blue { color: #1565c0; }
+
+  /* Section headings */
+  h2 { font-size: 1.4rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e0dbd4; color: #3d5e40; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 2rem; font-size: 0.9rem; }
+  th { background: #3d5e40; color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 0.85rem 1rem; border-bottom: 1px solid #f0ede8; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafaf8; }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .badge-critical { background: #fce4ec; color: #b71c1c; }
+  .badge-keep { background: #e8f5e9; color: #1b5e20; }
+  .badge-modify { background: #fff8e1; color: #f57f17; }
+  .badge-drop { background: #ffebee; color: #b71c1c; }
+  .badge-new { background: #e3f2fd; color: #0d47a1; }
+  .diff-low { color: #2e7d32; font-weight: 600; }
+  .diff-med { color: #e65100; font-weight: 600; }
+  .diff-high { color: #c62828; font-weight: 600; }
+  .intent-T { background: #e8f5e9; color: #1b5e20; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .intent-I { background: #e3f2fd; color: #0d47a1; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .intent-IT { background: #f3e5f5; color: #4a148c; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+
+  /* Cards */
+  .card { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1rem; }
+  .card.warn { border-left: 4px solid #e65100; }
+  .card.info { border-left: 4px solid #1565c0; }
+  .card.success { border-left: 4px solid #2e7d32; }
+  .card.danger { border-left: 4px solid #c62828; }
+
+  /* Priority tiers */
+  .tier { margin: 1.5rem 0; }
+  .tier-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .tier-num { background: #3d5e40; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+
+  .note { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 0.35rem; }
+  .comp-list { font-size: 0.82rem; color: #555; }
+  .comp-list strong { color: #333; }
+
+  ul.plain { list-style: none; padding: 0; }
+  ul.plain li { padding: 0.3rem 0; padding-left: 1.2rem; position: relative; }
+  ul.plain li::before { content: "•"; color: #3d5e40; position: absolute; left: 0; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+  footer { text-align: center; padding: 2rem; color: #999; font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid #e0dbd4; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Keyword Research Brief</h1>
+  <p>Healing with Attia — Content Strategy, May 2026</p>
+  <div class="meta">Methodology: SERP analysis (live search results) + intent classification + competitor gap mapping<br>
+  Tools needed for volume confirmation: Google Keyword Planner / Ubersuggest / Ahrefs</div>
+</div>
+
+<div class="container">
+
+  <div class="summary-grid">
+    <div class="summary-box"><div class="num green">2</div><div class="label">CRITICAL (GSC confirmed)</div></div>
+    <div class="summary-box"><div class="num green">9</div><div class="label">KEEP</div></div>
+    <div class="summary-box"><div class="num orange">2</div><div class="label">MODIFY</div></div>
+    <div class="summary-box"><div class="num red">3</div><div class="label">DROP</div></div>
+    <div class="summary-box"><div class="num blue">6</div><div class="label">ADD (gaps found)</div></div>
+  </div>
+
+  <!-- METHODOLOGY NOTE -->
+  <div class="card info">
+    <strong>What this research is — and isn't.</strong> Volume figures are <em>not included</em> because I don't have access to Keyword Planner or Ahrefs data. What IS included is live SERP analysis: what sites actually rank for each query, what type of content they use, whether ads run (= commercial intent confirmed), and whether the competition is beatable for a new-ish domain. That tells you <em>difficulty and opportunity</em> — which matters more than raw volume for a niche practice site. Confirm volumes in KWP before writing.
+  </div>
+
+  <!-- SECTION 1: GSC CONFIRMED -->
+  <h2>✅ Phase 0 — GSC-Confirmed Wins (Write First, No Volume Check Needed)</h2>
+  <p style="margin-bottom:1rem;">These queries already show real humans finding your site. Volume is proven. The problem is zero clicks despite #1 rankings — a title/meta copywriting fix, <em>plus</em> a dedicated article, fixes that.</p>
+
+  <table>
+    <thead>
+      <tr><th>Keyword</th><th>Intent</th><th>Difficulty</th><th>What's Ranking</th><th>Your Edge</th><th>Decision</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>female muslim psychologist near me</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td class="comp-list"><strong>bestfemalepsychologist.com</strong> (exact-match domain), muslimtherapist.directory, thepsychwellbeing.com, ruhcare.com (US platform)</td>
+        <td>You already rank #1. Gap: no dedicated article on site — just the homepage. A 1,200-word post about what to expect from a female Muslim psychotherapist, with strong meta copy, will capture the click.</td>
+        <td><span class="badge badge-critical">CRITICAL</span></td>
+      </tr>
+      <tr>
+        <td><strong>islamic psychologist near me</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-low">Low (for Pakistan)</span></td>
+        <td class="comp-list">shifatherapy.com (US/UK, not Pakistan-specific), khalilcenter.com (Chicago, USA), ruhcare.com (US). <strong>No Pakistan-based practice ranks prominently.</strong></td>
+        <td>All top competitors are US or UK platforms. A Pakistan-based integrative psychotherapist writing authentically about faith-sensitive therapy has a massive geographic and cultural advantage.</td>
+        <td><span class="badge badge-critical">CRITICAL</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 2: KEEP -->
+  <h2>🟢 Phase 1–3 — Keep (Confirmed Opportunity)</h2>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Original Keyword</th><th>Intent</th><th>Difficulty</th><th>Who's Ranking</th><th>Why It's Winnable</th><th>Decision</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>do i need therapy pakistan</strong></td>
+        <td><span class="intent-IT">Info → Trans</span></td>
+        <td><span class="diff-low">Low</span></td>
+        <td class="comp-list">psychcaretherapy.com (small clinic, 1 article), sehatyab.com, therapyhunter.com blog</td>
+        <td>No dominant resource. Small clinics have blog posts ranking — yours can too. Mid-funnel: reader is close to booking.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>waswasa ocd islam</strong></td>
+        <td><span class="intent-IT">Info → Trans</span></td>
+        <td><span class="diff-low">Low</span></td>
+        <td class="comp-list">shifatherapy.com (1 blog post), islamqa.info, yaqeeninstitute.org (informational only). <strong>Only ONE therapy blog post ranking.</strong></td>
+        <td>Extremely low competition from therapy providers. Attia does CBT + OCD therapy + is a Muslim therapist — unbeatable cultural authenticity. Can cross-link to existing blog-cbt-ocd.html.</td>
+        <td><span class="badge badge-keep">KEEP ⭐ High Priority</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>therapy cost pakistan</strong><br><span class="note">→ Reframe as "How much does therapy cost in Pakistan 2026"</span></td>
+        <td><span class="intent-I">Informational</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td class="comp-list">geo.tv (news), marham.pk (directory), psychconsultants.com.pk, instacare.pk. Mix of directories + 1 news article.</td>
+        <td>No single definitive 2026 pricing guide exists. High buyer intent — people researching cost are about to book. Attia's transparent pricing is a selling point. Link directly to services.html.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>pakistani therapist uk</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-low">Low–Medium</span></td>
+        <td class="comp-list">ruhcare.com, safespacepk.com, thepsychwellbeing.com/urdu, shifatherapy.com. All are large platforms — <strong>none are individual practices with a dedicated UK page.</strong></td>
+        <td>online-therapy-uk.html already exists as a landing page. A supporting article (content calendar Week 4 + Week 11) builds topical authority for that page and feeds it internal links.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>psychotherapist pakistan</strong><br><span class="note">→ "What does a psychotherapist do? Different from a psychiatrist?"</span></td>
+        <td><span class="intent-IT">Info → Trans</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td class="comp-list">sehatyab.com, mentalzon.com, therapyroute.com, counseling.pk. <strong>No dedicated explainer article ranks — just directory listing pages.</strong></td>
+        <td>"Psychotherapist" is Attia's exact credential (CPCAB-UK). An explainer article is her terrain, not directories'. Educates readers and converts curious visitors to clients.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>premarital counseling pakistan</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td class="comp-list">UNFPA Pakistan (focuses on maternal health & genetic screening — very different angle), aghaaz.com.pk (sexual/reproductive health), sehatyab.com</td>
+        <td>UNFPA's content is about public health, not couples therapy. Aghaaz is about reproductive health. There is a clear gap for a psychotherapy-focused, culturally sensitive "8 questions couples should discuss" article.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>trauma therapy pakistan</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td class="comp-list">trwcentre.com (Pakistan's first trauma-specific centre — strong), therapyhelpers.com (blog post ranks), sehatyab.com</td>
+        <td>therapyhelpers.com's blog post ranking proves content can compete here. Attia has certified trauma management training. A well-structured article can rank alongside trwcentre.com, not beat it.</td>
+        <td><span class="badge badge-keep">KEEP</span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>therapists in islamabad</strong><br><span class="note">→ ONLY as "Why online therapy beats in-person in Islamabad" angle</span></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-high">High (exact query)</span></td>
+        <td class="comp-list">oladoc.com, marham.pk, healthwire.pk (massive doctor-booking platforms — equivalent of Booking.com). Impossible to beat for the head term.</td>
+        <td>Cannot win "therapists in islamabad" — directories own it. But an article "Why online beats in-person in Islamabad" targets a long-tail variant (<em>online therapy islamabad</em>, <em>online vs in-person therapy pakistan</em>) where there is no strong competitor. Smart reframe.</td>
+        <td><span class="badge badge-modify">MODIFY angle</span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>depression symptoms pakistan</strong><br><span class="note">→ Narrow to "depression vs sadness — how to tell the difference"</span></td>
+        <td><span class="intent-I">Informational</span></td>
+        <td><span class="diff-high">High (broad term)</span></td>
+        <td class="comp-list">sochclinics.org (established Islamabad clinic), globallyminded.org, medrxiv.org (academic), mindcare.pk. Established medical and clinic content dominates broad term.</td>
+        <td>Broad "depression symptoms pakistan" is competitive. The calendar's reframe — "Depression vs. Sadness: How to Know the Difference" — is a <em>specific</em> long-tail with educational + emotional hook that existing content doesn't cover directly.</td>
+        <td><span class="badge badge-modify">MODIFY angle</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3: DROP -->
+  <h2>🔴 Drop — Not Worth Writing</h2>
+
+  <table>
+    <thead>
+      <tr><th>Keyword</th><th>Why Drop</th><th>Decision</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>adhd diagnosis pakistan adults</strong></td>
+        <td>Aga Khan University (hospitals.aku.edu) ranks on page 1 — an institution with decades of authority and medical credentialing. A new practice blog cannot compete for health diagnostic queries against AKU. Additionally, ADHD assessment is not listed among Attia's specialties. Writing this would attract visitors she can't serve.</td>
+        <td><span class="badge badge-drop">DROP</span></td>
+      </tr>
+      <tr>
+        <td><strong>child therapist pakistan</strong></td>
+        <td>SERP dominated by large platforms (sehatyab, umeed, mentalzon) listing multiple child specialists. Attia's listed specialties (anxiety, trauma, OCD, relationships, burnout) don't include child psychology. Writing this attracts the wrong audience and risks E-E-A-T problems on a YMYL topic.</td>
+        <td><span class="badge badge-drop">DROP</span></td>
+      </tr>
+      <tr>
+        <td><strong>self care mental health pakistan</strong></td>
+        <td>Very broad informational query, low commercial intent — people reading "self-care tips" rarely book therapy immediately. Lifestyle blogs and magazine content (Runway Pakistan etc.) own this space. Not worth a full article slot in a 12-post calendar.</td>
+        <td><span class="badge badge-drop">DROP</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 4: ADD NEW -->
+  <h2>🔵 Add — Gaps Found During Research</h2>
+  <p style="margin-bottom:1rem;">These keywords were <em>not</em> in the original calendar but kept appearing in competitor SERPs as clearly high-value opportunities.</p>
+
+  <table>
+    <thead>
+      <tr><th>Keyword to Target</th><th>Intent</th><th>Est. Difficulty</th><th>Why Add</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>online therapy pakistan</strong><br><span class="note">→ Main service hub page (services.html) should target this</span></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td>This is the broadest, highest-volume service query in your market. sehatyab.com, thepsychwellbeing.com, and therapyhunter.com rank. Individual practices <em>can</em> rank here with strong on-page optimisation — services.html should be explicitly optimised for this.</td>
+      </tr>
+      <tr>
+        <td><strong>OCD treatment pakistan / CBT for OCD pakistan</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td>You already have blog-cbt-ocd.html. This page likely isn't ranking for its best keywords yet. A title/meta review for OCD-specific terms could unlock impressions without writing anything new.</td>
+      </tr>
+      <tr>
+        <td><strong>marriage counseling pakistan / couples therapy pakistan</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td>Relationship issues are explicitly listed as Attia's specialty. The SERP shows no dominant single resource — sehatyab.com + a few blog posts. blog-relationships-therapy.html exists but may not target this keyword. High-value booking intent.</td>
+      </tr>
+      <tr>
+        <td><strong>urdu therapist online / therapy in urdu</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-low">Low</span></td>
+        <td>thepsychwellbeing.com has a dedicated Urdu psychologist page ranking for this. Attia offers therapy in Urdu and Punjabi — a dedicated service note or article could capture this genuinely low-competition query that converts at high rates (language = cultural fit signal).</td>
+      </tr>
+      <tr>
+        <td><strong>anxiety treatment pakistan online</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-med">Medium</span></td>
+        <td>Anxiety is Attia's primary listed specialty and blog-anxiety-pakistan.html exists. This keyword likely has high volume for a Pakistan niche. Confirm in KWP — may just need a title tag fix on the existing article.</td>
+      </tr>
+      <tr>
+        <td><strong>online therapy for expats pakistan / overseas pakistani therapist</strong></td>
+        <td><span class="intent-T">Transactional</span></td>
+        <td><span class="diff-low">Very Low</span></td>
+        <td>Appeared in the UK diaspora search results. Very specific long-tail, almost no competition, and directly supported by online-therapy-uk.html. Could be a short standalone article or added to the UK page FAQ.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 5: REVISED PRIORITY ORDER -->
+  <h2>📋 Revised Writing Order (Post-Research)</h2>
+  <p style="margin-bottom: 1.25rem;">Based on: lowest difficulty → highest intent → strongest alignment with Attia's credentials. Confirm volumes in KWP before starting — this order should hold up, but adjust if a keyword shows near-zero volume.</p>
+
+  <div class="two-col">
+    <div>
+      <div class="tier">
+        <div class="tier-header"><div class="tier-num">1</div><strong>Write immediately — proven demand, low competition</strong></div>
+        <ul class="plain">
+          <li>Female Muslim Psychologist in Pakistan — What to Expect <span class="badge badge-critical">GSC #1</span></li>
+          <li>Islamic Psychologist Online: Faith-Sensitive Therapy in Pakistan <span class="badge badge-critical">GSC #1</span></li>
+          <li>Waswasa vs OCD: Is There a Difference? <span class="badge badge-keep">Low comp ⭐</span></li>
+          <li>Do I Need Therapy? 7 Signs (Pakistan Context) <span class="badge badge-keep">Low comp</span></li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tier-header"><div class="tier-num">2</div><strong>High intent, medium competition — write next</strong></div>
+        <ul class="plain">
+          <li>How Much Does Therapy Cost in Pakistan? (2026 Guide)</li>
+          <li>Pakistani Therapist in the UK: Guide for the Diaspora</li>
+          <li>What Does a Psychotherapist Do? (vs Psychiatrist)</li>
+          <li>Pre-Marital Counselling in Pakistan: 8 Questions</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="tier">
+        <div class="tier-header"><div class="tier-num">3</div><strong>Medium-term — build topical depth</strong></div>
+        <ul class="plain">
+          <li>Trauma Therapy in Pakistan: How PTSD Is Treated Online</li>
+          <li>Online Therapy vs In-Person in Islamabad: Honest Comparison <span class="badge badge-modify">Modified</span></li>
+          <li>Depression vs Sadness: How to Know the Difference <span class="badge badge-modify">Modified</span></li>
+          <li>Online Therapy for British Pakistanis: A Guide</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tier-header"><div class="tier-num">4</div><strong>Quick wins on existing pages (no new articles needed)</strong></div>
+        <ul class="plain">
+          <li>Review blog-cbt-ocd.html title/meta for "OCD treatment pakistan"</li>
+          <li>Review blog-anxiety-pakistan.html for "anxiety treatment pakistan"</li>
+          <li>Review blog-relationships-therapy.html for "couples therapy pakistan"</li>
+          <li>Add "therapy in urdu" to services.html or create 1 short page</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: WHAT TO DO IN KEYWORD PLANNER -->
+  <h2>🔧 How to Confirm Volumes (30-minute task)</h2>
+
+  <div class="card success">
+    <h3 style="margin-top:0;">Google Keyword Planner (free)</h3>
+    <p>Go to <strong>ads.google.com → Tools → Keyword Planner → Discover new keywords</strong>. Paste the list below. Set location to <strong>Pakistan</strong> + <strong>United Kingdom</strong> separately. Language: All. Look for monthly searches and competition column (Low/Med/High).</p>
+  </div>
+
+  <div style="background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 2rem;">
+    <p style="font-weight:600; margin-bottom: 0.75rem;">Copy-paste this keyword list into KWP:</p>
+    <pre style="background: #f5f3f0; padding: 1rem; border-radius: 6px; font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap;">female muslim psychologist near me
+islamic psychologist near me
+waswasa ocd islam
+do i need therapy pakistan
+therapy cost pakistan
+how much does therapy cost in pakistan
+online therapy pakistan
+pakistani therapist uk
+urdu therapist online
+therapy in urdu
+psychotherapist pakistan
+premarital counseling pakistan
+pre-marital counselling pakistan
+trauma therapy pakistan
+marriage counseling pakistan
+couples therapy pakistan
+OCD treatment pakistan
+CBT therapy pakistan
+anxiety treatment pakistan
+online therapy islamabad
+depression vs sadness pakistan
+british pakistani therapist online
+overseas pakistani therapist</pre>
+  </div>
+
+  <div class="card warn">
+    <strong>What to flag if volume is unexpectedly low:</strong> If any keyword shows &lt;10 searches/month in KWP, it doesn't mean zero demand — KWP undercounts niche/local queries significantly. Cross-check by Googling the query and seeing if any paid ads appear (ads = money being spent = real demand). If no ads AND low KWP volume, deprioritize.
+  </div>
+
+  <!-- FINAL NOTE -->
+  <h2>⚠️ One Honest Caveat</h2>
+  <div class="card danger">
+    <p>The entire existing content calendar was built on pattern recognition and GSC data — <strong>not confirmed volume data</strong>. The research above gives us a much stronger foundation: we know who's competing, what content type ranks, and whether the competition is beatable. But before writing any article beyond the 2 CRITICAL GSC-confirmed ones, spend 30 minutes in Keyword Planner to validate that real people are searching these queries in meaningful numbers. A well-written article targeting a 10-search/month keyword is wasted effort. A well-written article targeting a 500/month keyword with weak competition is transformative.</p>
+  </div>
+
+</div>
+
+<footer>Generated May 2026 · Healing with Attia SEO Strategy · For internal use only</footer>
+
+</body>
+</html>
