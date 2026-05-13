@@ -158,6 +158,16 @@ ul {
     color: white;
 }
 
+.btn-sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
 .btn-whatsapp {
     background-color: var(--color-whatsapp);
     color: white;
@@ -339,4 +349,22 @@ footer {
     background: #eef2f5;
     padding: var(--spacing-lg) 0 2rem;
     margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    footer {
+        margin-top: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
