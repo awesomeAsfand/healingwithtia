@@ -194,6 +194,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -223,6 +224,15 @@ ul {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    /* Touch-friendly: minimum 44×44px target, no tap delay */
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    border-radius: var(--radius-sm);
 }
 
 @media (max-width: 768px) {
@@ -234,9 +244,11 @@ ul {
         width: 100%;
         background: white;
         flex-direction: column;
-        padding: 2rem;
+        padding: 1.5rem 2rem;
         box-shadow: var(--shadow-md);
         text-align: center;
+        z-index: 999;
+        gap: 0.75rem;
     }
 
     .nav-links.active {
@@ -244,7 +256,7 @@ ul {
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex; /* flex so icon centres inside the 44px target */
     }
 }
 
@@ -352,19 +364,67 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* --- Layout spacing --- */
     .section {
         padding: 2.5rem 0;
     }
 
     footer {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
+        padding: 2rem 0 1.5rem;
     }
 
-    h1 {
-        font-size: 2rem;
+    /* --- Typography --- */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    /* --- Reduce large gaps in flex layouts when stacked vertically --- */
+    [style*="gap: 4rem"] { gap: 2rem !important; }
+    [style*="gap: 3rem"] { gap: 1.5rem !important; }
+
+    /* --- Fix fixed-height image frames (therapist photos) --- */
+    [style*="height:380px"],
+    [style*="height: 380px"],
+    [style*="height:400px"],
+    [style*="height: 400px"] {
+        height: 240px !important;
     }
 
-    h2 {
+    /* --- Fix blog card images --- */
+    [style*="height: 300px"],
+    [style*="height:300px"] {
+        height: 180px !important;
+    }
+
+    /* --- Fix hero image: height:100% collapses when flex wraps --- */
+    header img[style*="height: 100%"],
+    header img[style*="height:100%"] {
+        height: auto !important;
+        min-height: 200px;
+        width: 100% !important;
+    }
+
+    /* --- Ensure all buttons meet 44px touch target --- */
+    .btn {
+        min-height: 44px;
+    }
+
+    /* --- Floating WhatsApp: tighten position, hide tooltip --- */
+    .floating-whatsapp {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 52px;
+        height: 52px;
         font-size: 1.6rem;
+    }
+
+    .floating-whatsapp::after {
+        display: none;
+    }
+
+    /* --- Hero section padding override (inline styles use !important) --- */
+    header.section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
     }
 }

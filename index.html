@@ -143,7 +143,7 @@
 
                 <!-- Image Column -->
                 <div style="flex: 1; min-width: 300px;" class="animate-on-scroll">
-                    <div style="position: relative; width: 100%; max-width: 400px; margin: 0 auto;">
+                    <div style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; overflow: hidden; border-radius: var(--radius-lg);">
                         <div
                             style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--color-accent); border-radius: 50%; z-index: 0;">
                         </div>
@@ -357,7 +357,7 @@
                         <a href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Book a Session</a>
                     </div>
                 </div>
-                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="animate-on-scroll delay-200">
+                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;" class="animate-on-scroll delay-200">
                     <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center;">
                         <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; display: block;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Communication</div>
@@ -581,4 +581,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Scripts --
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
