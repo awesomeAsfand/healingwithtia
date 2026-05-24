@@ -20,15 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (mobileToggle && navLinks) {
-        // pointerdown fires immediately on both touch and mouse (no 300ms delay)
-        mobileToggle.addEventListener('pointerdown', (e) => {
-            e.preventDefault();
+        // click fires on both touch and mouse; touch-action:manipulation on the
+        // element already removes the 300ms delay so no e.preventDefault() needed
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             toggleMenu();
         });
     }
 
     // Close menu when clicking outside
-    document.addEventListener('pointerdown', (e) => {
+    document.addEventListener('click', (e) => {
         if (navLinks && navLinks.classList.contains('active') &&
             !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
             navLinks.classList.remove('active');

@@ -469,4 +469,27 @@ footer {
         padding-top: 2.5rem !important;
         padding-bottom: 2.5rem !important;
     }
+
+    /* --- Prevent any flex CTA row from overflowing narrow screens --- */
+    [style*="display: flex"][style*="gap: 1rem"],
+    [style*="display: flex"][style*="gap: 1.5rem"] {
+        flex-wrap: wrap !important;
+    }
+
+}
+
+/* Extra-small phones (≤ 400px) — prevent min-width from causing horizontal scroll */
+@media (max-width: 400px) {
+    [style*="min-width: 300px"],
+    [style*="min-width: 280px"],
+    [style*="min-width: 260px"] {
+        min-width: 0 !important;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.4rem; }
 }
