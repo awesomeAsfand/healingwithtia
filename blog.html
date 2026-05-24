@@ -25,25 +25,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .blog-post {
-            max-width: 800px;
-            margin: 0 auto 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
         }
 
-        .blog-post img {
-            border-radius: var(--radius-md);
-            margin-bottom: 1.5rem;
+        .blog-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .blog-card img {
             width: 100%;
-            height: 300px;
+            height: 210px;
             object-fit: cover;
+            display: block;
+        }
+
+        .blog-card-body {
+            padding: 1.4rem 1.5rem 1.6rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .blog-meta {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            color: #999;
+            font-size: 0.82rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .blog-card-body h2 {
+            font-size: 1.1rem;
+            line-height: 1.45;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card-body h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .blog-card-body h2 a:hover {
+            color: var(--color-primary);
+        }
+
+        .blog-card-body p {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            flex: 1;
+            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -56,10 +105,21 @@
       ]
     }
     </script>
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Healing with Attia">
+    <meta property="og:url"         content="https://www.healingwithattia.com/blog.html">
+    <meta property="og:title"       content="Mental Health Blog — Therapy in Pakistan | Healing with Attia">
+    <meta property="og:description" content="Expert articles on anxiety, OCD, relationships & mental health in Pakistan by psychotherapist Attia Altaf. Practical advice in Urdu & English.">
+    <meta property="og:image"       content="https://www.healingwithattia.com/images/hero.webp">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Mental Health Blog — Therapy in Pakistan | Healing with Attia">
+    <meta name="twitter:description" content="Expert articles on anxiety, OCD, relationships & mental health in Pakistan by psychotherapist Attia Altaf. Practical advice in Urdu & English.">
+    <meta name="twitter:image"       content="https://www.healingwithattia.com/images/hero.webp">
 </head>
 
 <body>
-    <nav class="navbar">
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+        <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo"><i class="fas fa-leaf text-primary"></i> Healing with Attia</a>
             <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -67,7 +127,6 @@
                 <a href="/">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <!-- <a href="therapists.html">Therapists</a> -->
                 <a href="blog.html" class="text-primary">Blog</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
@@ -77,190 +136,181 @@
         </div>
     </nav>
 
-    <header class="section bg-soft text-center">
+    <header id="main-content" class="section bg-soft text-center">
         <div class="container animate-on-scroll">
-            <h1>Mental Wellness Blog</h1>
-            <p>Insights, tips, and stories for a healthier mind.</p>
+            <h1>Mental Health Blog — Therapy &amp; Wellbeing in Pakistan</h1>
+            <p>Expert articles on anxiety, depression, OCD, and relationships — written for Pakistan by a UK-certified psychotherapist.</p>
         </div>
     </header>
 
-    <section class="section">
+    <section class="section" style="background: var(--color-bg-soft, #f8f9fa);">
         <div class="container">
+            <div class="blog-grid">
 
-            <!-- Article: CBT for Anxiety (NEW - Highest Priority) -->
-            <article class="blog-post animate-on-scroll" id="cbt-anxiety">
-                <a href="blog-cbt-anxiety.html">
-                    <img src="images/blog/cbt.webp" alt="Cognitive Behavioral Therapy for Anxiety in Pakistan"
-                        style="background: #e0f7fa;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Mar 29, 2026 | <i class="far fa-user"></i> Attia
-                    Altaf</div>
-                <h2><a href="blog-cbt-anxiety.html" style="color: inherit; text-decoration: none;">Cognitive Behavioral
-                        Therapy for Anxiety: A Complete Guide for Pakistan</a></h2>
-                <p>Cognitive behavioral therapy (CBT) is the gold-standard treatment for anxiety — structured,
-                    practical, and proven. Learn exactly how CBT works, what happens in sessions, and how to start
-                    online in Pakistan...</p>
-                <br>
-                <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Therapy for Depression -->
+                <article class="blog-card animate-on-scroll" id="depression-therapy">
+                    <a href="blog-depression-therapy.html">
+                        <img src="images/blog/depression-therapy.webp"
+                            alt="Online therapy for depression in Pakistan — Healing with Attia" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> May 24, 2026 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-depression-therapy.html">Therapy for Depression in Pakistan: Understanding, Treating, and Healing</a></h2>
+                        <p>Depression affects millions of Pakistanis yet remains deeply misunderstood. Learn the real signs, why it goes untreated, and how online therapy works in Pakistan.</p>
+                        <a href="blog-depression-therapy.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article: CBT for OCD (NEW) -->
-            <article class="blog-post animate-on-scroll" id="cbt-ocd">
-                <a href="blog-cbt-ocd.html">
-                    <img src="images/blog/ocd.webp" alt="Cognitive Behavioral Therapy for OCD and Waswasa in Pakistan"
-                        style="background: #f3e5f5;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Mar 30, 2026 | <i class="far fa-user"></i> Attia
-                    Altaf</div>
-                <h2><a href="blog-cbt-ocd.html" style="color: inherit; text-decoration: none;">Cognitive Behavioral
-                        Therapy for OCD: How ERP Works in Pakistan (Including Waswasa)</a></h2>
-                <p>OCD is one of the most treatable mental health conditions — but one of the most misunderstood in
-                    Pakistan. Learn how Exposure and Response Prevention (ERP) breaks the OCD cycle, including religious
-                    OCD (waswasa)...</p>
-                <br>
-                <a href="blog-cbt-ocd.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Postnatal Depression -->
+                <article class="blog-card animate-on-scroll" id="postnatal-depression">
+                    <a href="blog-postnatal-depression.html">
+                        <img src="images/blog/postnatal-depression.webp"
+                            alt="Postnatal depression support for Pakistani mothers — Healing with Attia" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> May 24, 2026 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-postnatal-depression.html">Postnatal Depression in Pakistan: You Are Not a Bad Mother</a></h2>
+                        <p>Postnatal depression affects up to 63% of Pakistani mothers yet 91% never receive treatment. Learn the signs and how online therapy can help you heal.</p>
+                        <a href="blog-postnatal-depression.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article New: Financial Anxiety -->
-            <article class="blog-post animate-on-scroll" id="financial-anxiety">
-                <a href="blog-financial-anxiety.html">
-                    <img src="images/blog/financial-anxiety.jpg"
-                        alt="Pakistani family worried about electricity bills and inflation"
-                        style="background: #e8f5e9;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Mar 05, 2024 | <i class="far fa-user"></i> Dr.
-                    Attia Altaf</div>
-                <h2><a href="blog-financial-anxiety.html" style="color: inherit; text-decoration: none;">The Cost of
-                        Living Crisis: Coping with Financial Anxiety in Pakistan</a></h2>
-                <p>The inflation crisis in Pakistan is causing widespread anxiety. Learn practical mental health
-                    strategies to cope with financial stress and uncertainty...</p>
-                <br>
-                <a href="blog-financial-anxiety.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- CBT for Anxiety -->
+                <article class="blog-card animate-on-scroll" id="cbt-anxiety">
+                    <a href="blog-cbt-anxiety.html">
+                        <img src="images/blog/cbt.webp" alt="Cognitive Behavioral Therapy for Anxiety in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Mar 29, 2026 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-cbt-anxiety.html">Cognitive Behavioral Therapy for Anxiety: A Complete Guide for Pakistan</a></h2>
+                        <p>CBT is the gold-standard treatment for anxiety — structured, practical, and proven. Learn how it works and how to start online in Pakistan.</p>
+                        <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article New: Log Kya Kahenge -->
-            <article class="blog-post animate-on-scroll" id="parents-therapy">
-                <a href="blog-parents-therapy.html">
-                    <img src="images/blog/parents-therapy.jpg"
-                        alt="Pakistani daughter talking to mother about mental health taboo"
-                        style="background: #f3e5f5;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Feb 28, 2024 | <i class="far fa-user"></i> Dr.
-                    Attia Altaf</div>
-                <h2><a href="blog-parents-therapy.html" style="color: inherit; text-decoration: none;">"Log Kya
-                        Kahenge?"
-                        How to Talk to Desi Parents About Mental Health</a></h2>
-                <p>Scared to ask your parents for therapy? Learn how to explain depression and anxiety to Desi parents
-                    using
-                    cultural and religious context...</p>
-                <br>
-                <a href="blog-parents-therapy.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- CBT for OCD -->
+                <article class="blog-card animate-on-scroll" id="cbt-ocd">
+                    <a href="blog-cbt-ocd.html">
+                        <img src="images/blog/ocd.webp" alt="CBT for OCD and Waswasa in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Mar 30, 2026 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-cbt-ocd.html">CBT for OCD: How ERP Works in Pakistan (Including Waswasa)</a></h2>
+                        <p>OCD is one of the most treatable but misunderstood conditions in Pakistan. Learn how Exposure and Response Prevention breaks the OCD cycle.</p>
+                        <a href="blog-cbt-ocd.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article New: Exam Stress -->
-            <article class="blog-post animate-on-scroll" id="exam-stress">
-                <a href="blog-exam-stress.html">
-                    <img src="images/blog/MDCAT.jpg" alt="Student studying late night stressed for MDCAT exam Pakistan"
-                        style="background: #fff3e0;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Feb 21, 2024 | <i class="far fa-user"></i> Dr.
-                    Attia Altaf</div>
-                <h2><a href="blog-exam-stress.html" style="color: inherit; text-decoration: none;">More Than Just
-                        Grades: Managing Exam Stress During MDCAT & CAIEs</a></h2>
-                <p>The pressure to succeed in competitive exams is crushing Pakistani students. Learn how to distinguish
-                    burnout from laziness and manage anxiety in the exam hall...</p>
-                <br>
-                <a href="blog-exam-stress.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Financial Anxiety -->
+                <article class="blog-card animate-on-scroll" id="financial-anxiety">
+                    <a href="blog-financial-anxiety.html">
+                        <img src="images/blog/financial-anxiety.webp"
+                            alt="Pakistani family worried about inflation and financial stress" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Mar 05, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-financial-anxiety.html">The Cost of Living Crisis: Coping with Financial Anxiety in Pakistan</a></h2>
+                        <p>The inflation crisis is causing widespread anxiety. Learn practical mental health strategies to cope with financial stress and uncertainty.</p>
+                        <a href="blog-financial-anxiety.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article New: Joint Family -->
-            <article class="blog-post animate-on-scroll" id="joint-family">
-                <a href="blog-joint-family.html">
-                    <img src="images/blog/joint-family1.jpg"
-                        alt="Joint family problems and daughter in law depression Pakistan" style="background: #eef2ff;"
-                        loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Feb 14, 2024 | <i class="far fa-user"></i> Dr.
-                    Attia Altaf</div>
-                <h2><a href="blog-joint-family.html" style="color: inherit; text-decoration: none;">Surviving the Joint
-                        Family: Mental Peace vs. Cultural Expectations</a></h2>
-                <p>Living with in-laws is a cultural norm, but boundary violations can destroy marriages. Learn
-                    strategies
-                    for privacy and respect in a joint family system...</p>
-                <br>
-                <a href="blog-joint-family.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Log Kya Kahenge -->
+                <article class="blog-card animate-on-scroll" id="parents-therapy">
+                    <a href="blog-parents-therapy.html">
+                        <img src="images/blog/parents-therapy.webp"
+                            alt="Pakistani daughter talking to parents about mental health" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Feb 28, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-parents-therapy.html">"Log Kya Kahenge?" How to Talk to Desi Parents About Mental Health</a></h2>
+                        <p>Scared to ask your parents for therapy? Learn how to explain depression and anxiety using cultural and religious context they will understand.</p>
+                        <a href="blog-parents-therapy.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article New: Rishta Stress -->
-            <article class="blog-post animate-on-scroll" id="rishta-stress">
-                <a href="blog-rishta-stress.html">
-                    <img src="images/blog/rishta.jpg" alt="Pakistani wedding rishta stress and rejection counselling"
-                        style="background: #fdf2f8;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Feb 07, 2024 | <i class="far fa-user"></i> Dr.
-                    Attia Altaf</div>
-                <h2><a href="blog-rishta-stress.html" style="color: inherit; text-decoration: none;">The Rishta Parade:
-                        Handling Rejection in Arranged Marriages</a></h2>
-                <p>The process of "being seen" by families can be damaging to self-esteem. Learn how to protect your
-                    mental
-                    health from judgment and rejection during the rishta process...</p>
-                <br>
-                <a href="blog-rishta-stress.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Exam Stress -->
+                <article class="blog-card animate-on-scroll" id="exam-stress">
+                    <a href="blog-exam-stress.html">
+                        <img src="images/blog/MDCAT.webp" alt="Student stressed for MDCAT exams in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Feb 21, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-exam-stress.html">More Than Just Grades: Managing Exam Stress During MDCAT & CAIEs</a></h2>
+                        <p>The pressure to succeed in Pakistan's competitive exams is crushing students. Learn to distinguish burnout from laziness and manage anxiety in the exam hall.</p>
+                        <a href="blog-exam-stress.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article 1 -->
-            <!-- Article 1 -->
-            <article class="blog-post animate-on-scroll" id="anxiety-pakistan">
-                <a href="blog-anxiety-pakistan.html">
-                    <img src="images/blog/anxietyy.webp"
-                        alt="Online Anxiety Treatment and Panic Attack Therapy in Pakistan" style="background: #e0f7fa;"
-                        loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Jan 12, 2024 | <i class="far fa-user"></i> Attia
-                    Altaf</div>
-                <h2><a href="blog-anxiety-pakistan.html" style="color: inherit; text-decoration: none;">How Online
-                        Therapy Helps with Anxiety in Pakistan</a></h2>
-                <p>Anxiety is one of the most common mental health issues in Pakistan, yet it often goes untreated due
-                    to stigma and lack of awareness. Online therapy offers a private, accessible way to get help...</p>
-                <br>
-                <a href="blog-anxiety-pakistan.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Joint Family -->
+                <article class="blog-card animate-on-scroll" id="joint-family">
+                    <a href="blog-joint-family.html">
+                        <img src="images/blog/joint-family1.webp"
+                            alt="Joint family stress and mental health in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Feb 14, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-joint-family.html">Surviving the Joint Family: Mental Peace vs. Cultural Expectations</a></h2>
+                        <p>Joint family life is a cultural norm, but boundary violations can destroy marriages. Learn strategies for privacy and respect in the joint family system.</p>
+                        <a href="blog-joint-family.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article 2 -->
-            <!-- Article 2 -->
-            <article class="blog-post animate-on-scroll delay-100" id="burnout-professionals">
-                <a href="blog-burnout-professionals.html">
-                    <img src="images/blog/burnout1.jpg"
-                        alt="Workplace Burnout Counseling for Professionals in Islamabad" style="background: #fff3e0;"
-                        loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Jan 05, 2024 | <i class="far fa-user"></i> Attia
-                    Altaf</div>
-                <h2><a href="blog-burnout-professionals.html" style="color: inherit; text-decoration: none;">Signs of
-                        Burnout and How Pakistani Professionals Can Cope</a></h2>
-                <p>The hustle culture in Pakistan's corporate sector is intense. Long hours, lack of work-life balance,
-                    and economic pressure contribute to high rates of burnout among professionals...</p>
-                <br>
-                <a href="blog-burnout-professionals.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Rishta Stress -->
+                <article class="blog-card animate-on-scroll" id="rishta-stress">
+                    <a href="blog-rishta-stress.html">
+                        <img src="images/blog/rishta.webp" alt="Rishta stress and rejection in arranged marriages Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Feb 07, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-rishta-stress.html">The Rishta Parade: Handling Rejection in Arranged Marriages</a></h2>
+                        <p>Being judged by families can be deeply damaging to self-esteem. Learn how to protect your mental health from rejection during the rishta process.</p>
+                        <a href="blog-rishta-stress.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
-            <!-- Article 3 -->
-            <!-- Article 3 -->
-            <article class="blog-post animate-on-scroll delay-200" id="relationships">
-                <a href="blog-relationships-therapy.html">
-                    <img src="images/blog/relationshipss.webp" alt="Relationship and Marriage Counseling in Urdu"
-                        style="background: #fce4ec;" loading="lazy">
-                </a>
-                <div class="blog-meta"><i class="far fa-calendar"></i> Dec 28, 2023 | <i class="far fa-user"></i> Attia
-                    Altaf </div>
-                <h2><a href="blog-relationships-therapy.html" style="color: inherit; text-decoration: none;">Why Talking
-                        to a Therapist Strengthens Relationships</a></h2>
-                <p>In Pakistan, joint family systems and marital expectations can create complex relationship dynamics.
-                    Often, we vent to friends who might be biased, or we bottle things up...</p>
-                <br>
-                <a href="blog-relationships-therapy.html" class="btn btn-outline btn-sm">Read Full Article</a>
-            </article>
+                <!-- Anxiety Pakistan -->
+                <article class="blog-card animate-on-scroll" id="anxiety-pakistan">
+                    <a href="blog-anxiety-pakistan.html">
+                        <img src="images/blog/anxietyy.webp"
+                            alt="Online anxiety therapy in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Jan 12, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-anxiety-pakistan.html">How Online Therapy Helps with Anxiety in Pakistan</a></h2>
+                        <p>Anxiety is one of the most common mental health issues in Pakistan, yet it often goes untreated due to stigma. Online therapy offers a private, accessible solution.</p>
+                        <a href="blog-anxiety-pakistan.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
 
+                <!-- Burnout -->
+                <article class="blog-card animate-on-scroll" id="burnout-professionals">
+                    <a href="blog-burnout-professionals.html">
+                        <img src="images/blog/burnout1.webp"
+                            alt="Workplace burnout counseling for professionals in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Jan 05, 2024 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-burnout-professionals.html">Signs of Burnout and How Pakistani Professionals Can Cope</a></h2>
+                        <p>Long hours, economic pressure, and hustle culture are burning out Pakistan's professionals. Learn to recognise the signs and recover.</p>
+                        <a href="blog-burnout-professionals.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Relationships -->
+                <article class="blog-card animate-on-scroll" id="relationships">
+                    <a href="blog-relationships-therapy.html">
+                        <img src="images/blog/relationshipss.webp" alt="Marriage and relationship counseling in Pakistan" loading="lazy" width="800" height="210">
+                    </a>
+                    <div class="blog-card-body">
+                        <div class="blog-meta"><i class="far fa-calendar"></i> Dec 28, 2023 &nbsp;·&nbsp; Attia Altaf</div>
+                        <h2><a href="blog-relationships-therapy.html">Why Talking to a Therapist Strengthens Relationships</a></h2>
+                        <p>Joint family systems and marital expectations create complex dynamics. A therapist gives you an unbiased space to work through what friends and family cannot.</p>
+                        <a href="blog-relationships-therapy.html" class="btn btn-outline btn-sm">Read Article</a>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </section>
 
@@ -308,10 +358,4 @@
     </footer>
 
     <a href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment" class="floating-whatsapp"
-        target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+        target="_blank" title="Chat on What

@@ -40,7 +40,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Healing with Attia",
-      "image": "https://www.healingwithattia.com/images/hero.jpg",
+      "image": "https://www.healingwithattia.com/images/hero.webp",
       "description": "Professional online therapy and marriage counseling in Pakistan. Services include marriage counseling, couples therapy, anxiety therapy, depression counseling, OCD therapy, and trauma therapy. Sessions in Urdu and English via Zoom.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -82,11 +82,21 @@
       ]
     }
     </script>
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Healing with Attia">
+    <meta property="og:url"         content="https://www.healingwithattia.com/">
+    <meta property="og:title"       content="Online Therapy & Counseling in Pakistan | Healing with Attia">
+    <meta property="og:description" content="Online therapy & marriage counseling in Pakistan in Urdu & English — anxiety, depression, OCD, trauma & couples therapy. Book via WhatsApp with Attia Altaf.">
+    <meta property="og:image"       content="https://www.healingwithattia.com/images/hero.webp">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Online Therapy & Counseling in Pakistan | Healing with Attia">
+    <meta name="twitter:description" content="Online therapy & marriage counseling in Pakistan in Urdu & English — anxiety, depression, OCD, trauma & couples therapy. Book via WhatsApp with Attia Altaf.">
+    <meta name="twitter:image"       content="https://www.healingwithattia.com/images/hero.webp">
 </head>
 
 <body>
-
-    <!-- Navigation -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+        <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">
@@ -99,7 +109,6 @@
                 <a href="/">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <!-- <a href="therapists.html">Therapists</a> -->
                 <a href="blog.html">Blog</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
@@ -112,7 +121,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="section"
+    <header id="main-content" class="section"
         style="padding-top: 4rem; padding-bottom: 4rem; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
         <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
             <div style="flex: 1; min-width: 300px;" class="animate-on-scroll">
@@ -130,8 +139,8 @@
             </div>
             <div style="flex: 1; min-width: 300px;" class="animate-on-scroll delay-200">
                 <!-- Placeholder for Hero Image -->
-                <img src="images/hero.jpg" alt="Online Therapy Pakistan — Attia Altaf, Integrative Psychotherapist"
-                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" fetchpriority="high">
+                <img src="images/hero.webp" alt="Online Therapy Pakistan — Attia Altaf, Integrative Psychotherapist"
+                    style="width: 100%; height: auto; max-height: 520px; object-fit: cover; border-radius: var(--radius-lg); opacity: 0.9;" fetchpriority="high" width="700" height="520">
             </div>
         </div>
     </header>
@@ -147,7 +156,7 @@
                         <div
                             style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--color-accent); border-radius: 50%; z-index: 0;">
                         </div>
-                        <img src="images/about/img.jpeg"
+                        <img src="images/about/img.webp"
                             alt="Attia Altaf — Online Therapist Pakistan | Healing with Attia"
                             style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); position: relative; z-index: 1;">
                         <div
@@ -158,9 +167,7 @@
 
                 <!-- Text Column -->
                 <div style="flex: 1; min-width: 300px;" class="animate-on-scroll delay-100">
-                    <h5 class="text-primary"
-                        style="margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; font-weight: 600;">
-                        Meet Your Therapist</h5>
+                    <p class="section-label">Meet Your Therapist</p>
                     <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Attia Altaf</h2>
                     <h4
                         style="font-family: 'Inter', sans-serif; font-size: 1.2rem; color: #555; margin-bottom: 1.5rem; font-weight: 400;">
@@ -202,32 +209,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
 
                 <!-- Item 1 -->
-                <div class="card animate-on-scroll"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem;">
+                <a href="blog-depression-therapy.html" class="card animate-on-scroll"
+                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit;">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-wind"></i>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">The Weight of Worry</h4>
-                        <p style="font-size: 0.95rem; color: #555;">Anxiety, chronic stress, and that feeling of
-                            constantly being "on edge."</p>
+                        <h4 style="margin-bottom: 0.5rem;">Depression & Low Mood</h4>
+                        <p style="font-size: 0.95rem; color: #555;">Feeling empty, exhausted, or disconnected from life? Learn how therapy for depression works in Pakistan.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read more →</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 2 -->
-                <div class="card animate-on-scroll delay-100"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem;">
+                <a href="blog-postnatal-depression.html" class="card animate-on-scroll delay-100"
+                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit;">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-cloud-rain"></i>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">The Cloud of Low Mood</h4>
-                        <p style="font-size: 0.95rem; color: #555;">Depression, sadness, loneliness, and finding it hard
-                            to enjoy life.</p>
+                        <h4 style="margin-bottom: 0.5rem;">Postnatal Depression</h4>
+                        <p style="font-size: 0.95rem; color: #555;">Struggling after having a baby? You are not alone — and you are not a bad mother. Support is available.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read more →</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 3 -->
                 <a href="blog-relationships-therapy.html" class="card animate-on-scroll delay-200"
@@ -245,46 +252,46 @@
                 </a>
 
                 <!-- Item 4 -->
-                <div class="card animate-on-scroll"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem;">
+                <a href="blog-rishta-stress.html" class="card animate-on-scroll"
+                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit;">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-fingerprint"></i>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">Self-Worth & Identity</h4>
-                        <p style="font-size: 0.95rem; color: #555;">Low self-esteem, perfectionism, and overcoming the
-                            voice that says "not enough."</p>
+                        <h4 style="margin-bottom: 0.5rem;">Rishta Stress & Self-Worth</h4>
+                        <p style="font-size: 0.95rem; color: #555;">The rishta process and family expectations can damage self-esteem. Therapy helps you protect your sense of self.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read more →</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 5 -->
-                <div class="card animate-on-scroll delay-100"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem;">
+                <a href="blog-cbt-anxiety.html" class="card animate-on-scroll delay-100"
+                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit;">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-brain"></i>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">The Busy Mind</h4>
-                        <p style="font-size: 0.95rem; color: #555;">ADD/ADHD support, focus challenges, and managing a
-                            mind that never sleeps.</p>
+                        <h4 style="margin-bottom: 0.5rem;">Anxiety & CBT Therapy</h4>
+                        <p style="font-size: 0.95rem; color: #555;">CBT is the gold-standard treatment for anxiety. Find out how it works online in Pakistan — in Urdu and English.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read more →</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 6 -->
-                <div class="card animate-on-scroll delay-200"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem;">
+                <a href="blog-cbt-ocd.html" class="card animate-on-scroll delay-200"
+                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit;">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-fire-alt"></i>
                     </div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">Emotional Storms</h4>
-                        <p style="font-size: 0.95rem; color: #555;">Anger regulation, OCD, and learning to ride the
-                            waves of intense emotions.</p>
+                        <h4 style="margin-bottom: 0.5rem;">OCD & Intrusive Thoughts</h4>
+                        <p style="font-size: 0.95rem; color: #555;">Repetitive thoughts, compulsions, or religious OCD (waswasa)? ERP therapy helps break the cycle.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read more →</span>
                     </div>
-                </div>
+                </a>
 
             </div>
 
@@ -357,30 +364,26 @@
                         <a href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Book a Session</a>
                     </div>
                 </div>
-                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;" class="animate-on-scroll delay-200">
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center;">
-                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; display: block;"></i>
+                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;" class="animate-on-scroll delay-200">
+                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Communication</div>
                         <div style="font-size: 0.85rem; color: #777;">Break the cycle of conflict</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center;">
-                        <i class="fas fa-home" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; display: block;"></i>
+                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                        <i class="fas fa-home" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Joint Family</div>
                         <div style="font-size: 0.85rem; color: #777;">Navigate in-law dynamics</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center;">
-                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; display: block;"></i>
+                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Trust Repair</div>
                         <div style="font-size: 0.85rem; color: #777;">Rebuild after a difficult time</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center;">
-                        <i class="fas fa-ring" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; display: block;"></i>
+                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                        <i class="fas fa-ring" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Pre-marital</div>
                         <div style="font-size: 0.85rem; color: #777;">Start on the right foundation</div>
-                    </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; grid-column: 1 / -1;">
-                        <div style="font-size: 1.2rem; font-weight: 700; color: var(--color-primary-dark);">PKR 6,500 <span style="font-size: 0.85rem; font-weight: 400; color: #888;">/ 60-min session</span></div>
-                        <div style="font-size: 0.85rem; color: #777; margin-top: 0.2rem;">No waiting list · Urdu &amp; English · Via Zoom</div>
                     </div>
                 </div>
             </div>
@@ -534,11 +537,11 @@
                     <p>Empathy. Clarity. Healing.</p>
                     <div style="margin-top: 1rem; display: flex; gap: 1rem;">
                         <a href="https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow" class="text-primary"
-                            target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fa-lg"></i></a>
+                            target="_blank" rel="noopener noreferrer" aria-label="Healing with Attia on YouTube"><i class="fab fa-youtube fa-lg"></i></a>
                         <a href="https://www.instagram.com/healingwithattia/" class="text-primary" target="_blank"
-                            rel="noopener noreferrer"><i class="fab fa-instagram fa-lg"></i></a>
+                            rel="noopener noreferrer" aria-label="Healing with Attia on Instagram"><i class="fab fa-instagram fa-lg"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61586205224366" class="text-primary"
-                            target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-lg"></i></a>
+                            target="_blank" rel="noopener noreferrer" aria-label="Healing with Attia on Facebook"><i class="fab fa-facebook fa-lg"></i></a>
 
                     </div>
                 </div>
@@ -580,9 +583,4 @@
         target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+                                                                                                                                                                      
