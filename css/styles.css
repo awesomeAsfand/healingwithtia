@@ -3,13 +3,13 @@
    Modern, Soft, Professional
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+/* Google Fonts loaded via preload in HTML — no blocking @import */
 
 :root {
     /* Color Palette */
-    --color-primary: #8cc6b7;
+    --color-primary: #2d7a6a; /* darkened from #8cc6b7 for WCAG AA 5:1 contrast */
     /* Soft Mint */
-    --color-primary-dark: #6ba89a;
+    --color-primary-dark: #1e5c4e; /* darkened from #6ba89a for WCAG AA 7.6:1 contrast */
     --color-secondary: #a3c4f3;
     /* Soft Light Blue */
     --color-accent: #e6e6fa;
@@ -18,7 +18,7 @@
     /* Off White */
     --color-surface: #ffffff;
     --color-text: #2c3e50;
-    --color-text-light: #6c757d;
+    --color-text-light: #595f6b; /* darkened from #6c757d for WCAG AA footer contrast */
     --color-success: #2ecc71;
     --color-whatsapp: #25d366;
 
@@ -492,4 +492,17 @@ footer {
 
     h1 { font-size: 1.75rem; }
     h2 { font-size: 1.4rem; }
+}
+/* Font Awesome font-display: swap — eliminates FOIT on icon fonts */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+    font-weight: 900;
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+    font-weight: 400;
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
 }

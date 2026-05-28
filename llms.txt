@@ -1,0 +1,15 @@
+# llms.txt — AI Crawler Access
+# healingwithattia.com
+
+User-agent: *
+Allow: /
+
+# About this site
+# Healing with Attia — Online Therapy & Marriage Counseling in Pakistan
+
+Therapist: Attia Altaf, Integrative Psychotherapist (CPCAB UK certified, Level 3 & 4 Diploma)
+Services: Online therapy for anxiety, depression, OCD, trauma, PTSD, burnout, marriage counseling, couples therapy, pre-marital counseling
+Languages: Urdu, English, Punjabi
+Serving: Pakistan (Islamabad, Lahore, Karachi, and nationwide) and UK Pakistani diaspora
+Contact: https://wa.me/923285694209
+Website: https://www.healingwithattia.com
