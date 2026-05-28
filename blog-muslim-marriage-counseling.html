@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics: deferred until first user interaction -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5HNGTSNP3B', {'send_page_view': true});
+        var _gtmLoaded = false;
+        function _loadGTM() {
+            if (_gtmLoaded) return;
+            _gtmLoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5HNGTSNP3B';
+            document.head.appendChild(s);
+        }
+        ['scroll','mousedown','touchstart','keydown'].forEach(function(ev) {
+            window.addEventListener(ev, _loadGTM, {once: true, passive: true});
+        });
+        setTimeout(_loadGTM, 5000);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim &amp; Islamic Marriage Counseling in Pakistan | Healing with Attia</title>
+    <meta name="description" content="Muslim marriage counseling by a culturally sensitive, UK-certified therapist. Helping Pakistani couples navigate conflict, communication, and family pressure within an Islamic framework.">
+    <link rel="canonical" href="https://www.healingwithattia.com/blog-muslim-marriage-counseling.html">
+    <link rel="icon" href="images/logo1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <style>
+/* 
+   Healing with Attia - Core Styles
+   Modern, Soft, Professional
+*/
+
+/* Google Fonts loaded via preload in HTML — no blocking @import */
+
+/* ── Font metric overrides — eliminates font-swap CLS ─────────────────────
+   These @font-face declarations make system fallback fonts (Arial, Georgia)
+   occupy the exact same space as Inter and Lora before they load.
+   Result: zero layout shift when web fonts swap in.                       */
+@font-face {
+    font-family: 'Inter-fallback';
+    src: local('Arial');
+    ascent-override: 90%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+    size-adjust: 107%;
+}
+@font-face {
+    font-family: 'Lora-fallback';
+    src: local('Georgia');
+    ascent-override: 91%;
+    descent-override: 24%;
+    line-gap-override: 0%;
+    size-adjust: 102%;
+}
+
+
+:root {
+    /* Color Palette */
+    --color-primary: #2d7a6a; /* darkened from #8cc6b7 for WCAG AA 5:1 contrast */
+    /* Soft Mint */
+    --color-primary-dark: #1e5c4e; /* darkened from #6ba89a for WCAG AA 7.6:1 contrast */
+    --color-secondary: #a3c4f3;
+    /* Soft Light Blue */
+    --color-accent: #e6e6fa;
+    /* Lavender */
+    --color-background: #fdfdfd;
+    /* Off White */
+    --color-surface: #ffffff;
+    --color-text: #2c3e50;
+    --color-text-light: #595f6b; /* darkened from #6c757d for WCAG AA footer contrast */
+    --color-success: #2ecc71;
+    --color-whatsapp: #25d366;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Skip to content (accessibility) */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    background: var(--color-primary-dark);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    z-index: 9999;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+.skip-to-content:focus {
+    top: 0.5rem;
+}
+
+/* Section label — replaces decorative h5 use */
+.section-label {
+    color: var(--color-primary-dark);
+    font-family: 'Inter', 'Inter-fallback', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Screen-reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lora', 'Lora-fallback', serif;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.bg-surface {
+    background-color: var(--color-surface);
+}
+
+.bg-soft {
+    background-color: #f8fbfb;
+}
+
+.section {
+    padding: var(--spacing-lg) 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+    color: #0a3d22; /* dark green — WCAG AA 8:1 contrast on #25D366 */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1bcf58;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-family: 'Lora', 'Lora-fallback', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a:not(.btn) {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.nav-links a:not(.btn):hover {
+    color: var(--color-primary);
+}
+
+/* Mobile Menu */
+.mobile-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* Touch-friendly: minimum 44×44px target, no tap delay */
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        z-index: 999;
+        gap: 0.75rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-toggle {
+        display: flex; /* flex so icon centres inside the 44px target */
+    }
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--color-whatsapp);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 1001;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.floating-whatsapp::after {
+    content: 'Chat Now';
+    position: absolute;
+    right: 70px;
+    background: white;
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.floating-whatsapp:hover::after {
+    opacity: 1;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Components */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background: #eef2f5;
+    padding: var(--spacing-lg) 0 2rem;
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    /* --- Layout spacing --- */
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    footer {
+        margin-top: 2rem;
+        padding: 2rem 0 1.5rem;
+    }
+
+    /* --- Typography --- */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    /* --- Reduce large gaps in flex layouts when stacked vertically --- */
+    [style*="gap: 4rem"] { gap: 2rem !important; }
+    [style*="gap: 3rem"] { gap: 1.5rem !important; }
+
+    /* --- Fix fixed-height image frames (therapist photos) --- */
+    [style*="height:380px"],
+    [style*="height: 380px"],
+    [style*="height:400px"],
+    [style*="height: 400px"] {
+        height: 240px !important;
+    }
+
+    /* --- Fix blog card images --- */
+    [style*="height: 300px"],
+    [style*="height:300px"] {
+        height: 180px !important;
+    }
+
+    /* --- Fix hero image: height:100% collapses when flex wraps --- */
+    header img[style*="height: 100%"],
+    header img[style*="height:100%"] {
+        height: auto !important;
+        min-height: 200px;
+        width: 100% !important;
+    }
+
+    /* --- Ensure all buttons meet 44px touch target --- */
+    .btn {
+        min-height: 44px;
+    }
+
+    /* --- Floating WhatsApp: tighten position, hide tooltip --- */
+    .floating-whatsapp {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+
+    .floating-whatsapp::after {
+        display: none;
+    }
+
+    /* --- Hero section padding override (inline styles use !important) --- */
+    header.section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    /* --- Prevent any flex CTA row from overflowing narrow screens --- */
+    [style*="display: flex"][style*="gap: 1rem"],
+    [style*="display: flex"][style*="gap: 1.5rem"] {
+        flex-wrap: wrap !important;
+    }
+
+}
+
+/* Extra-small phones (≤ 400px) — prevent min-width from causing horizontal scroll */
+@media (max-width: 400px) {
+    [style*="min-width: 300px"],
+    [style*="min-width: 280px"],
+    [style*="min-width: 260px"] {
+        min-width: 0 !important;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.4rem; }
+}
+/* Font Awesome font-display: swap — eliminates FOIT on icon fonts */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+    font-weight: 900;
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+    font-weight: 400;
+    src: url('https://cdnjs.cloudflare.com/ajax
+</style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Muslim &amp; Islamic Marriage Counseling in Pakistan",
+      "description": "A guide to Muslim marriage counseling in Pakistan — what it is, how it works, and why culturally sensitive therapy helps couples navigate conflict, communication, and family pressure within an Islamic framework.",
+      "author": {"@type": "Person", "name": "Attia Altaf", "url": "https://www.healingwithattia.com/about.html"},
+      "publisher": {"@type": "Organization", "name": "Healing with Attia", "url": "https://www.healingwithattia.com"},
+      "url": "https://www.healingwithattia.com/blog-muslim-marriage-counseling.html",
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-05-28",
+      "inLanguage": "en",
+      "image": "https://www.healingwithattia.com/images/hero.webp",
+      "mainEntityOfPage": "https://www.healingwithattia.com/blog-muslim-marriage-counseling.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Is marriage counseling allowed in Islam?","acceptedAnswer":{"@type":"Answer","text":"Yes. Seeking guidance and support to improve a marriage is entirely consistent with Islamic values. Islam places great emphasis on the health and stability of the marital bond. Counseling is a structured form of the same support that elders, family, and trusted advisors have always provided — but delivered by a trained professional with the tools to help both partners communicate and heal effectively."}},
+        {"@type":"Question","name":"What is Muslim marriage counseling?","acceptedAnswer":{"@type":"Answer","text":"Muslim marriage counseling is couples therapy that is sensitive to Islamic values and the cultural context that Muslim families live within. It does not replace religious guidance but works alongside it, helping couples improve communication, resolve conflict, and rebuild connection in a way that respects their faith, their family structures, and their shared values."}},
+        {"@type":"Question","name":"Will the therapist judge us for our religious practices?","acceptedAnswer":{"@type":"Answer","text":"No. A culturally sensitive therapist works within your framework, not against it. Your faith, your family values, and your cultural background are treated as important context — not as obstacles to overcome. The goal is to help you both, within the life you are actually living."}},
+        {"@type":"Question","name":"Can we do Muslim marriage counseling online?","acceptedAnswer":{"@type":"Answer","text":"Yes, and for many couples this is actually preferable. Online sessions remove the barrier of being seen entering a clinic, offer complete privacy at home, and allow both partners to join from wherever they are. Sessions are available via Zoom in Urdu and English."}},
+        {"@type":"Question","name":"What issues does Muslim marriage counseling address?","acceptedAnswer":{"@type":"Answer","text":"Common issues include communication breakdown, joint family and in-law conflict, lack of emotional intimacy, disagreements about roles and responsibilities, trust issues, and the strain that financial or work pressure places on a marriage. Pre-marital counseling before nikah is also available."}}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.healingwithattia.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.healingwithattia.com/blog.html"},
+        {"@type":"ListItem","position":3,"name":"Muslim Marriage Counseling","item":"https://www.healingwithattia.com/blog-muslim-marriage-counseling.html"}
+      ]
+    }
+    </script>
+    <meta property="og:type"        content="article">
+    <meta property="og:site_name"   content="Healing with Attia">
+    <meta property="og:url"         content="https://www.healingwithattia.com/blog-muslim-marriage-counseling.html">
+    <meta property="og:title"       content="Muslim &amp; Islamic Marriage Counseling in Pakistan | Healing with Attia">
+    <meta property="og:description" content="Muslim marriage counseling by a culturally sensitive, UK-certified therapist. Helping Pakistani couples navigate conflict, communication, and family pressure within an Islamic framework.">
+    <meta property="og:image"       content="https://www.healingwithattia.com/images/hero.webp">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Muslim &amp; Islamic Marriage Counseling in Pakistan | Healing with Attia">
+    <meta name="twitter:description" content="Muslim marriage counseling by a culturally sensitive, UK-certified therapist. Helping Pakistani couples navigate conflict, communication, and family pressure within an Islamic framework.">
+    <meta name="twitter:image"       content="https://www.healingwithattia.com/images/hero.webp">
+</head>
+
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo"><i class="fas fa-leaf text-primary"></i> Healing with Attia</a>
+            <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+a+session"
+                    class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main-content">
+
+    <!-- Hero -->
+    <header class="section bg-soft text-center">
+        <div class="container animate-on-scroll">
+            <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">Marriage Counseling</p>
+            <h1 style="max-width: 780px; margin: 0 auto 1rem;">Muslim Marriage Counseling in Pakistan</h1>
+            <p style="font-size: 1.15rem; max-width: 620px; margin: 0 auto 2rem; color: #555;">
+                Culturally sensitive couples therapy that respects your faith, understands your family, and helps you rebuild what matters most.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/923285694209?text=Hello%2C+I+am+interested+in+Muslim+marriage+counseling"
+                    class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book a Session</a>
+                <a href="blog-relationships-therapy.html" class="btn btn-outline">About Marriage Counseling</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Body -->
+    <section class="section">
+        <div class="container" style="max-width: 820px; margin: 0 auto;">
+
+            <h2>Why Muslim Couples in Pakistan Seek Marriage Counseling</h2>
+            <p>Marriage in Muslim families is not simply a personal relationship — it is a religious bond, a family arrangement, and a social institution, all at once. That weight is real and meaningful, but it also means that when a marriage is struggling, the pressure to keep things together — quietly, privately, without involving outsiders — can be overwhelming.</p>
+            <p style="margin-top: 1rem;">Many Pakistani couples arrive at counseling after years of carrying difficulties alone. They have tried talking to family, only to find that the advice reinforces silence rather than resolution. They have hoped the problems would resolve on their own. They have stayed together out of genuine commitment to the marriage and to their faith — but they are exhausted, disconnected, or caught in the same painful cycles with no way forward.</p>
+            <p style="margin-top: 1rem;">Muslim marriage counseling exists to offer a different kind of support: professional, structured, and deeply informed by the cultural and religious context that Pakistani couples actually live within.</p>
+
+            <h2 style="margin-top: 2.5rem;">What Makes Marriage Counseling "Muslim" or "Islamic"?</h2>
+            <p>The term "Muslim marriage counseling" or "Islamic marriage counseling" does not mean therapy that replaces religious guidance or acts as a substitute for the wisdom of scholars. It means therapy that is conducted with a thorough understanding and respect for Islamic values, the structure of Muslim family life, and the specific cultural pressures that Muslim couples in Pakistan navigate.</p>
+            <p style="margin-top: 1rem;">A culturally sensitive therapist does not ask you to set aside your faith to engage with therapy. They work within your framework. Your beliefs about the sanctity of marriage, your values around family roles, your commitment to keeping the marriage intact — these are treated as the context the work happens within, not as complications to be overcome.</p>
+            <p style="margin-top: 1rem;">In practice, this means:</p>
+            <ul style="padding-left: 1.5rem; line-height: 2; margin-top: 0.5rem;">
+                <li>The therapist understands concepts like family honour, joint family dynamics, and the role of in-laws without needing them explained from scratch</li>
+                <li>The language and framing of sessions respects Islamic values around marriage, gender roles, and family responsibility</li>
+                <li>Advice and interventions are grounded in what is actually workable within your life — not imported from a cultural context that bears no resemblance to it</li>
+                <li>The goal is strengthening the marriage, not dismantling it — working from a place of genuine respect for the couple's commitment to each other and to their faith</li>
+            </ul>
+
+            <h2 style="margin-top: 2.5rem;">Common Issues Muslim Couples Bring to Counseling</h2>
+            <p>The specific struggles that bring Muslim couples to counseling vary, but certain themes appear consistently in Pakistani marriages:</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Communication Breakdown</h3>
+            <p>Many couples have never been taught how to have difficult conversations. In a culture where emotional directness is not modelled or encouraged, husbands and wives often default to silence, withdrawal, or conflict — without ever reaching genuine understanding. Communication work is the foundation of almost every couples session.</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Joint Family and In-Law Conflict</h3>
+            <p>The joint family system is one of the most frequently cited sources of marital stress in Pakistan. Decisions about where to live, how to raise children, how finances are managed, and where loyalties lie when conflict arises — all of these are complicated by the presence of in-laws in a way that is specific to this cultural context. Therapy helps couples clarify their own boundaries as a unit while navigating family relationships with care and respect.</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Emotional Distance and Lack of Intimacy</h3>
+            <p>Many couples describe a marriage that functions practically but has lost its emotional connection. Years of unresolved conflict, unspoken resentments, or simply the pressure of busy lives can create distance that gradually becomes the norm. Rebuilding genuine intimacy — emotional as much as physical — is a central part of couples work.</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Different Expectations About Roles</h3>
+            <p>One of the most common sources of conflict in Muslim Pakistani marriages is differing assumptions about roles — who earns, who manages the home, who makes decisions, who sacrifices career for family. These expectations are often never explicitly discussed before marriage, and they create friction when reality diverges from assumption. Counseling creates the space to name these differences and negotiate them honestly.</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Trust Issues and Betrayal</h3>
+            <p>Whether the betrayal is emotional or physical, trust injuries in marriage create wounds that do not heal on their own. The shame around acknowledging these difficulties — especially in a community where marriages are expected to remain private — often means couples carry them silently for years. Therapy provides a safe, completely confidential space to work through betrayal with professional support.</p>
+
+            <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">Financial Stress and its Impact on Marriage</h3>
+            <p>Economic pressure changes the dynamics of a marriage. Financial stress brings out conflict patterns that often have very little to do with money and everything to do with power, control, anxiety, and unmet needs. Therapy helps couples separate the practical from the relational and respond to each more effectively.</p>
+
+            <h2 style="margin-top: 2.5rem;">Is Marriage Counseling Allowed in Islam?</h2>
+            <p>This question comes up frequently — and the honest answer is that seeking help to strengthen a marriage is entirely consistent with Islamic values. Islam places enormous emphasis on the health and stability of the marital bond. The concept of shura (consultation) is central to Islamic decision-making. Elders, family members, and trusted community figures have always played a role in helping couples navigate difficulty.</p>
+            <p style="margin-top: 1rem;">Professional marriage counseling is a structured, evidence-based form of that same principle. It is not in tension with seeking Allah's guidance — it is one of the means through which that guidance becomes actionable. Many devout Muslim couples find that working with a therapist who respects their faith actually deepens their understanding of what Islamic marriage values mean in the everyday reality of their relationship.</p>
+
+            <h2 style="margin-top: 2.5rem;">The Stigma Around Seeking Help</h2>
+            <p>Despite the growing conversation about mental health in Pakistan, there remains a specific stigma around marriage counseling. Seeking help can feel like an admission of failure — to the family, to the community, and to yourself. There is often a fear that going to therapy signals that divorce is imminent, when in reality, most couples who seek counseling are doing so precisely because they want to save and strengthen the marriage.</p>
+            <p style="margin-top: 1rem;">Online therapy addresses part of this barrier directly. Sessions happen privately, at home, with no one else knowing. There is no clinic to be seen entering, no waiting room, no risk of your presence being noticed or interpreted. For many Pakistani couples, the privacy of an online session is what makes it possible to take the first step at all.</p>
+
+            <h2 style="margin-top: 2.5rem;">Pre-Marital Counseling for Muslim Couples</h2>
+            <p>One of the most valuable — and most underused — forms of marriage counseling is pre-marital counseling before nikah. In a culture where many couples have had limited contact before marriage, the period between engagement and nikah is an important opportunity to establish shared understanding about expectations, values, and how the relationship will work.</p>
+            <p style="margin-top: 1rem;">Pre-marital counseling covers topics like communication styles, family roles, financial management, expectations around living arrangements, and how conflict will be handled. Couples who invest in this conversation before marriage begin their relationship with a foundation that many others spend years trying to build after the wedding. See our dedicated guide to <a href="blog-premarital-counseling.html" style="color: var(--color-primary);">pre-marital counseling in Pakistan</a> for more detail.</p>
+
+            <h2 style="margin-top: 2.5rem;">What to Expect in a Muslim Marriage Counseling Session</h2>
+            <p>Sessions are 60 minutes via Zoom, in Urdu or English (or both — many clients switch freely). Both partners attend together, though individual sessions are sometimes part of the process. The first session focuses on understanding the full picture — each partner's experience, the history of the relationship, and what both are hoping for. From there, the work is structured and purposeful: specific communication exercises, guided conversations, and practical tools that couples can apply between sessions.</p>
+            <p style="margin-top: 1rem;">There is no judgment, no taking of sides, and no predetermined conclusion. The goal is to help both partners be heard, understood, and equipped to move forward — whether that means rebuilding the relationship or, in some cases, navigating a respectful and considered ending with as little damage as possible to both parties and any children involved.</p>
+
+            <!-- CTA Box -->
+            <div style="background: #f0f9f7; border-radius: 16px; padding: 2.5rem; margin: 3rem 0; border: 1px solid #c8e6e0; text-align: center;">
+                <h2 style="margin-bottom: 0.5rem;">Ready to Start?</h2>
+                <p style="color: #555; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Sessions are online, confidential, and available in Urdu and English. No waiting list — most couples get their first session within a week.</p>
+                <a href="https://wa.me/923285694209?text=Hello%2C+I+am+interested+in+Muslim+marriage+counseling"
+                    class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h3 style="color: var(--color-primary-dark); margin-top: 1.5rem;">Is marriage counseling allowed in Islam?</h3>
+            <p style="margin-bottom: 1.5rem;">Yes. Seeking support and guidance to improve a marriage is entirely consistent with Islamic values. Islam places great emphasis on the health and stability of the marital bond. Counseling is professional, structured support — the same principle as consulting a trusted elder or advisor, but with evidence-based tools for communication and healing.</p>
+
+            <h3 style="color: var(--color-primary-dark);">What is Muslim marriage counseling?</h3>
+            <p style="margin-bottom: 1.5rem;">It is couples therapy conducted by a therapist who understands Islamic values and Pakistani cultural context. Sessions respect your faith, your family structure, and your shared values — working within your framework rather than against it.</p>
+
+            <h3 style="color: var(--color-primary-dark);">Will the therapist judge us for our religious practices?</h3>
+            <p style="margin-bottom: 1.5rem;">No. A culturally sensitive therapist treats your faith and cultural background as important context, not as something to overcome. The goal is to help you both within the life you are actually living.</p>
+
+            <h3 style="color: var(--color-primary-dark);">Can we do Muslim marriage counseling online?</h3>
+            <p style="margin-bottom: 1.5rem;">Yes — and for many couples this is actually preferable. Online sessions offer complete privacy at home and remove the barrier of being seen entering a clinic. Sessions are available via Zoom in Urdu and English across Pakistan.</p>
+
+            <h3 style="color: var(--color-primary-dark);">What issues does Muslim marriage counseling address?</h3>
+            <p style="margin-bottom: 1.5rem;">Communication breakdown, joint family and in-law conflict, emotional distance, disagreements about roles and responsibilities, trust issues, financial stress on the marriage, and pre-marital preparation before nikah.</p>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="section bg-soft">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Related Reading</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+                <a href="blog-relationships-therapy.html" class="card" style="display: block; text-decoration: none; color: inherit;">
+                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Marriage Counseling in Pakistan — A Complete Guide</h3>
+                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">Everything you need to know about couples therapy in Pakistan — what it involves, how it helps, and how to get started.</p>
+                </a>
+                <a href="blog-premarital-counseling.html" class="card" style="display: block; text-decoration: none; color: inherit;">
+                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Pre-Marital Counseling Before Nikah — What to Expect</h3>
+                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">Why more Pakistani couples are investing in pre-marital counseling — and what the sessions actually cover.</p>
+                </a>
+                <a href="faq.html" class="card" style="display: block; text-decoration: none; color: inherit;">
+                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Marriage &amp; Relationships FAQ</h3>
+                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">Answers to the most common questions about marriage counseling — cost, process, what to expect, and more.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h3>Healing with Attia</h3>
+                    <p>Empathy. Clarity. Healing.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services &amp; Pricing</a></li>
+                        <li><a href="blog.html">Mental Health Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10am - 8pm PKT</p>
+                </div>
+                <div>
+                    <h3>Locations</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
+                        <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
+                        <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
+                        <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
+                        <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="border-top: 1px solid #ddd; padding-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+                &copy; 2026 Healing with Attia. All rights reserved. |
+                <a href="privacy-policy.html" style="color: var(--color-text-light);">Privacy Policy</a> |
+                <a href="terms.html" style="color: var(--color-text-light);">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923285694209?text=Hello%2C+I+am+interested+in+Muslim+marriage+counseling"
+        class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
