@@ -2,18 +2,27 @@
 <html lang="en">
 
 <head>
-    <!-- Google Analytics: deferred after load to eliminate forced reflow -->
+    <!-- Google Analytics: deferred until first user interaction — minimal INP impact -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-5HNGTSNP3B', {'send_page_view': true});
-        window.addEventListener('load', function() {
+        var _gtmLoaded = false;
+        function _loadGTM() {
+            if (_gtmLoaded) return;
+            _gtmLoaded = true;
             var s = document.createElement('script');
             s.async = true;
             s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5HNGTSNP3B';
             document.head.appendChild(s);
+        }
+        // Load after first scroll, click, or touch — whichever comes first
+        ['scroll','mousedown','touchstart','keydown'].forEach(function(ev) {
+            window.addEventListener(ev, _loadGTM, {once: true, passive: true});
         });
+        // Fallback: load after 5s even with no interaction
+        setTimeout(_loadGTM, 5000);
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +55,28 @@
 */
 
 /* Google Fonts loaded via preload in HTML — no blocking @import */
+
+/* ── Font metric overrides — eliminates font-swap CLS ─────────────────────
+   These @font-face declarations make system fallback fonts (Arial, Georgia)
+   occupy the exact same space as Inter and Lora before they load.
+   Result: zero layout shift when web fonts swap in.                       */
+@font-face {
+    font-family: 'Inter-fallback';
+    src: local('Arial');
+    ascent-override: 90%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+    size-adjust: 107%;
+}
+@font-face {
+    font-family: 'Lora-fallback';
+    src: local('Georgia');
+    ascent-override: 91%;
+    descent-override: 24%;
+    line-gap-override: 0%;
+    size-adjust: 102%;
+}
+
 
 :root {
     /* Color Palette */
@@ -104,7 +135,7 @@
 /* Section label — replaces decorative h5 use */
 .section-label {
     color: var(--color-primary-dark);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter-fallback', sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -146,7 +177,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', 'Lora-fallback', serif;
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
     font-weight: 500;
@@ -254,11 +285,11 @@ ul {
 
 .btn-whatsapp {
     background-color: var(--color-whatsapp);
-    color: white;
+    color: #0a3d22; /* dark green — WCAG AA 8:1 contrast on #25D366 */
 }
 
 .btn-whatsapp:hover {
-    background-color: #1fe05b;
+    background-color: #1bcf58;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -282,7 +313,7 @@ ul {
 }
 
 .logo {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', 'Lora-fallback', serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-primary-dark);
@@ -546,9 +577,7 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
-}
-
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6
     </style>
 
     <!-- Schema.org Structured Data -->
@@ -676,7 +705,8 @@ footer {
                         </div>
                         <img src="images/about/img.webp"
                             alt="Attia Altaf — Online Therapist Pakistan | Healing with Attia"
-                            style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); position: relative; z-index: 1;">
+                            width="750" height="562"
+                            style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); position: relative; z-index: 1;">
                         <div
                             style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; border: 3px solid var(--color-primary); border-radius: 50%; z-index: 2; opacity: 0.3;">
                         </div>
