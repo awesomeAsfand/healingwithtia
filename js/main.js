@@ -76,4 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.opacity = '0'; // Hide initially
         observer.observe(el);
     });
+
+    // ── WhatsApp click conversion tracking ──────────────────────────────
+    // Fires a `whatsapp_lead` GA4 event on any WhatsApp link click.
+    // Forces the deferred GA library to load and uses beacon transport so
+    // the event still sends even as the page navigates away to WhatsApp.
+    function fireWhatsAppLead(url) {
+        try {
+            if (typeof _loadGTM === 'function') { _loadGTM(); } // ensure GA library loads now
+            if (typeof gtag === 'function') {
+                gtag('event', 'whatsapp_lead', {
+                    'event_category': 'engagement',
+                    'event_label': url || 'whatsapp',
+                    'transport_type': 'beacon'
+                });
+            }
+        } catch (err) { /* never block the click */ }
+    }
+
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            fireWhatsAppLead(link.getAttribute('href'));
+        });
+    });
 });
