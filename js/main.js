@@ -1,6 +1,44 @@
-/* 
+/*
    Healing with Attia - Main JS
 */
+
+/* ── Geo-based pricing ────────────────────────────────────────────────────────
+   Pakistani visitors see PKR 5,000. International visitors see PKR 8,000.
+   Only visible text nodes are changed — schema/meta/JSON-LD are never touched.
+   Country is cached in sessionStorage so the API fires once per browser session.
+────────────────────────────────────────────────────────────────────────────── */
+(async function geoPrice() {
+    try {
+        let country = sessionStorage.getItem('vc');
+        if (!country) {
+            const r = await fetch('https://api.country.is/');
+            country = (await r.json()).country || 'PK';
+            sessionStorage.setItem('vc', country);
+        }
+        if (country === 'PK') return; // local visitor — nothing to do
+
+        // Wait for DOM to be ready before walking text nodes
+        if (document.readyState === 'loading') {
+            await new Promise(function(resolve) {
+                document.addEventListener('DOMContentLoaded', resolve, { once: true });
+            });
+        }
+
+        // Walk every text node in <body>, skip <script> and <style>
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        let node;
+        while ((node = walker.nextNode()) !== null) {
+            const tag = node.parentElement && node.parentElement.tagName;
+            if (tag === 'SCRIPT' || tag === 'STYLE') continue;
+            let val = node.nodeValue;
+            // PKR amount swap
+            if (val.indexOf('5,000') !== -1) val = val.replace(/5,000/g, '8,000');
+            // GBP equivalent on the UK page (£13–15 → £22–25)
+            if (val.indexOf('£13') !== -1) val = val.replace(/£13[–\-]15/g, '£22–25').replace(/£13(?=[^–\-]|$)/g, '£22');
+            if (val !== node.nodeValue) node.nodeValue = val;
+        }
+    } catch (_) { /* geolocation failed — PKR 5,000 stays, page unaffected */ }
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
