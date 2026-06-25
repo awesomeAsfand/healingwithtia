@@ -142,6 +142,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.healingwithattia.com/blog-emotional-hurt.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- CITY & DIASPORA LANDING PAGES -->
   <url>
     <loc>https://www.healingwithattia.com/therapy-lahore.html</loc>
