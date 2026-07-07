@@ -572,7 +572,18 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
 
     <style>
@@ -771,10 +782,10 @@ footer {
             <h3 style="margin-top: 1.5rem; color: var(--color-primary-dark);">What is a mental health professional and how do they help?</h3>
             <p>A mental health professional is a trained specialist who helps people manage psychological difficulties, including depression, anxiety, trauma, and relationship issues. In Pakistan, the main types are: Psychotherapists/Counselors (like Attia Altaf), who provide talk therapy; Clinical Psychologists, who assess and treat mental health conditions; and Psychiatrists, who prescribe medication. A psychotherapist is the right first step for most people dealing with stress, anxiety, or relationship problems.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Is therapy for depression available online in Pakistan?</h3>
+            <h3 style="color: var(--color-primary-dark);">Is online therapy a good option for depression in Pakistan?</h3>
             <p>Yes. Therapy for depression is available online across Pakistan at Healing with Attia. Evidence-based approaches like CBT and Integrative Therapy are highly effective for depression and can be delivered fully online via Zoom. Sessions are confidential, culturally sensitive, and conducted in Urdu or English. You do not need a referral to begin.</p>
 
-            <h3 style="color: var(--color-primary-dark);">How do I find a mental health professional in Pakistan?</h3>
+            <h3 style="color: var(--color-primary-dark);">Where should I start looking for a mental health professional in Pakistan?</h3>
             <p>Finding a mental health professional in Pakistan can feel overwhelming due to limited public resources and social stigma. The easiest way to start is by booking a WhatsApp consultation with Healing with Attia — there is no waiting list, sessions are online (so no commute), and the first step is simply a conversation about what you are struggling with. You can also search platforms like Marham.pk or Oladoc.com for listed professionals.</p>
 
             <h3 style="color: var(--color-primary-dark);">What if my parents find out I am seeing a mental health professional?</h3>
@@ -788,8 +799,8 @@ footer {
       "@type": "FAQPage",
       "mainEntity": [
         {"@type":"Question","name":"What is a mental health professional?","acceptedAnswer":{"@type":"Answer","text":"A mental health professional is a trained specialist who helps people manage psychological difficulties including depression, anxiety, and relationship issues. Psychotherapists, clinical psychologists, and psychiatrists are the main types in Pakistan."}},
-        {"@type":"Question","name":"Is therapy for depression available online in Pakistan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Healing with Attia offers online therapy for depression via Zoom across Pakistan in Urdu and English. No referral needed."}},
-        {"@type":"Question","name":"How do I find a mental health professional in Pakistan?","acceptedAnswer":{"@type":"Answer","text":"The easiest way is to book a WhatsApp consultation with Healing with Attia — no waiting list, fully online, no commute. You can also search Marham.pk or Oladoc.com."}},
+        {"@type":"Question","name":"Is online therapy a good option for depression in Pakistan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Healing with Attia offers online therapy for depression via Zoom across Pakistan in Urdu and English. No referral needed."}},
+        {"@type":"Question","name":"Where should I start looking for a mental health professional in Pakistan?","acceptedAnswer":{"@type":"Answer","text":"The easiest way is to book a WhatsApp consultation with Healing with Attia — no waiting list, fully online, no commute. You can also search Marham.pk or Oladoc.com."}},
         {"@type":"Question","name":"Is therapy confidential if I don't want my parents to know?","acceptedAnswer":{"@type":"Answer","text":"Yes. All therapy sessions are fully confidential. Your therapist will not share anything with your parents without your explicit consent."}}
       ]
     }
@@ -814,6 +825,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -822,10 +843,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>

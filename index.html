@@ -576,7 +576,30 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Marriage-counseling feature grid: stack on its own row on small phones
+   (global min-width:0 override at <=400px otherwise lets it overflow) */
+@media (max-width: 480px) {
+    .mc-feature-grid {
+        flex: 1 1 100% !important;
+        width: 100%;
+    }
+    .mc-feature-grid > div {
+        min-width: 0;
+    }
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
 
     <!-- Schema.org Structured Data -->
@@ -755,7 +778,7 @@ footer {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
 
                 <!-- Item 1 -->
-                <a href="blog-depression-therapy.html" class="card animate-on-scroll"
+                <a href="depression-therapy-pakistan.html" class="card animate-on-scroll"
                     style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -763,13 +786,13 @@ footer {
                     </div>
                     <div>
                         <h3 style="margin-bottom: 0.5rem;">Depression & Low Mood</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Feeling empty, exhausted, or disconnected from life? Learn how therapy for depression works in Pakistan.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read the guide →</span>
+                        <p style="font-size: 0.95rem; color: #555;">Feeling empty, exhausted, or disconnected from life? Evidence-based depression treatment — online, in Urdu &amp; English.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore depression treatment →</span>
                     </div>
                 </a>
 
                 <!-- Item 2 -->
-                <a href="blog-postnatal-depression.html" class="card animate-on-scroll delay-100"
+                <a href="postnatal-depression-treatment-pakistan.html" class="card animate-on-scroll delay-100"
                     style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -777,8 +800,8 @@ footer {
                     </div>
                     <div>
                         <h3 style="margin-bottom: 0.5rem;">Postnatal Depression</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Struggling after having a baby? You are not alone — and you are not a bad mother. Support is available.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read the guide →</span>
+                        <p style="font-size: 0.95rem; color: #555;">Struggling after having a baby? You are not a bad mother. Treatment built around new motherhood — online, in Urdu &amp; English.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore PND treatment →</span>
                     </div>
                 </a>
 
@@ -798,19 +821,19 @@ footer {
                 </a>
 
                 <!-- Item 4 -->
-                <a href="blog-emotional-hurt.html" class="card animate-on-scroll" style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
+                <a href="trauma-therapy-pakistan.html" class="card animate-on-scroll" style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
                     <div style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <div>
                         <h3 style="margin-bottom: 0.5rem;">Healing from Trauma &amp; Emotional Pain</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Hurt by someone you trusted — a partner, parent, or in-law? Learn to process the pain, set boundaries, and heal.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read the guide →</span>
+                        <p style="font-size: 0.95rem; color: #555;">Hurt by someone you trusted — a partner, parent, or in-law? Trauma-informed therapy to process the pain and heal.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore trauma therapy →</span>
                     </div>
                 </a>
 
                 <!-- Item 5 -->
-                <a href="blog-cbt-anxiety.html" class="card animate-on-scroll delay-100"
+                <a href="anxiety-treatment-pakistan.html" class="card animate-on-scroll delay-100"
                     style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -818,13 +841,13 @@ footer {
                     </div>
                     <div>
                         <h3 style="margin-bottom: 0.5rem;">Anxiety & CBT Therapy</h3>
-                        <p style="font-size: 0.95rem; color: #555;">CBT is the gold-standard treatment for anxiety. Find out how it works online in Pakistan — in Urdu and English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read the guide →</span>
+                        <p style="font-size: 0.95rem; color: #555;">Panic attacks, social anxiety, chronic worry — CBT is the gold-standard anxiety treatment, online in Urdu &amp; English.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore anxiety treatment →</span>
                     </div>
                 </a>
 
                 <!-- Item 6 -->
-                <a href="blog-cbt-ocd.html" class="card animate-on-scroll delay-200"
+                <a href="ocd-treatment-pakistan.html" class="card animate-on-scroll delay-200"
                     style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
                     <div
                         style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -832,8 +855,8 @@ footer {
                     </div>
                     <div>
                         <h3 style="margin-bottom: 0.5rem;">OCD & Intrusive Thoughts</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Repetitive thoughts, compulsions, or religious OCD (waswasa)? ERP therapy helps break the cycle.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Read the guide →</span>
+                        <p style="font-size: 0.95rem; color: #555;">Repetitive thoughts, compulsions, or religious OCD (waswasa)? ERP therapy breaks the cycle — online, in Urdu &amp; English.</p>
+                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore OCD treatment →</span>
                     </div>
                 </a>
 
@@ -926,7 +949,7 @@ footer {
                     <p style="margin-top: 0.75rem; color: #555;">weekly sessions &mdash; after which half of people consider themselves recovered (APA)</p>
                 </div>
             </div>
-            <p class="text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: #888; font-style: italic;">Source: <a href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you" target="_blank" rel="noopener noreferrer" style="color: inherit;">UCLA Health &amp; the American Psychological Association</p></a>
+            <p class="text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: #888; font-style: italic;">Source: <a href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you" target="_blank" rel="noopener noreferrer" style="color: inherit;">UCLA Health &amp; the American Psychological Association</a></p>
         </div>
     </section>
 
@@ -948,7 +971,7 @@ footer {
                         <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Book a Session</a>
                     </div>
                 </div>
-                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;" class="animate-on-scroll delay-200">
+                <div style="flex: 1; min-width: 280px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;" class="mc-feature-grid animate-on-scroll delay-200">
                     <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
                         <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
                         <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Communication</div>
@@ -1085,34 +1108,32 @@ footer {
 
     <!-- Areas We Serve -->
     <section class="section bg-surface">
-        <div class="container text-center">
-            <h2 style="margin-bottom: 0.75rem;">Areas We Serve</h2>
-            <p style="margin-bottom: 3rem; color: var(--color-text-light);">Online therapy available across Pakistan and for the Pakistani diaspora in the UK.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
-                <a href="therapy-islamabad.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s;">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🏛️</div>
-                    <h3 style="color: var(--color-primary);">Online Therapy — Islamabad</h3>
-                    <p style="font-size: 0.95rem;">Therapy by a therapist based in Islamabad. F-sectors, DHA, Bahria Town, Rawalpindi — sessions from wherever you are.</p>
-                    <span style="color: var(--color-primary); font-weight: 500;">Book a Session →</span>
-                </a>
-                                <a href="therapy-lahore.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s;">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🏙️</div>
-                    <h3 style="color: var(--color-primary);">Online Therapy — Lahore</h3>
-                    <p style="font-size: 0.95rem;">Skip the traffic on Canal Road or Gulberg. Professional counseling from your home in Lahore.</p>
-                    <span style="color: var(--color-primary); font-weight: 500;">Book a Session →</span>
-                </a>
-                <a href="therapy-karachi.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s;">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌊</div>
-                    <h3 style="color: var(--color-primary);">Online Therapy — Karachi</h3>
-                    <p style="font-size: 0.95rem;">No commute through Clifton or DHA traffic. Confidential therapy sessions from anywhere in Karachi.</p>
-                    <span style="color: var(--color-primary); font-weight: 500;">Book a Session →</span>
-                </a>
-                <a href="online-therapy-uk.html" class="card" style="text-decoration: none; color: inherit; transition: transform 0.2s;">
-                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">🇬🇧</div>
-                    <h3 style="color: var(--color-primary);">Pakistani Therapist — UK Diaspora</h3>
-                    <p style="font-size: 0.95rem;">Culturally sensitive therapy in Urdu & English for Pakistanis living in the UK. Early morning slots available.</p>
-                    <span style="color: var(--color-primary); font-weight: 500;">Book a Session →</span>
-                </a>
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 2.5rem;">
+                <h2 style="margin-bottom: 0.75rem;">Areas We Serve</h2>
+                <p style="color: var(--color-text-light); max-width: 620px; margin: 0 auto;">Every session is online — so it works from any city in Pakistan, and from anywhere the Pakistani diaspora lives.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="card animate-on-scroll">
+                    <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 style="margin-bottom: 0.5rem;">Across Pakistan</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
+                    <p style="margin: 0; line-height: 2.2;">
+                        <a href="therapy-islamabad.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Islamabad →</a><br>
+                        <a href="therapy-lahore.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Lahore →</a><br>
+                        <a href="therapy-karachi.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Karachi →</a>
+                    </p>
+                </div>
+                <div class="card animate-on-scroll delay-100">
+                    <div class="icon-box"><i class="fas fa-globe-asia"></i></div>
+                    <h3 style="margin-bottom: 0.5rem;">Living Abroad</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Urdu &amp; English therapy for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
+                    <p style="margin: 0; line-height: 2.2;">
+                        <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — UK →</a><br>
+                        <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Dubai &amp; UAE →</a><br>
+                        <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Saudi Arabia →</a>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -1145,6 +1166,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -1153,10 +1184,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><span style="color: var(--color-primary-dark); font-weight: 500;">Online Therapy in Pakistan</span></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>
@@ -1179,4 +1213,4 @@ footer {
     <script src="js/main.js"></script>
 </body>
 
-</html
+</html>

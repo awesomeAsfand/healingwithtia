@@ -24,7 +24,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBT for Anxiety in Pakistan | Healing with Attia</title>
+    <title>How CBT Works for Anxiety — A Guide for Pakistan</title>
     <meta name="description"
         content="What is CBT for anxiety? Learn how it works, what to expect in sessions, and how to start online CBT in Pakistan. Book via WhatsApp.">
     <link rel="canonical" href="https://www.healingwithattia.com/blog-cbt-anxiety.html">
@@ -570,7 +570,18 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
     <style>
         .blog-article {
@@ -702,7 +713,7 @@ footer {
     <meta property="og:type"        content="article">
     <meta property="og:site_name"   content="Healing with Attia">
     <meta property="og:url"         content="https://www.healingwithattia.com/blog-cbt-anxiety.html">
-    <meta property="og:title"       content="CBT for Anxiety in Pakistan — How It Works | Healing with Attia">
+    <meta property="og:title"       content="How CBT Works for Anxiety — A Guide for Pakistan">
     <meta property="og:description" content="What is CBT for anxiety? Learn how it works, what to expect in sessions, and how to start online CBT in Pakistan. Book via WhatsApp.">
     <meta property="og:image"       content="https://www.healingwithattia.com/images/blog/cbt.webp">
     <meta name="twitter:card"        content="summary_large_image">
@@ -841,7 +852,7 @@ footer {
 
                 <p>Many people in Pakistan rely on medication alone for anxiety. While medication can help manage symptoms, it does not teach you the skills to address the root causes. CBT addresses the underlying thought patterns and behavioral cycles — which is why its effects last longer.</p>
 
-                <p>The best approach for moderate-to-severe anxiety is often a combination of CBT and, if a psychiatrist recommends it, appropriate medication. At Healing with Attia, we can refer you to a psychiatrist if needed, while you do CBT with us simultaneously.</p>
+                <p>The best approach for moderate-to-severe anxiety is often a combination of <a href="anxiety-treatment-pakistan.html" style="color: var(--color-primary); font-weight: 500;">CBT-based anxiety treatment</a> and, if a psychiatrist recommends it, appropriate medication. At Healing with Attia, we can refer you to a psychiatrist if needed, while you do CBT with us simultaneously.</p>
 
                 <!-- CTA Box -->
                 <div class="cta-box">
@@ -910,6 +921,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -918,10 +939,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>

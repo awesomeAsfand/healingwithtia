@@ -565,7 +565,18 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
 
     <script type="application/ld+json">
@@ -662,6 +673,7 @@ footer {
 
             <h2>Why Muslim Couples in Pakistan Seek Marriage Counseling</h2>
             <p>Marriage in Muslim families is not simply a personal relationship — it is a religious bond, a family arrangement, and a social institution, all at once. That weight is real and meaningful, but it also means that when a marriage is struggling, the pressure to keep things together — quietly, privately, without involving outsiders — can be overwhelming.</p>
+            <p>This is true wherever you live — counseling is available online across Pakistan and for Muslim couples abroad in the <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">UK</a>, <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">Dubai &amp; the UAE</a>, and <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Saudi Arabia</a>.</p>
             <p style="margin-top: 1rem;">Many Pakistani couples arrive at counseling after years of carrying difficulties alone. They have tried talking to family, only to find that the advice reinforces silence rather than resolution. They have hoped the problems would resolve on their own. They have stayed together out of genuine commitment to the marriage and to their faith — but they are exhausted, disconnected, or caught in the same painful cycles with no way forward.</p>
             <p style="margin-top: 1rem;">Muslim marriage counseling exists to offer a different kind of support: professional, structured, and deeply informed by the cultural and religious context that Pakistani couples actually live within.</p>
 
@@ -779,6 +791,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -787,11 +809,14 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                     </ul>
                 </div>
             </div>

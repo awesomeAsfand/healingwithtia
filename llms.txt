@@ -5,11 +5,36 @@ User-agent: *
 Allow: /
 
 # About this site
-# Healing with Attia — Online Therapy & Marriage Counseling in Pakistan
+# Healing with Attia — Online Therapy & Marriage Counseling in Pakistan & for the Pakistani diaspora
 
-Therapist: Attia Altaf, Integrative Psychotherapist (CPCAB UK certified, Level 3 & 4 Diploma)
-Services: Online therapy for anxiety, depression, OCD, trauma, PTSD, burnout, marriage counseling, pre-marital counseling
+Therapist: Attia Altaf, Integrative Psychotherapist (CPCAB UK certified, Level 3 & 4 Diploma; PhD)
+Services: Online therapy for depression, anxiety, OCD (including religious OCD / waswasa), trauma & PTSD, postnatal depression, burnout, marriage counseling, pre-marital counseling
 Languages: Urdu, English, Punjabi
-Serving: Pakistan (Islamabad, Lahore, Karachi, and nationwide) and UK Pakistani diaspora
+Format: Online via Zoom, 50-minute sessions, PKR 5,000 flat fee, no waiting list, booking via WhatsApp
+Serving: Pakistan (Islamabad, Lahore, Karachi & nationwide) and the Pakistani diaspora in the UK, UAE (Dubai, Abu Dhabi), Saudi Arabia (Riyadh, Jeddah), and worldwide
 Contact: https://wa.me/923285694209
 Website: https://www.healingwithattia.com
+
+# Key pages
+Treatment services:
+- https://www.healingwithattia.com/depression-therapy-pakistan.html — Depression therapy & treatment
+- https://www.healingwithattia.com/anxiety-treatment-pakistan.html — Anxiety treatment (CBT, panic, social anxiety)
+- https://www.healingwithattia.com/ocd-treatment-pakistan.html — OCD treatment (ERP, waswasa)
+- https://www.healingwithattia.com/trauma-therapy-pakistan.html — Trauma therapy & PTSD treatment
+- https://www.healingwithattia.com/postnatal-depression-treatment-pakistan.html — Postnatal depression treatment
+- https://www.healingwithattia.com/blog-relationships-therapy.html — Online marriage counseling
+
+Locations:
+- https://www.healingwithattia.com/ — Online therapy in Pakistan (main)
+- https://www.healingwithattia.com/therapy-islamabad.html — Islamabad & Rawalpindi
+- https://www.healingwithattia.com/therapy-lahore.html — Lahore
+- https://www.healingwithattia.com/therapy-karachi.html — Karachi
+- https://www.healingwithattia.com/online-therapy-uk.html — UK diaspora
+- https://www.healingwithattia.com/therapy-dubai-uae.html — Dubai & UAE
+- https://www.healingwithattia.com/online-therapy-saudi-arabia.html — Saudi Arabia (Riyadh & Jeddah)
+
+About & booking:
+- https://www.healingwithattia.com/about.html — Therapist credentials & profile
+- https://www.healingwithattia.com/services.html — Services & pricing
+- https://www.healingwithattia.com/faq.html — Frequently asked questions
+- https://www.healingwithattia.com/blog.html — Mental health blog (Pakistan-focused guides)

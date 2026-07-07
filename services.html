@@ -570,13 +570,38 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
 
         /* --- Equal-height service cards with bottom-aligned CTAs (responsive) --- */
         .svc-grid { align-items: stretch; }
         .svc-grid > .card { display: flex; flex-direction: column; height: 100%; }
         .svc-grid > .card > .btn:last-child { margin-top: auto; align-self: flex-start; }
-    </style>
+    
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Core services grid: equal-height cards with action buttons pinned to the bottom */
+.svc-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+.svc-actions {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+</style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -721,7 +746,7 @@ footer {
 
     <header id="main-content" class="section bg-soft text-center">
         <div class="container animate-on-scroll">
-            <h1>Online Therapy for Anxiety, Depression & Counseling in Pakistan</h1>
+            <h1>Therapy Services, Pricing & Booking in Pakistan</h1>
             <p style="font-size: 1.2rem;">Affordable, confidential therapy for anxiety, depression, marriage counseling,
                 OCD, ADHD, and stress management — in Urdu &amp; English.
             </p>
@@ -755,14 +780,15 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Joint Family &amp; In-law Conflict</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Divorce &amp; Separation Support</li>
                     </ul>
-                    <a href="blog-relationships-therapy.html" class="btn btn-primary btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Online Marriage Counseling in Pakistan</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-relationships-therapy.html" class="btn btn-primary btn-sm">Explore Marriage Counseling &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-user"></i></div>
-                    <h3>Individual Therapy (Anxiety & Depression)</h3>
+                    <h3><a href="anxiety-treatment-pakistan.html" style="color: inherit;">Individual Therapy (Anxiety & Depression)</a></h3>
                     <p style="margin-bottom: 1rem;">One-on-one private sessions to explore your thoughts and feelings in
                         a safe space.</p>
                     <ul class="fa-ul" style="text-align: left; margin-bottom: 1.5rem; margin-left: 1.5rem;">
@@ -771,15 +797,15 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Self-esteem issues</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Personal growth</li>
                     </ul>
-                    <a href="blog-anxiety-pakistan.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Individual+Therapy"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-anxiety-pakistan.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Individual+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-200">
                     <div class="icon-box"><i class="fas fa-cloud-rain"></i></div>
-                    <h3>Therapy for Depression</h3>
+                    <h3><a href="depression-therapy-pakistan.html" style="color: inherit;">Therapy for Depression</a></h3>
                     <p style="margin-bottom: 1rem;">Structured therapy for depression — helping you move from
                         hopelessness to hope, using evidence-based CBT techniques.</p>
                     <ul class="fa-ul" style="text-align: left; margin-bottom: 1.5rem; margin-left: 1.5rem;">
@@ -788,24 +814,25 @@ footer {
                         </li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Grief & Loss</li>
                     </ul>
-                    <a href="blog-depression-therapy.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Depression+Therapy"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-depression-therapy.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Depression+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-baby"></i></div>
-                    <h3>Postnatal Depression</h3>
+                    <h3><a href="postnatal-depression-treatment-pakistan.html" style="color: inherit;">Postnatal Depression</a></h3>
                     <p style="margin-bottom: 1rem;">Support for mothers struggling after childbirth — you are not alone, and you are not a bad mother. Therapy helps you recover, cope, and reconnect with your baby.</p>
                     <ul class="fa-ul" style="text-align: left; margin-bottom: 1.5rem; margin-left: 1.5rem;">
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Persistent low mood after birth</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Guilt, anxiety &amp; exhaustion</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Bonding &amp; adjustment support</li>
                     </ul>
-                    <a href="blog-postnatal-depression.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Postnatal+Depression+Support" class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-postnatal-depression.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Postnatal+Depression+Support" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-100">
@@ -818,15 +845,15 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>CBT for OCD (ERP)</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>CBT for Depression</li>
                     </ul>
-                    <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+CBT+Therapy"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+CBT+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll">
                     <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
-                    <h3>OCD Therapy (ERP & CBT)</h3>
+                    <h3><a href="ocd-treatment-pakistan.html" style="color: inherit;">OCD Therapy (ERP & CBT)</a></h3>
                     <p style="margin-bottom: 1rem;">Specialized OCD therapy using Exposure & Response Prevention (ERP) —
                         the most effective treatment for obsessive thoughts and compulsive behaviors.</p>
                     <ul class="fa-ul" style="text-align: left; margin-bottom: 1.5rem; margin-left: 1.5rem;">
@@ -835,10 +862,10 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Contamination OCD</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Intrusive Thoughts</li>
                     </ul>
-                    <a href="blog-cbt-ocd.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+OCD+Therapy"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-cbt-ocd.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+OCD+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-200">
@@ -852,25 +879,26 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Relaxation Techniques
                         </li>
                     </ul>
-                    <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Anxiety+Counseling"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-cbt-anxiety.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Anxiety+Counseling" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                             <!-- Service: Trauma Therapy -->
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h3>Trauma Therapy</h3>
+                    <h3><a href="trauma-therapy-pakistan.html" style="color: inherit;">Trauma Therapy</a></h3>
                     <p style="margin-bottom: 1rem;">Gentle, evidence-based therapy for emotional wounds, betrayal, abuse, and PTSD — including hurt caused by people you trusted.</p>
                     <ul class="fa-ul" style="text-align: left; margin-bottom: 1.5rem; margin-left: 1.5rem;">
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Emotional &amp; relational trauma</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Betrayal, abuse &amp; PTSD</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Rebuilding safety &amp; trust</li>
                     </ul>
-                    <a href="blog-emotional-hurt.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Trauma+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-emotional-hurt.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Trauma+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
             </div>
 
@@ -888,8 +916,9 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Behavioural addiction support</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Relapse-prevention coping skills</li>
                     </ul>
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Addiction+Support"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Addiction+Support" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll">
@@ -897,20 +926,20 @@ footer {
                     <h3>Teen Counseling & Support</h3>
                     <p style="margin-bottom: 1rem;">Support for teenagers facing academic pressure, identity issues, or
                         social stress.</p>
-                    <a href="blog-exam-stress.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Teen+Therapy"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-exam-stress.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Teen+Therapy" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-briefcase"></i></div>
                     <h3>Career Counseling & Guidance</h3>
                     <p style="margin-bottom: 1rem;">Guidance for workplace stress, burnout, and career path clarity.</p>
-                    <a href="blog-burnout-professionals.html" class="btn btn-outline btn-sm" style="margin-bottom: 0.5rem; display: inline-block;">Read the guide &rarr;</a>
-                    &nbsp;
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Career+Counseling"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a href="blog-burnout-professionals.html" class="btn btn-outline btn-sm">Read the guide &rarr;</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+Career+Counseling" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
                 <div class="card animate-on-scroll delay-200">
@@ -922,8 +951,9 @@ footer {
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Mindfulness & focus techniques</li>
                         <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>Focus & productivity coaching</li>
                     </ul>
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+ADHD+Support"
-                        class="btn btn-outline btn-sm">Book Session</a>
+                    <div class="svc-actions">
+                        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+want+to+book+ADHD+Support" class="btn btn-outline btn-sm">Book Session</a>
+                    </div>
                 </div>
 
             </div>
@@ -1082,6 +1112,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -1090,10 +1130,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>

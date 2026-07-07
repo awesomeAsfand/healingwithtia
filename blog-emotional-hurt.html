@@ -572,7 +572,18 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
 
     <style>
@@ -788,7 +799,7 @@ footer {
             <p>If the pain feels too heavy to carry alone, therapy gives you a private, judgment-free space to process it. That is not a last resort &mdash; for deep or repeated hurt, it is often the most direct path forward.</p>
 
             <h2>When the hurt runs deep: how therapy helps</h2>
-            <p>When emotional pain hardens into trauma &mdash; flashbacks, constant alertness, numbness, or trouble trusting anyone &mdash; structured therapy works, and the research is strong. A <a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/16740177/">meta-analysis of trauma-focused therapies</a> found trauma-focused approaches such as CBT and EMDR produce <strong>large reductions</strong> in trauma symptoms, and they work just as well delivered <strong>online</strong> as in person, according to <a target="_blank" rel="noopener noreferrer" href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you">UCLA Health</a>'s review of more than 60 studies.</p>
+            <p>When emotional pain hardens into trauma &mdash; flashbacks, constant alertness, numbness, or trouble trusting anyone &mdash; structured <a href="trauma-therapy-pakistan.html" style="color: var(--color-primary); font-weight: 500;">trauma therapy</a> works, and the research is strong. A <a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/16740177/">meta-analysis of trauma-focused therapies</a> found trauma-focused approaches such as CBT and EMDR produce <strong>large reductions</strong> in trauma symptoms, and they work just as well delivered <strong>online</strong> as in person, according to <a target="_blank" rel="noopener noreferrer" href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you">UCLA Health</a>'s review of more than 60 studies.</p>
             <p>This matters especially in Pakistan, where mental-health support is scarce &mdash; roughly <strong>0.19 psychiatrists per 100,000 people</strong> and an estimated <strong>24 million</strong> who need care (<a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full">Frontiers in Health Services (2024)</a>). Online therapy closes that gap: the same UK-certified support, in Urdu or English, from wherever you are &mdash; at home or anywhere in the diaspora.</p>
 
             <div style="background-color:#f8f9fa;padding:2.5rem;border-radius:12px;margin:3rem 0;border:1px solid #eee;text-align:center;"><h3 style="margin-top:0;color:var(--color-primary-dark);">Talk to a UK-Certified Therapist</h3><p>If someone has hurt you and you are struggling to move on, you do not have to carry it alone.</p><a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I+read+your+article+on+healing+from+emotional+hurt+and+would+like+to+book" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book a Session on WhatsApp</a><p style="font-size: 0.85rem; color: #888; margin: 1rem 0 0;">Online &middot; Urdu &amp; English &middot; PKR 5,000 / 50 min &middot; no waiting list</p></div>
@@ -832,6 +843,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -840,10 +861,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>

@@ -569,7 +569,18 @@ footer {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
     font-weight: 400;
-    src: url('https://cdnjs.cloudflare.com/ajax
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Small phones (<=400px): card grids with 280-320px track minimums cannot fit
+   the ~256px content width — collapse them to a single column instead of overflowing */
+@media (max-width: 400px) {
+    [style*="minmax(280px"],
+    [style*="minmax(300px"],
+    [style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+    }
+}
 </style>
 
     <!-- Schema: LocalBusiness + BreadcrumbList + FAQ -->
@@ -626,11 +637,11 @@ footer {
     <meta property="og:type"        content="website">
     <meta property="og:site_name"   content="Healing with Attia">
     <meta property="og:url"         content="https://www.healingwithattia.com/therapy-karachi.html">
-    <meta property="og:title"       content="Online Therapy & Marriage Counseling Karachi | Healing with Attia">
+    <meta property="og:title"       content="Therapy & Marriage Counseling Karachi | Healing with Attia">
     <meta property="og:description" content="Online therapy & marriage counseling in Karachi by a UK-certified therapist. Anxiety, OCD & relationships in Urdu & English. No commute. Book on WhatsApp.">
     <meta property="og:image"       content="https://www.healingwithattia.com/images/hero.webp">
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Online Therapy & Marriage Counseling Karachi | Healing with Attia">
+    <meta name="twitter:title"       content="Therapy & Marriage Counseling Karachi | Healing with Attia">
     <meta name="twitter:description" content="Online therapy & marriage counseling in Karachi by a UK-certified therapist. Anxiety, OCD & relationships in Urdu & English. No commute. Book on WhatsApp.">
     <meta name="twitter:image"       content="https://www.healingwithattia.com/images/hero.webp">
 </head>
@@ -806,7 +817,7 @@ footer {
                 <div style="flex: 1; min-width: 300px;" class="animate-on-scroll delay-200">
                     <h2>Your Therapist: Attia Altaf</h2>
                     <h4 class="text-primary">Integrative Psychotherapist (CPCAB-UK)</h4>
-                    <p style="margin-bottom: 1rem;">I am a UK-certified Integrative Psychotherapist with over 8 years of experience. I work with clients across Pakistan — including many in Karachi navigating the unique pressures of life in this city.</p>
+                    <p style="margin-bottom: 1rem;">I am a UK-certified Integrative Psychotherapist with over 8 years of experience. I provide <a href="/">online therapy across Pakistan</a> — including for many clients in Karachi navigating the unique pressures of life in this city.</p>
                     <p style="margin-bottom: 1.5rem;">Whether it is the relentlessness of the business world in SITE or Clifton, the weight of running a household in DHA, or the loneliness of feeling like no one around you talks about mental health — I have been there with clients, and I can be there with you.</p>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-certificate text-primary" style="margin-right: 8px;"></i> Level 3 & 4 Diploma, Integrative Psychotherapy (CPCAB-UK)</li>
@@ -925,6 +936,16 @@ footer {
                     </ul>
                 </div>
                 <div>
+                    <h3>Treatments</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
+                        <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
+                        <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
+                        <li><a href="trauma-therapy-pakistan.html">Trauma Therapy</a></li>
+                        <li><a href="postnatal-depression-treatment-pakistan.html">Postnatal Depression</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> healingwithattia@gmail.com</p>
                     <p><i class="fab fa-whatsapp"></i> +92 328 5694209</p>
@@ -933,10 +954,13 @@ footer {
                 <div>
                     <h3>Locations</h3>
                     <ul style="line-height: 2;">
+                        <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><span style="color: var(--color-primary-dark); font-weight: 500;">Therapy in Karachi</span></li>
                         <li><a href="online-therapy-uk.html">UK Diaspora Therapy</a></li>
+                        <li><a href="therapy-dubai-uae.html">Therapy in Dubai / UAE</a></li>
+                        <li><a href="online-therapy-saudi-arabia.html">Therapy in Saudi Arabia</a></li>
                         <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>
