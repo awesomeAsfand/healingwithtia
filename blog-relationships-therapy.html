@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Marriage Counseling in Pakistan &amp; for Pakistanis Abroad</title>
-    <meta name="description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English, from Pakistan or anywhere abroad. Book on WhatsApp.">
+    <meta name="description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English. Start even if your spouse won't attend. Pakistan & abroad. Book on WhatsApp.">
     <link rel="canonical" href="https://www.healingwithattia.com/blog-relationships-therapy.html">
 
     <!-- Favicon -->
@@ -659,26 +659,6 @@ footer {
         .credentials-strip .cred-info { flex: 1; min-width: 200px; }
         .credentials-strip .cred-info h4 { margin: 0 0 0.25rem; color: var(--color-primary-dark); font-size: 1rem; }
         .credentials-strip .cred-info p { margin: 0; font-size: 0.88rem; color: #666; line-height: 1.6; }
-        .city-callouts {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-            margin: 1.5rem 0 2rem;
-        }
-        .city-card {
-            padding: 1.4rem;
-            border-radius: 10px;
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .city-card i { font-size: 1.6rem; color: var(--color-primary); margin-bottom: 0.6rem; display: block; }
-        .city-card h4 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--color-primary-dark); }
-        .city-card p { margin: 0 0 1rem; font-size: 0.9rem; color: #666; flex: 1; }
-        .city-card .btn { margin-top: auto; width: 100%; box-sizing: border-box; min-height: 2.9rem; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; }
         .approach-steps {
             counter-reset: step;
             list-style: none;
@@ -728,6 +708,28 @@ footer {
         .pricing-card h4 { margin: 0 0 0.5rem; color: var(--color-primary-dark); }
         .pricing-card .price { font-size: 2rem; font-weight: 700; color: var(--color-primary-dark); display: block; margin: 0.5rem 0; }
         .pricing-card .price-sub { font-size: 0.85rem; color: #888; margin-bottom: 1.2rem; }
+
+        /* ── Redesign additions ─────────────────────────────── */
+        .stat-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; max-width: 1000px; margin: 0 auto; }
+        .stat-card { text-align: center; padding: 1.4rem 1rem; background: #fff; border: 1px solid #e8f0f0; border-radius: 12px; }
+        .stat-card .stat-num { display: block; font-family: 'Lora', Georgia, serif; font-size: 2rem; font-weight: 600; color: var(--color-primary-dark); line-height: 1.1; margin-bottom: 0.4rem; }
+        .stat-card .stat-label { font-size: 0.92rem; color: #555; line-height: 1.45; }
+        .stat-card .stat-src { display: block; font-size: 0.75rem; color: #aab; margin-top: 0.5rem; }
+        .stat-card .stat-src a { color: #aab; }
+        .toc-box { background: #f8fbfb; border: 1px solid #e8f0f0; border-radius: 12px; padding: 1.2rem 1.5rem; margin: 0 0 2.5rem; }
+        .toc-box .toc-title { margin: 0 0 0.6rem; color: var(--color-primary-dark); font-size: 1rem; font-weight: 600; }
+        .toc-box ol { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 2rem; font-size: 0.92rem; }
+        .toc-box li { margin-bottom: 0.35rem; }
+        .toc-box a { color: var(--color-primary); text-decoration: none; }
+        .toc-box a:hover { text-decoration: underline; }
+        @media (max-width: 640px) { .toc-box ol { columns: 1; } }
+        .pull-quote { border-left: 4px solid var(--color-primary); background: #f8fbfb; padding: 1.2rem 1.5rem; margin: 1.8rem 0; font-family: 'Lora', Georgia, serif; font-size: 1.15rem; color: var(--color-primary-dark); border-radius: 0 12px 12px 0; }
+        .pull-quote .pq-src { display: block; font-family: 'Inter', Arial, sans-serif; font-size: 0.8rem; color: #889; margin-top: 0.5rem; }
+        .sources-box { font-size: 0.82rem; color: #778; background: #f8fbfb; border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 2.5rem; }
+        .sources-box h4 { font-size: 0.9rem; margin: 0 0 0.6rem; color: #556; }
+        .sources-box ul { margin: 0; padding-left: 1.1rem; }
+        .sources-box li { margin-bottom: 0.3rem; }
+        .sources-box a { color: var(--color-primary); }
     </style>
 
     <!-- Schema: Service -->
@@ -738,7 +740,7 @@ footer {
       "name": "Marriage Counseling Pakistan",
       "alternateName": ["Online Marriage Counseling", "Relationship Counseling Pakistan"],
       "serviceType": "Marriage Counseling",
-      "description": "Professional online marriage counseling in Pakistan by Attia Altaf, UK-certified Integrative Psychotherapist. Sessions via Zoom in Urdu and English, available across Pakistan.",
+      "description": "Professional online marriage counseling in Pakistan by Attia Altaf, UK-certified Integrative Psychotherapist. Individual-format sessions via Zoom in Urdu and English — you can work on your marriage even if your spouse does not attend. Available across Pakistan and worldwide.",
       "provider": {
         "@type": "Person",
         "name": "Attia Altaf",
@@ -771,7 +773,15 @@ footer {
           "name": "What is marriage counseling and what happens in a session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Marriage counseling is professional therapy where a trained therapist works with partners to improve communication, resolve conflict, rebuild trust, and strengthen the relationship. A session typically lasts 50 minutes. The therapist does not take sides — they act as a neutral guide, helping both partners express themselves and hear each other in a safe, structured environment."
+            "text": "Marriage counseling is professional therapy where a trained therapist works with you to improve communication, resolve conflict, rebuild trust, and strengthen your marriage. At Healing with Attia, sessions are individual — you attend on your own, and your spouse may occasionally join a session if it would help. Sessions are 50 minutes. The therapist acts as a neutral guide — not a judge — helping you work through what is happening in a structured, safe environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can marriage counseling help if my spouse refuses to attend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Counseling at Healing with Attia is designed for exactly this situation — sessions are individual by default. A marriage is a system: when one person changes how they communicate, set boundaries, and respond to conflict, the dynamic between both partners shifts. Many clients start alone and see meaningful change in the relationship without their spouse ever attending."
           }
         },
         {
@@ -784,23 +794,31 @@ footer {
         },
         {
           "@type": "Question",
-          "name": "Does online marriage counseling work in Pakistan?",
+          "name": "Does online marriage counseling work as well as in-person?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Research consistently shows that online marriage counseling is as effective as in-person therapy. For Pakistani clients, online sessions have additional benefits: no stigma of being seen at a clinic, attend from wherever you feel safe, and no travel cost. Sessions are conducted via Zoom in Urdu and English."
+            "text": "Yes. A randomized clinical trial and a 2021 meta-analysis covering more than 4,300 clients found therapy delivered by video call equivalent to in-person therapy in outcomes, client satisfaction, and the quality of the therapeutic relationship. For Pakistani clients, online sessions add privacy benefits: no clinic, no waiting room, no travel. Sessions are conducted via Zoom in Urdu and English."
           }
         },
         {
           "@type": "Question",
-          "name": "How many marriage counseling sessions will we need?",
+          "name": "What is the success rate of marriage counseling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most clients see meaningful improvement in 8 to 12 sessions of marriage counseling. Addressing a specific issue such as communication breakdown may see changes in as few as 6 sessions. Situations involving long-standing conflict, trust repair, or separation decisions may take longer. You are never locked into a fixed number — progress is reviewed throughout."
+            "text": "Research on relationship-focused therapy consistently shows the majority of clients experience meaningful improvement. Outcomes are strongest when help is sought early — research from The Gottman Institute found that couples wait an average of six years after problems begin before seeking help, which makes negative patterns harder (but not impossible) to change."
           }
         },
         {
           "@type": "Question",
-          "name": "Can we do marriage counseling in Urdu?",
+          "name": "How many marriage counseling sessions will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clients see meaningful improvement in 8 to 12 sessions. Addressing a specific issue such as communication may show changes in as few as 6 sessions. Situations involving long-standing conflict or trust repair may take longer. You are never locked into a fixed number — progress is reviewed throughout and you decide when to continue or conclude."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I do marriage counseling in Urdu?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Attia Altaf conducts marriage counseling sessions in Urdu and English. You can switch between languages at any time during the session. Many clients find it easier to express deep emotions in Urdu, especially when discussing in-law dynamics, intimacy, or family conflict."
@@ -808,21 +826,48 @@ footer {
         },
         {
           "@type": "Question",
-          "name": "Is marriage counseling available in Lahore and Karachi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Attia offers online marriage counseling across all of Pakistan. For city-specific details, see the dedicated pages for marriage counseling in Karachi and marriage counseling in Lahore. Both partners can join the same Zoom session from any city."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this counseling appropriate for Muslim marriages?",
+          "name": "Is this counseling appropriate for Muslim clients?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Attia Altaf takes a culturally and religiously sensitive approach to marriage counseling, understanding the Islamic values around marriage, family, and respect. Sessions are conducted with full regard for Islamic principles, and the approach is always adapted to what feels right for each person."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is marriage counseling available in Lahore and Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — see the dedicated pages for marriage counseling in Lahore, marriage counseling in Karachi, and marriage counseling in Islamabad on healingwithattia.com."
+          }
         }
       ]
+    }
+    </script>
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Marriage Counseling in Pakistan — Online, Private & in Urdu",
+      "description": "Evidence-based online marriage counseling for Pakistanis at home and abroad. Individual-format sessions in Urdu and English — start even if your spouse won't attend.",
+      "url": "https://www.healingwithattia.com/blog-relationships-therapy.html",
+      "mainEntityOfPage": "https://www.healingwithattia.com/blog-relationships-therapy.html",
+      "image": "https://www.healingwithattia.com/images/blog/relationshipss.webp",
+      "dateModified": "2026-07-21",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Attia Altaf",
+        "jobTitle": "Integrative Psychotherapist",
+        "url": "https://www.healingwithattia.com/about.html",
+        "hasCredential": ["CPCAB Level 3 Diploma in Integrative Psychotherapy", "CPCAB Level 4 Diploma in Integrative Psychotherapy"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Healing with Attia",
+        "url": "https://www.healingwithattia.com/"
+      }
     }
     </script>
 
@@ -842,11 +887,11 @@ footer {
     <meta property="og:site_name"   content="Healing with Attia">
     <meta property="og:url"         content="https://www.healingwithattia.com/blog-relationships-therapy.html">
     <meta property="og:title"       content="Online Marriage Counseling Pakistan | Healing with Attia">
-    <meta property="og:description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English, from Pakistan or anywhere abroad. Book on WhatsApp.">
+    <meta property="og:description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English. Start even if your spouse won't attend. Pakistan & abroad. Book on WhatsApp.">
     <meta property="og:image"       content="https://www.healingwithattia.com/images/blog/relationshipss.webp">
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="Online Marriage Counseling Pakistan | Healing with Attia">
-    <meta name="twitter:description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English, from Pakistan or anywhere abroad. Book on WhatsApp.">
+    <meta name="twitter:description" content="Online marriage counseling with a UK-certified Pakistani therapist — via Zoom in Urdu & English. Start even if your spouse won't attend. Pakistan & abroad. Book on WhatsApp.">
     <meta name="twitter:image"       content="https://www.healingwithattia.com/images/blog/relationshipss.webp">
 </head>
 
@@ -877,15 +922,17 @@ footer {
                 <i class="fas fa-heart"></i> Marriage Counseling — Pakistan
             </p>
             <h1 style="max-width: 860px; margin: 0 auto 1rem;">Marriage Counseling in Pakistan —<br>Online, Private &amp; in Urdu</h1>
-            <p style="font-size: 1.15rem; max-width: 640px; margin: 0 auto 2rem; color: #555;">
-                Professional online marriage counseling by a UK-certified Integrative Psychotherapist. Sessions via Zoom in Urdu and English — available across Pakistan and worldwide.
+            <p style="font-size: 1.15rem; max-width: 640px; margin: 0 auto 1rem; color: #555;">
+                Professional online marriage counseling by a UK-certified Integrative Psychotherapist. Individual sessions via Zoom in Urdu and English — available across Pakistan and worldwide.
+            </p>
+            <p style="font-size: 1rem; max-width: 640px; margin: 0 auto 2rem; color: var(--color-primary-dark); font-weight: 500;">
+                You don't need your spouse to agree to therapy to start improving your marriage. You can begin alone.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling"
                     class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Book Marriage Counseling</a>
                 <a href="services.html" class="btn btn-outline">View All Services</a>
             </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 1rem;">PKR 5,000 per session · No waiting list · Mon–Sat, 10am–8pm PKT</p>
         </div>
     </header>
 
@@ -902,46 +949,92 @@ footer {
         </div>
     </section>
 
+    <!-- Stat band: the numbers no one talks about -->
+    <section class="section" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">The Numbers No One Talks About</h2>
+            <p style="text-align: center; color: #667; max-width: 620px; margin: 0 auto 2rem;">Marriages in Pakistan are under more pressure than ever — and help works better, and earlier, than most people think.</p>
+            <div class="stat-band">
+                <div class="stat-card">
+                    <span class="stat-num">100,000+</span>
+                    <span class="stat-label">divorce &amp; khula cases registered in Pakistan in 2025 — up from ~85,000 in 2023</span>
+                    <span class="stat-src"><a target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025">Express Tribune, 2025</a></span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">6 years</span>
+                    <span class="stat-label">the average time couples wait after problems begin before seeking any help</span>
+                    <span class="stat-src"><a target="_blank" rel="noopener noreferrer" href="https://www.gottman.com/blog/were-on-the-brink/">The Gottman Institute</a></span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">= In-person</span>
+                    <span class="stat-label">therapy by video call is equivalent to in-person in outcomes and satisfaction, across 4,300+ clients</span>
+                    <span class="stat-src"><a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.773030/full">Frontiers in Psychology, 2021</a></span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">~90%</span>
+                    <span class="stat-label">of Pakistanis who need mental-health support never receive professional care</span>
+                    <span class="stat-src"><a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full">Frontiers in Health Services, 2024</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <section class="section">
+    <section class="section" style="padding-top: 1.5rem;">
         <div class="container pillar-content">
 
-            <h2>What Is Marriage Counseling?</h2>
+            <nav class="toc-box" aria-label="On this page">
+                <p class="toc-title">On this page</p>
+                <ol>
+                    <li><a href="#what-is">What is marriage counseling?</a></li>
+                    <li><a href="#signs">Signs your marriage needs help</a></li>
+                    <li><a href="#alone">Your spouse won't come? Start anyway</a></li>
+                    <li><a href="#pakistan">Why marriage in Pakistan is different</a></li>
+                    <li><a href="#how-it-works">How counseling works, session by session</a></li>
+                    <li><a href="#approach">Attia's approach &amp; credentials</a></li>
+                    <li><a href="#online">Does online counseling actually work?</a></li>
+                    <li><a href="#islamic">Islamic &amp; cultural sensitivity</a></li>
+                    <li><a href="#fees">Fees &amp; booking</a></li>
+                    <li><a href="#faq-heading">Frequently asked questions</a></li>
+                </ol>
+            </nav>
+
+            <h2 id="what-is">What Is Marriage Counseling?</h2>
             <p>Marriage counseling — also known as relationship counseling — is professional therapy where a trained therapist works with you to address the patterns, communication gaps, and unresolved issues that are putting strain on your marriage.</p>
             <p>In Pakistan, marriage is rarely just about two people. It involves families, expectations, financial pressures, and deeply rooted cultural roles. A professional marriage counselor understands this context — and works within it, not against it. The goal is not to change your culture or your values. It is to help you communicate, reconnect, and build a marriage that actually works.</p>
-            <p>At Healing with Attia, marriage counseling is conducted online via Zoom — in Urdu and English — making it accessible for clients across Lahore, Karachi, Islamabad, and anywhere in Pakistan. Sessions can include one or both partners, depending on your situation.</p>
+            <p>At Healing with Attia, marriage counseling is conducted online via Zoom — in Urdu and English — making it accessible from anywhere in Pakistan and abroad. Sessions are <strong>individual</strong>: you attend on your own, work through what is happening in your marriage with a trained therapist, and apply what you learn at home. If it would genuinely help, your spouse may occasionally join a session — but the work never depends on them agreeing to therapy.</p>
 
-            <h2>Signs Your Marriage May Benefit from Counseling</h2>
-            <p>Many people wait too long before seeking help — often until the relationship is in crisis. In reality, the earlier you seek marriage counseling, the better the outcomes. Here are the signs that it may be time:</p>
+            <h2 id="signs">Signs Your Marriage May Benefit from Counseling</h2>
+            <p>Many people wait too long before seeking help — often until the relationship is in crisis. Research from The Gottman Institute found that couples wait an average of <a target="_blank" rel="noopener noreferrer" href="https://www.gottman.com/blog/were-on-the-brink/" style="color: var(--color-primary);">six years after problems begin</a> before reaching for support — six years in which negative patterns harden into habits. The same research program identified four communication patterns so corrosive that their presence predicted divorce with over 90% accuracy: criticism, contempt, defensiveness, and stonewalling. If you recognise any of the patterns below, it is time — not because your marriage is doomed, but because this is the window where change is easiest:</p>
 
             <div class="signs-grid">
                 <div class="sign-card">
-                    <h4><i class="fas fa-comment-slash text-primary" style="margin-right: 6px;"></i> Communication Has Broken Down</h4>
-                    <p>Every conversation ends in an argument. Or you have stopped talking about real things altogether. Silence and withdrawal have replaced connection.</p>
+                    <h4><i class="fas fa-comment-slash text-primary" style="margin-right: 6px;"></i> Criticism Has Replaced Complaints</h4>
+                    <p>"You never..." and "You always..." — attacking your spouse's character instead of raising a specific issue. The first of Gottman's four warning patterns.</p>
+                </div>
+                <div class="sign-card">
+                    <h4><i class="fas fa-angry text-primary" style="margin-right: 6px;"></i> Contempt: Eye-Rolling &amp; Taunts</h4>
+                    <p>Sarcasm, mockery, speaking down to each other. In Gottman's research, contempt was the single strongest predictor of divorce — and the most urgent to address.</p>
+                </div>
+                <div class="sign-card">
+                    <h4><i class="fas fa-shield-alt text-primary" style="margin-right: 6px;"></i> Defensiveness on Both Sides</h4>
+                    <p>Every complaint is met with a counter-complaint. Nobody feels heard, and every conversation becomes a case being argued rather than a problem being solved.</p>
+                </div>
+                <div class="sign-card">
+                    <h4><i class="fas fa-user-times text-primary" style="margin-right: 6px;"></i> Stonewalling &amp; Silence</h4>
+                    <p>One of you shuts down, walks out, or goes silent for days. Withdrawal feels safer than conflict — but it slowly turns a marriage into coexistence between strangers.</p>
                 </div>
                 <div class="sign-card">
                     <h4><i class="fas fa-home text-primary" style="margin-right: 6px;"></i> Joint Family Tension</h4>
                     <p>In-law interference, lack of boundaries, and feeling caught between your spouse and your parents — one of the most common causes of marital stress in Pakistan.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-heart-broken text-primary" style="margin-right: 6px;"></i> Trust Has Been Damaged</h4>
-                    <p>Whether through dishonesty, emotional distance, or a specific incident — trust can be rebuilt. But it requires a structured, guided process.</p>
-                </div>
-                <div class="sign-card">
-                    <h4><i class="fas fa-redo text-primary" style="margin-right: 6px;"></i> The Same Arguments Keep Repeating</h4>
-                    <p>You fight about the same issues over and over without resolution. The problem is rarely the surface topic — it is usually an unmet need underneath.</p>
-                </div>
-                <div class="sign-card">
-                    <h4><i class="fas fa-user-times text-primary" style="margin-right: 6px;"></i> Emotional Distance</h4>
-                    <p>You feel like strangers living together. The warmth, intimacy, and partnership that defined your early relationship has faded into coexistence.</p>
-                </div>
-                <div class="sign-card">
                     <h4><i class="fas fa-balance-scale text-primary" style="margin-right: 6px;"></i> Thinking About Separation</h4>
-                    <p>If divorce or separation is being considered, counseling is not a last resort — it is the most important step before making any irreversible decision.</p>
+                    <p>If divorce or khula is being considered, counseling is not a last resort — it is the most important step before making any irreversible decision.</p>
                 </div>
             </div>
 
-            <p>You do not need to be in crisis to benefit from marriage counseling. Many people use it proactively — to strengthen communication before problems become serious, or as pre-marital counseling before the nikah.</p>
+            <p>You do not need to be in crisis to benefit from marriage counseling. Many people use it proactively — to strengthen communication before problems become serious, or as pre-marital counseling before the nikah. And crucially: these patterns can be interrupted by <em>one person</em> learning to respond differently. You do not need your spouse's permission to stop a cycle you are both trapped in.</p>
 
             <!-- Inline CTA #1 -->
             <div class="cta-inline">
@@ -951,7 +1044,17 @@ footer {
                     class="btn btn-primary"><i class="fab fa-whatsapp"></i> Send a Message</a>
             </div>
 
-            <h2>The Pakistan-Specific Challenge: Why Marriage Here Is Different</h2>
+            <h2 id="alone">Your Spouse Won't Come to Counseling? Start Anyway</h2>
+            <p>This is the single most common reason people in Pakistan never get help: one spouse is ready, the other refuses. "Counseling? Hum pagal nahi hain." So nothing happens — for years.</p>
+            <p>Here is what that waiting looks like at a national scale: family courts across Pakistan registered over <a target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025" style="color: var(--color-primary);">100,000 divorce and khula cases in 2025</a>, and khula filings by women now outnumber talaq filings by men by roughly 25%. Behind most of those filings is not a marriage where counseling failed — it is a marriage where counseling was never tried, usually because one partner wouldn't go.</p>
+            <p>That is why counseling at Healing with Attia is built as <strong>individual marriage counseling</strong>. A marriage is a system: your patterns and your spouse's patterns feed each other. When one person learns to raise issues without criticism, hold boundaries with in-laws calmly, stop rewarding stonewalling with escalation, and respond instead of react — the entire dynamic shifts. Your spouse ends up in a different marriage, whether or not they ever attend a session.</p>
+            <div class="pull-quote">
+                "Couples wait an average of six years after serious problems begin before seeking help."
+                <span class="pq-src">— The Gottman Institute. You don't have to wait for your spouse to be ready to stop the clock.</span>
+            </div>
+            <p>Working alone is not the consolation prize. For many situations — where one partner is dismissive of therapy, where emotions run too hot for joint conversations, or where you first need clarity about what <em>you</em> want — starting individually is the clinically sensible first step. And if your spouse becomes open to it later, they can occasionally join a session.</p>
+
+            <h2 id="pakistan">The Pakistan-Specific Challenge: Why Marriage Here Is Different</h2>
             <p>Standard Western approaches to marriage counseling were not designed with Pakistani marriages in mind. The joint family system, arranged marriages, financial dependence, religious expectations, and the deep stigma around seeking help — these are realities that shape every session.</p>
 
             <h3>The Joint Family Pressure</h3>
@@ -963,48 +1066,48 @@ footer {
             <p>One of the most common things people say after starting counseling: <em>"We have been feeling this way for years but never knew how to say it."</em> That is exactly what a trained therapist helps you do.</p>
 
             <h3>The Stigma Problem</h3>
-            <p>In Pakistan, seeking marriage counseling still carries stigma — the assumption that something must be "seriously wrong" or that you are about to get divorced. The opposite is true: those who seek help early are the ones who stay together. The ones who wait until they are at breaking point face a much harder process.</p>
-            <p>Online marriage counseling removes the social risk entirely. There is no clinic, no waiting room, no risk of someone recognising your car. Just a private Zoom session from your own home.</p>
+            <p>In Pakistan, seeking marriage counseling still carries stigma — the assumption that something must be "seriously wrong" or that you are about to get divorced. The scale of the problem is stark: an estimated <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full" style="color: var(--color-primary);">90% of Pakistanis who need mental-health support never receive it</a>, in a country with roughly 0.19 psychiatrists per 100,000 people. Stigma and access failures — not lack of need — keep people struggling alone.</p>
+            <p>Online marriage counseling removes the social risk entirely. There is no clinic, no waiting room, no risk of someone recognising your car. Just a private Zoom session from your own home — and because it is individual, no one even needs to know you are working on your marriage.</p>
 
-            <h2>How Marriage Counseling Works — Session by Session</h2>
-            <p>A structured marriage counseling process typically moves through the following stages:</p>
+            <h2 id="how-it-works">How Marriage Counseling Works — Session by Session</h2>
+            <p>A structured, individual marriage counseling process typically moves through the following stages:</p>
 
             <ol class="approach-steps">
                 <li>
                     <strong>Assessment Session</strong>
-                    <span>The first session is about understanding your relationship — how you met, what has changed, what you each need. Both partners speak. Attia listens without judgement before making any assessment.</span>
+                    <span>The first session is about understanding your relationship — how it began, what has changed, what you need, and what you have already tried. Attia listens without judgement before making any assessment.</span>
                 </li>
                 <li>
                     <strong>Identifying the Real Patterns</strong>
-                    <span>Surface arguments are rarely about what they seem. Sessions uncover the underlying patterns: the pursuer-withdrawer dynamic, unspoken expectations, and unmet emotional needs that fuel recurring conflict.</span>
+                    <span>Surface arguments are rarely about what they seem. Sessions uncover the underlying cycle you and your spouse are caught in: the pursuer-withdrawer dynamic, unspoken expectations, and unmet emotional needs that fuel recurring conflict — and your role within it, which is the part you can change.</span>
                 </li>
                 <li>
                     <strong>Building New Communication Tools</strong>
-                    <span>You learn specific, practical techniques for expressing needs without blame, listening without shutting down, and navigating disagreement without it escalating into a fight.</span>
+                    <span>You learn specific, practical techniques for expressing needs without blame, listening without shutting down, and navigating disagreement without it escalating into a fight — then you take them home and use them.</span>
                 </li>
                 <li>
                     <strong>Repair &amp; Reconnection</strong>
-                    <span>Restoring trust, rebuilding emotional intimacy, and creating shared rituals of connection. This stage is where many people feel the relationship genuinely transforming.</span>
+                    <span>Rebuilding trust and emotional intimacy from your side of the marriage: changing how you respond, initiating repair after conflict, and creating rituals of connection. If it would help at this stage, your spouse may occasionally join a session.</span>
                 </li>
                 <li>
                     <strong>Consolidation</strong>
-                    <span>The final sessions focus on making sure the gains hold after therapy ends — building self-sufficiency so you do not become therapy-dependent.</span>
+                    <span>The final sessions focus on making sure the gains hold after therapy ends — building self-sufficiency so you do not become therapy-dependent. Most clients see meaningful change within 8–12 sessions.</span>
                 </li>
             </ol>
 
-            <h2>Attia's Approach: Integrative Marriage Counseling</h2>
+            <h2 id="approach">Attia's Approach: Integrative Marriage Counseling</h2>
             <p>Attia Altaf is a trained Integrative Psychotherapist — which means she draws on multiple evidence-based models to find what works for your specific situation, rather than following a rigid formula. For marriage counseling, this typically includes:</p>
             <ul>
-                <li><strong>Emotionally Focused Therapy (EFT)</strong> — identifying and reshaping the negative interaction cycles that keep marriages stuck</li>
-                <li><strong>Cognitive Behavioural Therapy (CBT)</strong> — challenging the automatic thoughts and assumptions that fuel conflict</li>
-                <li><strong>Systems Theory</strong> — understanding each partner within their family system and cultural context</li>
+                <li><strong>Attachment-informed work</strong> — understanding the emotional needs and fears underneath the arguments, drawing on the attachment research base that modern relationship therapy is built on</li>
+                <li><strong>Cognitive Behavioural Therapy (CBT)</strong> — an extensively researched, evidence-based method for challenging the automatic thoughts and assumptions that fuel conflict</li>
+                <li><strong>Systems Theory</strong> — understanding you and your spouse within your family system and cultural context; the principle that when one part of a system changes, the whole system must adjust is exactly why individual work can shift a marriage</li>
                 <li><strong>Hara Therapy</strong> — body-based awareness techniques that help regulate emotional reactivity during difficult conversations</li>
             </ul>
-            <p>Crucially, Attia does not take sides. Her role is to advocate for the <em>marriage</em> — helping you feel heard, understood, and capable of change.</p>
+            <p>Crucially, Attia does not take sides — including yours against your spouse's. Her role is to advocate for the <em>marriage</em> — helping you feel heard, understood, and capable of change.</p>
 
             <!-- Credentials strip -->
             <div class="credentials-strip">
-                <img src="images/about/about1.webp" width="896" height="1195" alt="Attia Altaf, marriage counselor Pakistan" class="cred-photo" style="object-position: top center; box-shadow: 0 12px 30px rgba(0,0,0,0.15);">
+                <img src="images/about/about1.webp" width="896" height="1195" alt="Attia Altaf, marriage counselor Pakistan" class="cred-photo" loading="lazy" decoding="async" style="object-position: top center; box-shadow: 0 12px 30px rgba(0,0,0,0.15);">
                 <div class="cred-info">
                     <h4>Attia Altaf — Integrative Psychotherapist</h4>
                     <p>
@@ -1018,37 +1121,44 @@ footer {
                 <a href="about.html" style="color: var(--color-primary); font-weight: 500; align-self: center; white-space: nowrap;">Full profile →</a>
             </div>
 
-            <h2>Marriage Counseling with Islamic & Cultural Sensitivity</h2>
+            <h2 id="islamic">Marriage Counseling with Islamic & Cultural Sensitivity</h2>
             <p>For many Pakistani clients, faith is central to who they are and how they approach their marriage. Attia's approach to marriage counseling is fully respectful of Islamic values — the sanctity of nikah, the importance of family, the roles and responsibilities a husband and wife hold, and the expectation that marriage is a lifelong commitment worth working for.</p>
             <p>This is not secular Western therapy being applied awkwardly to Muslim marriages. Sessions are conducted with full cultural and religious sensitivity. Attia understands the weight of Islamic expectations on a husband and a wife, and works within that context rather than against it.</p>
             <p>If you are looking for marriage counseling that understands concepts like <em>sabr</em>, <em>haq mehr</em>, joint family obligations, or the specific dynamics of arranged versus love marriages — this is that space.</p>
-            <p>Related reading: <a href="blog-rishta-stress.html" style="color: var(--color-primary);">Navigating Rishta Stress &amp; the Arranged Marriage Process →</a></p>
+            <p>Read the full guide: <a href="blog-muslim-marriage-counseling.html" style="color: var(--color-primary); font-weight: 500;">Muslim Marriage Counseling in Pakistan →</a><br>
+            Related reading: <a href="blog-rishta-stress.html" style="color: var(--color-primary);">Navigating Rishta Stress &amp; the Arranged Marriage Process →</a></p>
 
-            <h2>Online Marriage Counseling — Available Across Pakistan</h2>
-            <p>Whether you are looking for marriage counseling in Pakistan, all sessions are conducted online via Zoom. You do not need to be in a specific city. Both partners can join from the same room or from completely different locations — even different countries. Sessions are available Monday to Saturday, 10am to 8pm PKT.</p>
+            <h2 id="online">Does Online Marriage Counseling Actually Work?</h2>
+            <p>The honest answer, from the research: yes — and it is not close to a compromise. A <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.773030/full" style="color: var(--color-primary);">2021 study published in Frontiers in Psychology</a> found therapy delivered by videoconference produced improvements in relationship satisfaction, mental health, and the therapist–client relationship comparable to face-to-face sessions, and a meta-analysis of more than 4,300 clients found video-delivered therapy <a target="_blank" rel="noopener noreferrer" href="https://www.tandfonline.com/doi/abs/10.1080/10503307.2023.2256465" style="color: var(--color-primary);">largely equivalent to in-person care</a> across outcomes.</p>
+            <p>For Pakistani clients, online is often <em>better</em> than in-person: complete privacy (no clinic, no waiting room), no travel through city traffic, access to a qualified therapist regardless of which city — or country — you live in, and the comfort of speaking from your own space. All sessions run on Zoom, Monday to Saturday, 10am to 8pm PKT.</p>
 
-            <div class="city-callouts">
-                <div class="city-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Based in Lahore?</h4>
-                    <p>Serving individuals and families across DHA, Gulberg, Model Town, Bahria Town and beyond — online.</p>
-                    <a href="therapy-lahore.html" class="btn btn-outline btn-sm">Marriage Counseling in Lahore →</a>
+            <h3>Living Abroad? Counseling Reaches You Too</h3>
+            <p>A large share of marriage counseling clients live outside Pakistan — in the UK, the UAE, Saudi Arabia, the US, and Canada. Overseas marriages carry their own pressures: distance from family support, cross-border rishtas where one spouse is in Dubai and the other in Lahore, and the isolation of working through marriage problems far from home. Time zones are handled easily, and sessions run in Urdu or English with a therapist who understands the Pakistani context you come from.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 2rem auto;">
+                <div class="card animate-on-scroll">
+                    <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 style="margin-bottom: 0.5rem;">Across Pakistan</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
+                    <p style="margin: 0; line-height: 2.2;">
+                        <a href="therapy-lahore.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Lahore →</a><br>
+                        <a href="therapy-karachi.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Karachi →</a><br>
+                        <a href="therapy-islamabad.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Islamabad →</a>
+                    </p>
                 </div>
-                <div class="city-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Based in Karachi?</h4>
-                    <p>Serving individuals and families across Clifton, DHA, PECHS, North Karachi and beyond — online.</p>
-                    <a href="therapy-karachi.html" class="btn btn-outline btn-sm">Marriage Counseling in Karachi →</a>
-                </div>
-                <div class="city-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>UK Pakistani Marriages</h4>
-                    <p>British-Pakistani individuals seeking culturally sensitive marriage counseling in Urdu and English.</p>
-                    <a href="online-therapy-uk.html" class="btn btn-outline btn-sm">UK Page →</a>
+                <div class="card animate-on-scroll delay-100">
+                    <div class="icon-box"><i class="fas fa-globe-asia"></i></div>
+                    <h3 style="margin-bottom: 0.5rem;">Living Abroad</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Urdu &amp; English marriage counseling for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
+                    <p style="margin: 0; line-height: 2.2;">
+                        <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — UK →</a><br>
+                        <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Dubai &amp; UAE →</a><br>
+                        <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Saudi Arabia →</a>
+                    </p>
                 </div>
             </div>
 
-            <h2>Session Fees &amp; Booking</h2>
+            <h2 id="fees">Session Fees &amp; Booking</h2>
             <p>Pricing is transparent with no hidden charges. Payment is made in advance via EasyPaisa or bank transfer. Sessions are conducted via Zoom at your scheduled time.</p>
 
             <div class="pricing-cards">
@@ -1065,25 +1175,28 @@ footer {
                 Payment via EasyPaisa · Bank Transfer &nbsp;|&nbsp; Mon–Sat, 10am–8pm PKT &nbsp;|&nbsp; No waiting list
             </p>
 
-            <h2>Living Abroad? Counseling Reaches You Too</h2>
-            <p>A large share of marriage counseling clients live outside Pakistan — in the <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">UK</a>, the <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">UAE</a>, <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Saudi Arabia</a>, the US, and Canada. Because sessions are on Zoom, both spouses can join from different countries entirely — one in Dubai, one in Lahore. Time zones are handled easily, and sessions run in Urdu or English.</p>
-
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="section" style="background: #f8fbfb; padding-top: 2rem; padding-bottom: 3rem;">
         <div class="container pillar-content">
-            <h2 style="margin-top: 0;">Frequently Asked Questions</h2>
+            <h2 style="margin-top: 0;" id="faq-heading">Frequently Asked Questions</h2>
 
             <h3 style="color: var(--color-primary-dark);">What is marriage counseling and what happens in a session?</h3>
-            <p>Marriage counseling is professional therapy where a trained therapist works with you to improve communication, resolve conflict, rebuild trust, and strengthen your marriage. Sessions are 50 minutes. The therapist acts as a neutral guide — not a judge — helping you work through what is happening in a structured, safe environment.</p>
+            <p>Marriage counseling is professional therapy where a trained therapist works with you to improve communication, resolve conflict, rebuild trust, and strengthen your marriage. At Healing with Attia, sessions are individual — you attend on your own, and your spouse may occasionally join a session if it would help. Sessions are 50 minutes. The therapist acts as a neutral guide — not a judge — helping you work through what is happening in a structured, safe environment.</p>
+
+            <h3 style="color: var(--color-primary-dark);">Can marriage counseling help if my spouse refuses to attend?</h3>
+            <p>Yes. Counseling here is designed for exactly this situation — sessions are individual by default. A marriage is a system: when one person changes how they communicate, set boundaries, and respond to conflict, the dynamic between both partners shifts. Many clients start alone and see meaningful change in the relationship without their spouse ever attending.</p>
 
             <h3 style="color: var(--color-primary-dark);">How much does marriage counseling cost in Pakistan?</h3>
             <p>At Healing with Attia, marriage counseling sessions are <strong>PKR 5,000 per 50-minute session</strong>. Payment is via EasyPaisa or bank transfer. There are no hidden charges or registration fees.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Does online marriage counseling work in Pakistan?</h3>
-            <p>Yes. Research consistently shows online marriage counseling is as effective as in-person therapy. For Pakistani clients, online sessions have additional benefits: no stigma of being seen at a clinic, attend from wherever you feel safe, and no travel cost or commute. Sessions are via Zoom in Urdu and English.</p>
+            <h3 style="color: var(--color-primary-dark);">Does online marriage counseling work as well as in-person?</h3>
+            <p>Yes. A randomized clinical trial and a 2021 meta-analysis covering more than 4,300 clients found therapy delivered by video call equivalent to in-person therapy in outcomes, client satisfaction, and the quality of the therapeutic relationship. For Pakistani clients, online sessions add privacy benefits: no clinic, no waiting room, no travel. Sessions are via Zoom in Urdu and English.</p>
+
+            <h3 style="color: var(--color-primary-dark);">What is the success rate of marriage counseling?</h3>
+            <p>Research on relationship-focused therapy consistently shows the majority of clients experience meaningful improvement. Outcomes are strongest when help is sought early — research from The Gottman Institute found that couples wait an average of six years after problems begin before seeking help, which makes negative patterns harder (but not impossible) to change.</p>
 
             <h3 style="color: var(--color-primary-dark);">How many marriage counseling sessions will I need?</h3>
             <p>Most clients see meaningful improvement in 8–12 sessions. Addressing a specific issue such as communication may show changes in as few as 6 sessions. Situations involving long-standing conflict or trust repair may take longer. You are never locked into a fixed number — progress is reviewed throughout and you decide when to continue or conclude.</p>
@@ -1094,11 +1207,20 @@ footer {
             <h3 style="color: var(--color-primary-dark);">Is this counseling appropriate for Muslim clients?</h3>
             <p>Yes. Attia's approach is fully culturally and religiously sensitive. She understands the Islamic values around marriage, family, and the importance of working through difficulty before considering separation. Sessions are conducted with complete respect for your beliefs and cultural context.</p>
 
-            <h3 style="color: var(--color-primary-dark);">My spouse refuses to come to therapy. Can I still benefit?</h3>
-            <p>Absolutely. Working individually on your own patterns, responses, and emotional health often leads to significant positive changes in the marriage, even without the other partner present. When one person changes how they communicate and respond, the dynamic between them frequently shifts too.</p>
-
             <h3 style="color: var(--color-primary-dark);">Is marriage counseling available in Lahore and Karachi?</h3>
-            <p>Yes. Online marriage counseling is available for clients anywhere in Pakistan. For city-specific details, see our dedicated pages on <a href="therapy-lahore.html" style="color: var(--color-primary);">marriage counseling in Lahore</a>, <a href="therapy-karachi.html" style="color: var(--color-primary);">marriage counseling in Karachi</a>, and <a href="therapy-islamabad.html" style="color: var(--color-primary);">marriage counseling in Islamabad</a>, plus Rawalpindi, Peshawar, Faisalabad, and beyond.</p>
+            <p>Yes — see our dedicated pages on <a href="therapy-lahore.html" style="color: var(--color-primary);">marriage counseling in Lahore</a>, <a href="therapy-karachi.html" style="color: var(--color-primary);">marriage counseling in Karachi</a>, and <a href="therapy-islamabad.html" style="color: var(--color-primary);">marriage counseling in Islamabad</a>.</p>
+
+            <div class="sources-box">
+                <h4>Sources &amp; further reading</h4>
+                <ul>
+                    <li>The Gottman Institute — <a target="_blank" rel="noopener noreferrer" href="https://www.gottman.com/blog/were-on-the-brink/">couples wait an average of six years before seeking help</a>; the "Four Horsemen" communication patterns and divorce prediction research.</li>
+                    <li>Frontiers in Psychology (2021) — <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.773030/full">therapy via videoconferencing: effects on relationship outcomes, mental health and the therapeutic alliance</a>.</li>
+                    <li>Psychotherapy Research — <a target="_blank" rel="noopener noreferrer" href="https://www.tandfonline.com/doi/abs/10.1080/10503307.2023.2256465">in-person vs. teletherapy outcomes among married couples</a>.</li>
+                    <li>The Express Tribune (2025) — <a target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025">family disputes hit record high in Pakistan</a>.</li>
+                    <li>Frontiers in Health Services (2024) — <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full">closing the mental health gap in Pakistan</a>.</li>
+                </ul>
+                <p style="margin: 0.8rem 0 0; font-size: 0.78rem; color: #99a;">Written by Attia Altaf, Integrative Psychotherapist (CPCAB, UK) · Last reviewed: July 2026</p>
+            </div>
         </div>
     </section>
 
@@ -1139,6 +1261,7 @@ footer {
     </section>
 
         </main>
+
     <footer>
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">

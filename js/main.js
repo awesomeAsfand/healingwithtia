@@ -31,8 +31,10 @@
             const tag = node.parentElement && node.parentElement.tagName;
             if (tag === 'SCRIPT' || tag === 'STYLE') continue;
             let val = node.nodeValue;
-            // PKR amount swap
-            if (val.indexOf('5,000') !== -1) val = val.replace(/5,000/g, '8,000');
+            // PKR amount swap — only standalone 5,000, never inside larger numbers (85,000; 195,000)
+            if (val.indexOf('5,000') !== -1) {
+                val = val.replace(/(^|[^\d])5,000(?![\d,]\d)/g, function (m, pre) { return pre + '8,000'; });
+            }
             // GBP equivalent on the UK page (£13–15 → £22–25)
             if (val.indexOf('£13') !== -1) val = val.replace(/£13[–\-]15/g, '£22–25').replace(/£13(?=[^–\-]|$)/g, '£22');
             if (val !== node.nodeValue) node.nodeValue = val;
