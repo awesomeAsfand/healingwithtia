@@ -500,14 +500,8 @@ footer {
 
 }
 
-/* Extra-small phones (≤ 400px) — prevent min-width from causing horizontal scroll */
+/* Extra-small phones (≤ 400px) */
 @media (max-width: 400px) {
-    [style*="min-width: 300px"],
-    [style*="min-width: 280px"],
-    [style*="min-width: 260px"] {
-        min-width: 0 !important;
-    }
-
     .logo {
         font-size: 1.2rem;
     }
