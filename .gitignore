@@ -1,1 +1,35 @@
 .claude/settings.local.json
+
+# ── Video masters ────────────────────────────────────────────────────────────
+# Large uncompressed source recordings. Only the compressed, web-ready clips
+# belong in the repo — git keeps every version of a binary forever.
+video/*.mov
+video/*.MOV
+video/*.avi
+video/*.mkv
+video/*-master.mp4
+video/*-source.mp4
+
+# ── Podcast working files ────────────────────────────────────────────────────
+# Used to produce podcast.html, not served by it. The English transcript is
+# already embedded in the page as HTML; the .srt is for uploading to YouTube
+# Studio. Keep these locally — nothing on the site loads them.
+video/*.srt
+video/*.vtt
+video/*.md
+
+# ── Source artwork ───────────────────────────────────────────────────────────
+# Full-resolution originals. Only the exported/cropped versions are served.
+images/about/podcast.webp
+
+# ── Local previews ───────────────────────────────────────────────────────────
+# Layout mockups, not part of the site.
+video-mockup*.html
+
+# ── OS / editor cruft ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.bak
+*~

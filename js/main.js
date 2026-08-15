@@ -140,3 +140,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* ── Click-to-play video ──────────────────────────────────────────────────────
+   Two lazy players, both no-ops on pages where the markup is absent:
+     1. index.html  — self-hosted intro clip in "Meet Your Therapist".
+                      preload="none" keeps the 7MB file off the initial load.
+     2. podcast.html — YouTube facade. No YouTube request is made until the
+                      visitor presses play, so the embed costs nothing on load.
+────────────────────────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* 1. Self-hosted intro clip */
+    var wrap = document.querySelector('.mt-video');
+    if (wrap) {
+        var video = wrap.querySelector('video');
+        var btn = wrap.querySelector('.mt-video-play');
+        if (video && btn) {
+            btn.addEventListener('click', function () {
+                video.muted = false;
+                video.setAttribute('controls', '');
+                video.play();
+                wrap.classList.add('is-playing');
+                btn.remove();
+            });
+        }
+    }
+
+    /* 2. YouTube facade */
+    var facade = document.getElementById('ytFacade');
+    if (facade) {
+        facade.addEventListener('click', function () {
+            var id = facade.getAttribute('data-video');
+            if (!id) return;
+            var ifr = document.createElement('iframe');
+            ifr.src = 'https://www.youtube-nocookie.com/embed/' + id +
+                      '?autoplay=1&rel=0&cc_load_policy=1&cc_lang_pref=en';
+            ifr.title = 'Mind Matters: Exploring Mental Health';
+            ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+                        'gyroscope; picture-in-picture; web-share';
+            ifr.allowFullscreen = true;
+            facade.innerHTML = '';
+            facade.appendChild(ifr);
+            facade.style.cursor = 'default';
+        }, { once: true });
+    }
+});

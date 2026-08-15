@@ -189,36 +189,62 @@
         .sources-box ul { margin: 0; padding-left: 1.1rem; }
         .sources-box li { margin-bottom: 0.3rem; }
         .sources-box a { color: var(--color-primary); }
-    </style>
+</style>
 
     <!-- Schema: Service -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Marriage Counseling Pakistan",
-      "alternateName": ["Online Marriage Counseling", "Relationship Counseling Pakistan"],
-      "serviceType": "Marriage Counseling",
-      "description": "Professional online marriage counseling in Pakistan by Attia Altaf, UK-certified Integrative Psychotherapist. Individual-format sessions via Zoom in Urdu and English — you can work on your marriage even if your spouse does not attend. Available across Pakistan and worldwide.",
-      "provider": {
-        "@type": "Person",
-        "name": "Attia Altaf",
-        "jobTitle": "Integrative Psychotherapist",
-        "hasCredential": ["CPCAB Level 3 Diploma in Integrative Psychotherapy", "CPCAB Level 4 Diploma in Integrative Psychotherapy"],
-        "knowsLanguage": ["Urdu", "English", "Punjabi"]
-      },
-      "areaServed": [
-        {"@type": "Country", "name": "Pakistan"},
-        {"@type": "Country", "name": "United Kingdom"}
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "5000",
-        "priceCurrency": "PKR",
-        "description": "50-minute marriage counseling session via Zoom"
-      },
-      "url": "https://www.healingwithattia.com/blog-relationships-therapy.html"
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Marriage Counseling Pakistan",
+  "alternateName": [
+    "Online Marriage Counseling",
+    "Relationship Counseling Pakistan"
+  ],
+  "serviceType": "Marriage Counseling",
+  "description": "Professional online marriage counseling in Pakistan by Attia Altaf, UK-certified Integrative Psychotherapist. Individual-format sessions via Zoom in Urdu and English — you can work on your marriage even if your spouse does not attend. Available across Pakistan and worldwide.",
+  "provider": {
+    "@type": "Person",
+    "name": "Attia Altaf",
+    "jobTitle": "Integrative Psychotherapist",
+    "hasCredential": [
+      "CPCAB Level 3 Diploma in Integrative Psychotherapy",
+      "CPCAB Level 4 Diploma in Integrative Psychotherapy"
+    ],
+    "knowsLanguage": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "url": "https://www.healingwithattia.com/about.html",
+    "@id": "https://www.healingwithattia.com/about.html#attia"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Pakistan"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
     }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "5000",
+    "priceCurrency": "PKR",
+    "description": "50-minute marriage counseling session via Zoom"
+  },
+  "url": "https://www.healingwithattia.com/blog-relationships-therapy.html",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://www.healingwithattia.com/contact.html",
+    "availableLanguage": [
+      "en",
+      "ur"
+    ]
+  }
+}
     </script>
 
     <!-- Schema: FAQPage -->
@@ -304,31 +330,6 @@
     </script>
 
     <!-- Schema: Article -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Marriage Counseling in Pakistan — Online, Private & in Urdu",
-      "description": "Evidence-based online marriage counseling for Pakistanis at home and abroad. Individual-format sessions in Urdu and English — start even if your spouse won't attend.",
-      "url": "https://www.healingwithattia.com/blog-relationships-therapy.html",
-      "mainEntityOfPage": "https://www.healingwithattia.com/blog-relationships-therapy.html",
-      "image": "https://www.healingwithattia.com/images/blog/relationshipss.webp",
-      "dateModified": "2026-07-21",
-      "inLanguage": "en",
-      "author": {
-        "@type": "Person",
-        "name": "Attia Altaf",
-        "jobTitle": "Integrative Psychotherapist",
-        "url": "https://www.healingwithattia.com/about.html",
-        "hasCredential": ["CPCAB Level 3 Diploma in Integrative Psychotherapy", "CPCAB Level 4 Diploma in Integrative Psychotherapy"]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Healing with Attia",
-        "url": "https://www.healingwithattia.com/"
-      }
-    }
-    </script>
 
     <!-- Schema: BreadcrumbList -->
     <script type="application/ld+json">
@@ -719,7 +720,8 @@
         </div>
     </section>
 
-        </main>
+        
+    </main>
 
     <footer>
         <div class="container">
