@@ -7,8 +7,11 @@ video/*.mov
 video/*.MOV
 video/*.avi
 video/*.mkv
-video/*-master.mp4
-video/*-source.mp4
+
+# Full-quality MP4 exports are masters too. Only files ending in "-web.mp4"
+# are compressed for the browser and belong in the repo.
+video/*.mp4
+!video/*-web.mp4
 
 # ── Podcast working files ────────────────────────────────────────────────────
 # Used to produce podcast.html, not served by it. The English transcript is

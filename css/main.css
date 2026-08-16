@@ -553,7 +553,7 @@ footer {
 }
 .mt-video {
     flex: 0 0 auto;
-    width: 271px;               /* matches the clip's 704x1142 ratio at 440px tall */
+    width: 248px;               /* matches the clip's 9:16 ratio at 440px tall */
     height: 100%;
     position: relative;
     z-index: 1;
@@ -691,7 +691,7 @@ footer {
         width: 100%;
         max-width: 275px;
         height: auto;
-        aspect-ratio: 704 / 1142;
+        aspect-ratio: 9 / 16;
     }
 }
 
