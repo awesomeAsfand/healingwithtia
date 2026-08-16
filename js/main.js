@@ -144,7 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ── Click-to-play video ──────────────────────────────────────────────────────
    Two lazy players, both no-ops on pages where the markup is absent:
      1. index.html  — self-hosted intro clip in "Meet Your Therapist".
-                      preload="none" keeps the 7MB file off the initial load.
+                      Ships as preload="none" so nothing is fetched on page
+                      load. It is then WARM-STARTED: once the clip scrolls into
+                      view (or the pointer enters it on desktop) we switch to
+                      preload="auto" so the opening seconds buffer while the
+                      visitor is still reading the bio. By the time they press
+                      play, playback is usually instant instead of a cold start.
+                      Skipped entirely on metered or slow connections, and when
+                      the visitor has asked to save data.
      2. podcast.html — YouTube facade. No YouTube request is made until the
                       visitor presses play, so the embed costs nothing on load.
 ────────────────────────────────────────────────────────────────────────────── */
@@ -156,7 +163,59 @@ document.addEventListener('DOMContentLoaded', function () {
         var video = wrap.querySelector('video');
         var btn = wrap.querySelector('.mt-video-play');
         if (video && btn) {
+
+            /* --- warm start ------------------------------------------------ */
+            var warmed = false;
+            function warmUp() {
+                if (warmed) return;
+                warmed = true;
+                // Respect the visitor's data: skip on save-data, 2g/3g, or
+                // when the browser reports a metered connection.
+                var c = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                if (c) {
+                    if (c.saveData) return;
+                    if (/(^|-)(2g|slow-2g|3g)$/.test(c.effectiveType || '')) return;
+                }
+                video.preload = 'auto';
+                video.setAttribute('preload', 'auto');
+                video.load();          // begins buffering; poster stays visible
+            }
+
+            // Only start observing AFTER the page has finished loading, and
+            // then only when the browser is idle. On a short desktop viewport
+            // the clip is already on screen at load — without this gate the
+            // 6.6MB would compete with the hero image and hurt LCP.
+            function armObserver() {
+                var start = function () {
+                    if (!('IntersectionObserver' in window)) { warmUp(); return; }
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (e) {
+                            if (e.isIntersecting) { warmUp(); io.disconnect(); }
+                        });
+                    }, { rootMargin: '200px 0px' });  // start just before it appears
+                    io.observe(wrap);
+                };
+                if (window.requestIdleCallback) {
+                    requestIdleCallback(start, { timeout: 3000 });
+                } else {
+                    setTimeout(start, 1200);
+                }
+            }
+            if (document.readyState === 'complete') {
+                armObserver();
+            } else {
+                window.addEventListener('load', armObserver, { once: true });
+            }
+
+            // Desktop: hovering the card is a strong intent signal — warm
+            // immediately rather than waiting for the observer.
+            wrap.addEventListener('mouseenter', warmUp, { once: true });
+            // Touch: fires before the click completes, buying a head start.
+            wrap.addEventListener('touchstart', warmUp, { once: true, passive: true });
+
+            /* --- play ------------------------------------------------------ */
             btn.addEventListener('click', function () {
+                warmUp();
                 video.muted = false;
                 video.setAttribute('controls', '');
                 video.play();
