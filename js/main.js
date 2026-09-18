@@ -9,11 +9,23 @@
 ────────────────────────────────────────────────────────────────────────────── */
 (async function geoPrice() {
     try {
-        let country = sessionStorage.getItem('vc');
+        let country = null;
+        try { country = sessionStorage.getItem('vc'); } catch (_) {}
         if (!country) {
-            const r = await fetch('https://api.country.is/');
-            country = (await r.json()).country || 'PK';
-            sessionStorage.setItem('vc', country);
+            try {
+                const ctrl = new AbortController();
+                const timer = setTimeout(function () { ctrl.abort(); }, 2500);
+                const r = await fetch('https://api.country.is/', { signal: ctrl.signal });
+                clearTimeout(timer);
+                country = (await r.json()).country || null;
+            } catch (_) { country = null; } // blocked/timed out — fall through to timezone guess
+            if (country) { try { sessionStorage.setItem('vc', country); } catch (_) {} }
+        }
+        if (!country) {
+            // No network signal (ad-blocker, firewall, timeout) — guess from the browser's timezone
+            // instead of silently keeping the PK price for an international visitor.
+            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            country = tz === 'Asia/Karachi' ? 'PK' : 'INTL';
         }
         if (country === 'PK') return; // local visitor — nothing to do
 
@@ -37,6 +49,10 @@
             }
             // GBP equivalent on the UK page (£13–15 → £22–25)
             if (val.indexOf('£13') !== -1) val = val.replace(/£13[–\-]15/g, '£22–25').replace(/£13(?=[^–\-]|$)/g, '£22');
+            // AED equivalent on the Dubai page (AED 65 -> AED 104 for PKR 8,000)
+            if (val.indexOf('AED 65') !== -1) val = val.replace(/AED 65(?!\d)/g, 'AED 104');
+            // SAR equivalent on the Saudi page (SAR 65 -> SAR 104 for PKR 8,000)
+            if (val.indexOf('SAR 65') !== -1) val = val.replace(/SAR 65(?!\d)/g, 'SAR 104');
             if (val !== node.nodeValue) node.nodeValue = val;
         }
     } catch (_) { /* geolocation failed — PKR 5,000 stays, page unaffected */ }
