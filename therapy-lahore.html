@@ -44,38 +44,37 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Schema: LocalBusiness + BreadcrumbList -->
+    <!-- Schema: Service + BreadcrumbList -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Healing with Attia — Online Therapy for Lahore",
+  "@type": "Service",
+  "name": "Online therapy and marriage counseling for people in Lahore",
+  "serviceType": "Online psychotherapy and marriage counseling",
   "description": "Professional online therapy for residents of Lahore, Pakistan. Anxiety, depression, OCD, trauma and relationship counseling by psychotherapist Attia Altaf. Sessions via Zoom in Urdu and English.",
   "url": "https://www.healingwithattia.com/therapy-lahore.html",
-  "telephone": "+923285694209",
   "areaServed": {
     "@type": "City",
     "name": "Lahore",
-    "addressCountry": "PK"
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Pakistan"
+    }
   },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Lahore",
-    "addressRegion": "Punjab",
-    "addressCountry": "PK"
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://www.healingwithattia.com/#practice",
+    "name": "Healing with Attia"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "10:00",
-    "closes": "20:00"
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://wa.me/923285694209?text=Hi%2C+I+am+interested+in+marriage+counseling",
+    "description": "Book on WhatsApp. Sessions are 50 minutes, online via Zoom; there is no in-person clinic.",
+    "availableLanguage": [
+      "ur",
+      "en",
+      "pa"
+    ]
   }
 }
     </script>

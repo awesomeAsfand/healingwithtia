@@ -75,73 +75,59 @@
     </style>
 
     <!-- Schema.org Structured Data -->
+    <!-- TODO-HUMAN [P4-1]: add Google Business Profile URL -->
+    <!-- TODO-HUMAN [P4-1]: add LinkedIn URL once created; replace Facebook URL if a named page facebook.com/healingwithattia is created -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
+  "@id": "https://www.healingwithattia.com/#practice",
   "name": "Healing with Attia",
+  "url": "https://www.healingwithattia.com/",
+  "logo": "https://www.healingwithattia.com/images/logo1.png",
   "image": "https://www.healingwithattia.com/images/hero.webp",
-  "description": "Professional online therapy and marriage counseling in Pakistan. Services include marriage counseling, anxiety therapy, depression counseling, OCD therapy, and trauma therapy. Sessions in Urdu and English via Zoom.",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Therapy Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Marriage Counseling Pakistan",
-          "url": "https://www.healingwithattia.com/blog-relationships-therapy.html"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Anxiety Therapy"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "OCD Therapy Pakistan"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Trauma Therapy Pakistan"
-        }
-      }
-    ]
-  },
+  "telephone": "+923285694209",
+  "email": "healingwithattia@gmail.com",
+  "description": "Healing with Attia is the online therapy and marriage counseling practice of Attia Altaf: UK-qualified (CPCAB) Integrative Psychotherapist, 8+ years' experience. Based in Islamabad, Pakistan; all sessions are online via Zoom, in Urdu, English and Punjabi.",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "PK",
-    "addressRegion": "Islamabad",
-    "addressLocality": "Islamabad"
+    "addressLocality": "Islamabad",
+    "addressCountry": "PK"
   },
-  "telephone": "+923285694209",
-  "url": "https://www.healingwithattia.com",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "10:00",
-    "closes": "20:00"
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Pakistan"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    },
+    {
+      "@type": "Country",
+      "name": "Saudi Arabia"
+    }
+  ],
+  "founder": {
+    "@id": "https://www.healingwithattia.com/about.html#attia"
   },
+  "employee": {
+    "@id": "https://www.healingwithattia.com/about.html#attia"
+  },
+  "knowsLanguage": [
+    "ur",
+    "en",
+    "pa"
+  ],
   "sameAs": [
     "https://www.instagram.com/healingwithattia/",
     "https://www.facebook.com/profile.php?id=61586205224366",
-    "https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow"
+    "https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow",
+    "https://www.muslimtherapist.directory/pakistan/islamabad/psychotherapist/attia-altaf"
   ]
 }
     </script>

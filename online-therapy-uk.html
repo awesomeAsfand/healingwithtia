@@ -46,25 +46,32 @@
 
     <!-- Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Healing with Attia — Online Therapy for UK Pakistani Diaspora",
-      "description": "Online therapy in Urdu and English for Pakistani and South Asian Muslims living in the UK. Anxiety, depression, trauma, OCD and relationship counseling by UK-certified psychotherapist Attia Altaf.",
-      "url": "https://www.healingwithattia.com/online-therapy-uk.html",
-      "telephone": "+923285694209",
-      "areaServed": [
-        {"@type": "Country", "name": "United Kingdom"},
-        {"@type": "Country", "name": "Pakistan"},
-        {"@type": "City", "name": "London"},
-        {"@type": "City", "name": "Birmingham"},
-        {"@type": "City", "name": "Manchester"},
-        {"@type": "City", "name": "Bradford"},
-        {"@type": "City", "name": "Leeds"},
-        {"@type": "City", "name": "Sheffield"},
-        {"@type": "City", "name": "Leicester"}
-      ]
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Online therapy and marriage counseling for Pakistanis in the UK",
+  "serviceType": "Online psychotherapy and marriage counseling",
+  "description": "Online therapy in Urdu and English for Pakistani and South Asian Muslims living in the UK. Anxiety, depression, trauma, OCD and relationship counseling by UK-certified psychotherapist Attia Altaf.",
+  "url": "https://www.healingwithattia.com/online-therapy-uk.html",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://www.healingwithattia.com/#practice",
+    "name": "Healing with Attia"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://wa.me/923285694209?text=Hello%2C+I+am+based+in+the+UK+and+would+like+to+book+a+session",
+    "description": "Book on WhatsApp. Sessions are 50 minutes, online via Zoom; there is no in-person clinic.",
+    "availableLanguage": [
+      "ur",
+      "en"
+    ]
+  }
+}
     </script>
     <script type="application/ld+json">
     {

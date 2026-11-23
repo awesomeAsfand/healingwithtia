@@ -78,47 +78,327 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Healing with Attia",
-  "url": "https://www.healingwithattia.com/services.html",
-  "telephone": "+923285694209",
-  "description": "Online therapy and counseling in Pakistan by UK-certified integrative psychotherapist Attia Altaf. Specialising in anxiety, depression, OCD, trauma, and marriage counseling. Sessions in Urdu and English via Zoom.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "PK",
-    "addressRegion": "Islamabad"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Therapy Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Marriage Counseling Pakistan",
-          "description": "Online marriage counseling in Urdu and English. Covers communication, conflict resolution, joint family dynamics, trust repair, and pre-marital counseling.",
-          "url": "https://www.healingwithattia.com/blog-relationships-therapy.html"
-        }
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Marriage counseling",
+      "description": "Online marriage counseling for communication, conflict, trust repair, joint family dynamics and pre-marital counseling, in Urdu and English.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Anxiety & Depression Therapy Pakistan",
-          "description": "Individual therapy for anxiety, depression, low mood, panic attacks, and stress. Evidence-based CBT and integrative approaches."
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
         }
+      ],
+      "url": "https://www.healingwithattia.com/blog-relationships-therapy.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Individual therapy for anxiety and depression",
+      "description": "One-to-one online sessions for anxiety, depression, self-esteem and personal growth.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "OCD Therapy Pakistan",
-          "description": "Specialised OCD therapy using Exposure and Response Prevention (ERP) and CBT. Includes religious OCD (waswasa), contamination OCD, and intrusive thoughts."
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
         }
-      }
-    ]
-  }
+      ],
+      "url": "https://www.healingwithattia.com/anxiety-treatment-pakistan.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Therapy for depression",
+      "description": "Structured online therapy for depression, low mood, grief and loss, using evidence-based CBT techniques.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "url": "https://www.healingwithattia.com/depression-therapy-pakistan.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Postnatal depression support",
+      "description": "Online therapy for mothers with persistent low mood, guilt, anxiety or exhaustion after childbirth.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "url": "https://www.healingwithattia.com/postnatal-depression-treatment-pakistan.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Cognitive behavioral therapy (CBT)",
+      "description": "CBT for anxiety, OCD (ERP) and depression, online across Pakistan.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "url": "https://www.healingwithattia.com/blog-cbt-anxiety.html"
+    },
+    {
+      "@type": "Service",
+      "name": "OCD therapy (ERP and CBT)",
+      "description": "Exposure and Response Prevention for OCD, including religious OCD (waswasa), contamination OCD and intrusive thoughts.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "url": "https://www.healingwithattia.com/ocd-treatment-pakistan.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Panic attacks and stress management",
+      "description": "Counseling for stress, panic attacks and daily anxiety.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Trauma therapy",
+      "description": "Evidence-based therapy for emotional wounds, betrayal, abuse and PTSD.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "url": "https://www.healingwithattia.com/trauma-therapy-pakistan.html"
+    },
+    {
+      "@type": "Service",
+      "name": "Addiction and substance use support",
+      "description": "Psychotherapeutic support for the emotional side of dependency, alongside any medical care.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Teen counseling and support",
+      "description": "Support for teenagers facing academic pressure, identity issues or social stress.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Career counseling and guidance",
+      "description": "Guidance for workplace stress, burnout and career path clarity.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "ADHD and focus support",
+      "description": "Psychotherapeutic support for teens and adults with ADHD; diagnosis and medication are handled by a psychiatrist.",
+      "provider": {
+        "@id": "https://www.healingwithattia.com/#practice"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ]
+    }
+  ]
 }
     </script>
     <script type="application/ld+json">

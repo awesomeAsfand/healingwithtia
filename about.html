@@ -47,54 +47,81 @@
     <link rel="icon" href="images/logo1.png">
 
     <!-- Schema.org: Person (E-E-A-T signal for YMYL content) -->
+    <!-- TODO-HUMAN [P4-1]: add Google Business Profile URL -->
+    <!-- TODO-HUMAN [P4-1]: add LinkedIn URL once created; replace Facebook URL if a named page facebook.com/healingwithattia is created -->
+    <!-- TODO-HUMAN [P2c-3]: once Level 4 is confirmed as the CPCAB Level 4 Diploma in Therapeutic Counselling, set the Level 4 credential name/category to that title. No Level 5 entry until it is awarded. -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.healingwithattia.com/about.html#attia",
+  "name": "Attia Altaf",
+  "jobTitle": "Integrative Psychotherapist",
+  "description": "Attia Altaf, Integrative Psychotherapist. CPCAB (UK) Level 3 and Level 4 counselling qualifications; Level 5 in progress. 8+ years' experience. Sessions in Urdu, English and Punjabi. Based in Islamabad, Pakistan, she works online with individuals and offers marriage counseling through Healing with Attia. She also holds a PhD in Media and Communication Sciences.",
+  "url": "https://www.healingwithattia.com/about.html",
+  "image": "https://www.healingwithattia.com/images/about/about1.webp",
+  "email": "healingwithattia@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Islamabad",
+    "addressCountry": "PK"
+  },
+  "worksFor": {
+    "@type": "ProfessionalService",
+    "@id": "https://www.healingwithattia.com/#practice",
+    "name": "Healing with Attia"
+  },
+  "affiliation": {
+    "@type": "ProfessionalService",
+    "@id": "https://www.healingwithattia.com/#practice",
+    "name": "Healing with Attia"
+  },
+  "hasCredential": [
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://www.healingwithattia.com/about.html#attia",
-      "name": "Attia Altaf",
-      "jobTitle": "Integrative Psychotherapist",
-      "description": "Attia Altaf is a UK-certified integrative psychotherapist with over 8 years of experience providing online therapy in Pakistan, specialising in anxiety, depression, trauma, OCD, and relationship issues. Sessions available in Urdu and English.",
-      "url": "https://www.healingwithattia.com/about.html",
-      "image": "https://www.healingwithattia.com/images/about/about1.webp",
-      "telephone": "+923285694209",
-      "email": "healingwithattia@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Islamabad",
-        "addressRegion": "Islamabad Capital Territory",
-        "addressCountry": "PK"
-      },
-      "worksFor": {
-        "@type": "LocalBusiness",
-        "name": "Healing with Attia",
-        "url": "https://www.healingwithattia.com"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "degree",
-          "name": "Level 3 & 4 Diploma in Integrative Psychotherapy Counselling",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "CPCAB (Counselling & Psychotherapy Central Awarding Body), UK"
-          }
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "degree",
-          "name": "PhD in Media and Communication Sciences"
-        }
-      ],
-      "knowsAbout": ["anxiety therapy", "depression counseling", "CBT", "OCD therapy", "trauma therapy", "marriage counseling", "integrative psychotherapy"],
-      "knowsLanguage": ["Urdu", "English", "Punjabi"],
-      "sameAs": [
-        "https://www.instagram.com/healingwithattia/",
-        "https://www.facebook.com/profile.php?id=61586205224366",
-        "https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow",
-        "https://www.muslimtherapist.directory/pakistan/islamabad/counsellor/attia-altaf"
-      ]
+      "@type": "EducationalOccupationalCredential",
+      "name": "Level 3 counselling qualification",
+      "credentialCategory": "Certificate",
+      "educationalLevel": "Level 3",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "CPCAB (Counselling and Psychotherapy Central Awarding Body)",
+        "url": "https://www.cpcab.co.uk/"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Level 4 counselling qualification",
+      "credentialCategory": "Professional qualification",
+      "educationalLevel": "Level 4",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "CPCAB (Counselling and Psychotherapy Central Awarding Body)",
+        "url": "https://www.cpcab.co.uk/"
+      }
     }
+  ],
+  "knowsAbout": [
+    "integrative psychotherapy",
+    "anxiety",
+    "depression",
+    "OCD",
+    "trauma",
+    "postnatal depression",
+    "CBT",
+    "marriage counseling"
+  ],
+  "knowsLanguage": [
+    "ur",
+    "en",
+    "pa"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/healingwithattia/",
+    "https://www.facebook.com/profile.php?id=61586205224366",
+    "https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow",
+    "https://www.muslimtherapist.directory/pakistan/islamabad/psychotherapist/attia-altaf"
+  ]
+}
     </script>
     <script type="application/ld+json">
     {
