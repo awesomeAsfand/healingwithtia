@@ -36,3 +36,9 @@ desktop.ini
 *.swp
 *.bak
 *~
+
+# ── SEO implementation working files ─────────────────────────────────────────
+# Reports, scripts, lead log. Not part of the site; GitHub Pages would publish
+# anything committed, so keep these out of the repo.
+seo-work/
+healingwithattia-seo-agent-prompt.md
