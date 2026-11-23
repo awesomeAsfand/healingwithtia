@@ -7,10 +7,18 @@
    Only visible text nodes are changed — schema/meta/JSON-LD are never touched.
    Country is cached in sessionStorage so the API fires once per browser session.
 ────────────────────────────────────────────────────────────────────────────── */
+/* Region is published as window.hwaRegion ('PK' | 'INTL') so the WhatsApp lead
+   code below can tag messages and GA4 events with the price the visitor saw. */
+window.hwaRegion = window.hwaRegion || null;
+function hwaSetRegion(country) {
+    window.hwaRegion = country === 'PK' ? 'PK' : 'INTL';
+}
+
 (async function geoPrice() {
     try {
         let country = null;
         try { country = sessionStorage.getItem('vc'); } catch (_) {}
+        if (country) hwaSetRegion(country);
         if (!country) {
             try {
                 const ctrl = new AbortController();
@@ -27,6 +35,7 @@
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
             country = tz === 'Asia/Karachi' ? 'PK' : 'INTL';
         }
+        hwaSetRegion(country);
         if (country === 'PK') return; // local visitor — nothing to do
 
         // Wait for DOM to be ready before walking text nodes
@@ -133,29 +142,128 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // ── WhatsApp click conversion tracking ──────────────────────────────
-    // Fires a `whatsapp_lead` GA4 event on any WhatsApp link click.
-    // Forces the deferred GA library to load and uses beacon transport so
-    // the event still sends even as the page navigates away to WhatsApp.
-    function fireWhatsAppLead(url) {
+});
+
+/* ── WhatsApp leads: source tag + GA4 event ───────────────────────────────────
+   1. First-touch source (P1-D2). On the first page of a visit we work out where
+      the visitor came from and keep a one-letter code in sessionStorage
+      'hwa_src':
+        G Google search   S other search   C ChatGPT   P Perplexity
+        A other AI        I Instagram      F Facebook  M Business Profile
+        R directory       D direct         O other
+   2. When a WhatsApp link is clicked, " (web · <code> · <PK|INTL>)" is appended
+      to the pre-filled message, once, just before WhatsApp opens. This is the
+      practice's only automatic record of where a chat came from.
+   3. GA4 `whatsapp_lead` fires at most once per page view (P1-D3), with
+      `price_region` and `lead_source` parameters (P1-D1).
+   Never blocks the click: every step is wrapped so a failure just lets the
+   link open as normal.
+────────────────────────────────────────────────────────────────────────────── */
+var hwaLeadSource = (function detectLeadSource() {
+    var KEY = 'hwa_src';
+    try {
+        var saved = sessionStorage.getItem(KEY);
+        if (saved) return saved;
+    } catch (_) {}
+
+    function fromUtm() {
+        var p;
+        try { p = new URLSearchParams(window.location.search); } catch (_) { return null; }
+        var src = (p.get('utm_source') || '').toLowerCase();
+        var camp = (p.get('utm_campaign') || '').toLowerCase();
+        if (camp === 'gbp') return 'M';
+        if (!src) return null;
+        if (/chatgpt|openai/.test(src)) return 'C';
+        if (/perplexity/.test(src)) return 'P';
+        if (/gemini|copilot|claude/.test(src)) return 'A';
+        if (src === 'ig' || /instagram/.test(src)) return 'I';
+        if (src === 'fb' || /facebook/.test(src)) return 'F';
+        if (/muslimtherapist|ruhcare/.test(src)) return 'R';
+        if (/^google/.test(src)) return 'G';
+        if (/bing|ecosia|duckduckgo|yahoo|yandex/.test(src)) return 'S';
+        return 'O';
+    }
+
+    function fromReferrer() {
+        var ref = document.referrer || '';
+        if (!ref) return null;
+        // Google app on Android reports an android-app:// referrer
+        if (/^android-app:\/\/com\.google\.android\.googlequicksearchbox/.test(ref)) return 'G';
+        var host;
+        try { host = new URL(ref).hostname.toLowerCase(); } catch (_) { return 'O'; }
+        function is(domain) { return host === domain || host.slice(-(domain.length + 1)) === '.' + domain; }
+        if (is('healingwithattia.com')) return null;                 // internal: ignore
+        if (is('gemini.google.com') || is('copilot.microsoft.com') || is('claude.ai')) return 'A';
+        if (/(^|\.)google\.[a-z]{2,3}(\.[a-z]{2})?$/.test(host)) return 'G';
+        if (/(^|\.)(bing|ecosia|duckduckgo|yahoo|yandex)\.[a-z.]+$/.test(host)) return 'S';
+        if (is('chatgpt.com') || is('openai.com')) return 'C';
+        if (is('perplexity.ai')) return 'P';
+        if (is('instagram.com')) return 'I';
+        if (is('facebook.com')) return 'F';
+        if (is('muslimtherapist.directory') || is('ruhcare.com')) return 'R';
+        return 'O';
+    }
+
+    var code = 'D';
+    try { code = fromUtm() || fromReferrer() || 'D'; } catch (_) { code = 'D'; }
+    try { sessionStorage.setItem(KEY, code); } catch (_) {}
+    return code;
+})();
+
+(function whatsappLeads() {
+    var leadFired = false;   // one whatsapp_lead per page view
+    var TAG_MARK = '(web · ';
+
+    function regionForTag() {
+        if (window.hwaRegion === 'PK' || window.hwaRegion === 'INTL') return window.hwaRegion;
+        // Region not resolved yet: use the same time-zone rule the price script falls back on
+        try {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Karachi' ? 'PK' : 'INTL';
+        } catch (_) { return 'INTL'; }
+    }
+
+    function tagLink(link) {
+        try {
+            var url = new URL(link.getAttribute('href'), window.location.href);
+            var text = url.searchParams.get('text') || '';
+            if (text.indexOf(TAG_MARK) !== -1) return;              // already tagged
+            var tag = TAG_MARK + hwaLeadSource + ' · ' + regionForTag() + ')';
+            url.searchParams.set('text', text ? text + ' ' + tag : tag);
+            link.setAttribute('href', url.toString());
+        } catch (_) { /* leave the link exactly as it was */ }
+    }
+
+    function fireLead(link) {
+        if (leadFired) return;
+        leadFired = true;
         try {
             if (typeof _loadGTM === 'function') { _loadGTM(); } // ensure GA library loads now
             if (typeof gtag === 'function') {
                 gtag('event', 'whatsapp_lead', {
                     'event_category': 'engagement',
-                    'event_label': url || 'whatsapp',
+                    'event_label': link.getAttribute('href') || 'whatsapp',
+                    'price_region': window.hwaRegion || 'unknown',
+                    'lead_source': hwaLeadSource,
                     'transport_type': 'beacon'
                 });
             }
-        } catch (err) { /* never block the click */ }
+        } catch (_) { /* never block the click */ }
     }
 
-    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(function (link) {
-        link.addEventListener('click', function () {
-            fireWhatsAppLead(link.getAttribute('href'));
-        });
-    });
-});
+    function onActivate(e) {
+        var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        if (href.indexOf('wa.me') === -1 && href.indexOf('api.whatsapp.com') === -1) return;
+        tagLink(link);   // before navigation: the browser reads href after this handler
+        fireLead(link);
+    }
+
+    // Capture phase so the href is rewritten before any other handler or the
+    // default navigation. auxclick covers middle-click "open in new tab".
+    document.addEventListener('click', onActivate, true);
+    document.addEventListener('auxclick', onActivate, true);
+})();
 
 /* ── Click-to-play video ──────────────────────────────────────────────────────
    Two lazy players, both no-ops on pages where the markup is absent:
