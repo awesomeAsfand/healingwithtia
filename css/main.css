@@ -798,3 +798,7 @@ footer {
 
 /* ── Hero price note (city landing pages) ────────────────────────────────── */
 .hero-price-note { margin: 1rem auto 0; color: #666; font-size: 0.95rem; }
+
+/* Session prices: hidden for at most 1 s while the visitor's region is resolved
+   (class added by an inline script in <head>, removed by js/main.js). */
+.price-pending .price { visibility: hidden; }

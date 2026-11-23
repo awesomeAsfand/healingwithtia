@@ -1,6 +1,8 @@
 <html lang="en">
 
 <head>
+    <!-- Hide session prices until the visitor's region is known (1 s at most); see js/main.js -->
+    <script>(function(w,c){c.add('price-pending');w.hwaPriceT0=Date.now();setTimeout(function(){c.remove('price-pending')},1000)})(window,document.documentElement.classList)</script>
     <!-- Google Analytics: deferred until first user interaction — minimal INP impact -->
     <script>
         window.dataLayer = window.dataLayer || [];

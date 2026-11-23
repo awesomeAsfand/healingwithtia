@@ -3,68 +3,111 @@
 */
 
 /* ── Geo-based pricing ────────────────────────────────────────────────────────
-   Pakistani visitors see PKR 5,000. International visitors see PKR 8,000.
-   Only visible text nodes are changed — schema/meta/JSON-LD are never touched.
-   Country is cached in sessionStorage so the API fires once per browser session.
+   Pakistani visitors see PKR 5,000; visitors outside Pakistan see PKR 8,000.
+   Each visitor sees one price, the same on every visit.
+
+   - Only elements marked <span class="price" data-price-pk data-price-intl
+     data-nosnippet> are changed. Nothing else on the page is touched.
+   - The HTML default is the PK value on Pakistan pages and the INTL value on
+     the UK / UAE / Saudi / abroad pages, so readers (and tools) that don't run
+     scripts see the price most readers of that page will get.
+   - Region ('PK' | 'INTL') is kept in localStorage 'hwa_region' (falls back to
+     sessionStorage) and read first on later visits.
+   - First visit: api.country.is (2.5 s timeout), else the browser time zone.
+   - A tiny inline script in <head> adds class "price-pending" to <html>, which
+     hides prices (css: .price-pending .price). It is removed as soon as the
+     region is settled, and never later than ~1 s after navigation: if the API
+     hasn't answered by then, the time-zone guess is used and kept. Once
+     settled, the region never changes during the page view, so nobody watches
+     5,000 turn into 8,000. The inline script also removes the class itself
+     after 1 s in case this file fails to load. Without JS the class is never
+     added and prices are simply visible.
+   - The settled region is published as window.hwaRegion for the WhatsApp lead
+     tag and the GA4 price_region parameter.
 ────────────────────────────────────────────────────────────────────────────── */
-/* Region is published as window.hwaRegion ('PK' | 'INTL') so the WhatsApp lead
-   code below can tag messages and GA4 events with the price the visitor saw. */
 window.hwaRegion = window.hwaRegion || null;
-function hwaSetRegion(country) {
-    window.hwaRegion = country === 'PK' ? 'PK' : 'INTL';
-}
 
-(async function geoPrice() {
-    try {
-        let country = null;
-        try { country = sessionStorage.getItem('vc'); } catch (_) {}
-        if (country) hwaSetRegion(country);
-        if (!country) {
-            try {
-                const ctrl = new AbortController();
-                const timer = setTimeout(function () { ctrl.abort(); }, 2500);
-                const r = await fetch('https://api.country.is/', { signal: ctrl.signal });
-                clearTimeout(timer);
-                country = (await r.json()).country || null;
-            } catch (_) { country = null; } // blocked/timed out — fall through to timezone guess
-            if (country) { try { sessionStorage.setItem('vc', country); } catch (_) {} }
-        }
-        if (!country) {
-            // No network signal (ad-blocker, firewall, timeout) — guess from the browser's timezone
-            // instead of silently keeping the PK price for an international visitor.
-            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            country = tz === 'Asia/Karachi' ? 'PK' : 'INTL';
-        }
-        hwaSetRegion(country);
-        if (country === 'PK') return; // local visitor — nothing to do
+(function geoPrice() {
+    var KEY = 'hwa_region';
+    var REVEAL_MS = 1000;
+    var root = document.documentElement;
+    var settled = false;
 
-        // Wait for DOM to be ready before walking text nodes
+    function valid(v) { return v === 'PK' || v === 'INTL' ? v : null; }
+
+    function readStored() {
+        var v = null;
+        try { v = valid(localStorage.getItem(KEY)); } catch (_) {}
+        if (!v) { try { v = valid(sessionStorage.getItem(KEY)); } catch (_) {} }
+        if (!v) {   // country cached by the previous version of this script
+            try { var c = sessionStorage.getItem('vc'); if (c) v = c === 'PK' ? 'PK' : 'INTL'; } catch (_) {}
+        }
+        return v;
+    }
+
+    function store(region) {
+        try { localStorage.setItem(KEY, region); return; } catch (_) {}
+        try { sessionStorage.setItem(KEY, region); } catch (_) {}
+    }
+
+    function timeZoneGuess() {
+        try {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Karachi' ? 'PK' : 'INTL';
+        } catch (_) { return 'PK'; }
+    }
+
+    function applyPrices(region) {
+        var attr = region === 'PK' ? 'data-price-pk' : 'data-price-intl';
+        var els = document.querySelectorAll('[data-price-pk][data-price-intl]');
+        for (var i = 0; i < els.length; i++) {
+            var v = els[i].getAttribute(attr);
+            if (v && els[i].textContent !== v) els[i].textContent = v;
+        }
+    }
+
+    function settle(region) {
+        if (settled) return window.hwaRegion;
+        settled = true;
+        window.hwaRegion = region;
+        store(region);
+        try { applyPrices(region); } catch (_) {}
+        root.classList.remove('price-pending');
         if (document.readyState === 'loading') {
-            await new Promise(function(resolve) {
-                document.addEventListener('DOMContentLoaded', resolve, { once: true });
-            });
+            // catch any price element parsed after this script
+            document.addEventListener('DOMContentLoaded', function () {
+                try { applyPrices(region); } catch (_) {}
+            }, { once: true });
         }
+        return region;
+    }
 
-        // Walk every text node in <body>, skip <script> and <style>
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        let node;
-        while ((node = walker.nextNode()) !== null) {
-            const tag = node.parentElement && node.parentElement.tagName;
-            if (tag === 'SCRIPT' || tag === 'STYLE') continue;
-            let val = node.nodeValue;
-            // PKR amount swap — only standalone 5,000, never inside larger numbers (85,000; 195,000)
-            if (val.indexOf('5,000') !== -1) {
-                val = val.replace(/(^|[^\d])5,000(?![\d,]\d)/g, function (m, pre) { return pre + '8,000'; });
-            }
-            // GBP equivalent on the UK page (£13–15 → £22–25)
-            if (val.indexOf('£13') !== -1) val = val.replace(/£13[–\-]15/g, '£22–25').replace(/£13(?=[^–\-]|$)/g, '£22');
-            // AED equivalent on the Dubai page (AED 65 -> AED 104 for PKR 8,000)
-            if (val.indexOf('AED 65') !== -1) val = val.replace(/AED 65(?!\d)/g, 'AED 104');
-            // SAR equivalent on the Saudi page (SAR 65 -> SAR 104 for PKR 8,000)
-            if (val.indexOf('SAR 65') !== -1) val = val.replace(/SAR 65(?!\d)/g, 'SAR 104');
-            if (val !== node.nodeValue) node.nodeValue = val;
+    // Lets the WhatsApp handler lock the region if someone clicks before it settles,
+    // so the tag always matches the price that will be shown.
+    window.hwaSettleRegion = function () { return settle(timeZoneGuess()); };
+
+    try {
+        var stored = readStored();
+        if (stored) { settle(stored); return; }
+
+        // 1 s budget counted from when the <head> snippet hid the prices
+        var elapsed = typeof window.hwaPriceT0 === 'number' ? Date.now() - window.hwaPriceT0 : 0;
+        var wait = Math.max(0, REVEAL_MS - elapsed);
+        setTimeout(function () { settle(timeZoneGuess()); }, wait);
+
+        if (window.fetch && window.AbortController) {
+            var ctrl = new AbortController();
+            var timer = setTimeout(function () { ctrl.abort(); }, 2500);
+            fetch('https://api.country.is/', { signal: ctrl.signal })
+                .then(function (r) { return r.json(); })
+                .then(function (d) {
+                    clearTimeout(timer);
+                    if (d && d.country) settle(d.country === 'PK' ? 'PK' : 'INTL');
+                })
+                .catch(function () { /* blocked / timed out: the time-zone guess will settle it */ });
         }
-    } catch (_) { /* geolocation failed — PKR 5,000 stays, page unaffected */ }
+    } catch (_) {
+        settle(timeZoneGuess());
+    }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -216,7 +259,8 @@ var hwaLeadSource = (function detectLeadSource() {
 
     function regionForTag() {
         if (window.hwaRegion === 'PK' || window.hwaRegion === 'INTL') return window.hwaRegion;
-        // Region not resolved yet: use the same time-zone rule the price script falls back on
+        // Clicked before the region settled: settle it now so tag and price agree
+        try { if (typeof window.hwaSettleRegion === 'function') return window.hwaSettleRegion(); } catch (_) {}
         try {
             return Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Karachi' ? 'PK' : 'INTL';
         } catch (_) { return 'INTL'; }
