@@ -115,10 +115,18 @@
     },
     {
       "@type": "Question",
+      "name": "Can I use my health insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We don't accept insurance. Sessions are paid directly."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "I searched for a Pakistani psychologist in Riyadh. Is this the same thing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not quite. Attia Altaf is a UK-qualified (CPCAB) Integrative Psychotherapist, not a psychologist or a psychiatrist, and she doesn't prescribe medication. For talk therapy, such as anxiety, depression, trauma or marriage problems, a qualified psychotherapist is the right person to see."
+        "text": "Not quite. Attia Altaf is an Integrative Psychotherapist, not a psychologist or a psychiatrist, and she doesn't prescribe medication. For talk therapy, such as anxiety, depression, trauma or marriage problems, a qualified psychotherapist is the right person to see."
       }
     },
     {
@@ -216,6 +224,8 @@
     <section class="section bg-soft" id="fees">
         <div class="container text-center" style="max-width: 820px; margin: 0 auto;">
             <h2>How Much Does a Private Therapy Session Cost From Jeddah or Riyadh?</h2>
+            <!-- TODO-HUMAN [B-S1]: Jeddah market range not published. saudi.vezeeta.com returned HTTP 403 on 24 Nov 2026, so the listed psychotherapy fees (about SAR 150-375 on 24 Nov per the brief) could not be verified. Once verified in a browser, open this section with e.g. "Booking-platform listings for psychotherapy sessions in Jeddah run from about SAR X to SAR Y" plus a rel="nofollow" source link, and add the same range to the FAQ answer below. -->
+            <p style="font-size: 1.05rem; color: #555; max-width: 680px; margin: 0 auto;">A private 50-minute session with Attia, from Jeddah, Riyadh or anywhere in the Kingdom, is one flat fee, paid directly:</p>
             <div style="background: #e8f5e9; border-radius: 14px; padding: 2rem; max-width: 760px; margin: 1.5rem auto 0;">
                 <p style="font-size: 2.2rem; font-weight: 700; color: var(--color-primary-dark); margin: 0;"><span class="price" data-price-pk="PKR 5,000" data-price-intl="PKR 8,000" data-nosnippet>PKR 8,000</span> <span style="font-size: 1rem; font-weight: 400; color: #777;">/ 50-minute session</span></p>
                 <p style="color: #888; font-size: 0.95rem; margin: 0.35rem 0 0;">&asymp; <span class="price" data-price-pk="SAR 65" data-price-intl="SAR 104" data-nosnippet>SAR 104</span> per session at current exchange rates</p>
@@ -297,15 +307,30 @@
             <h3 style="color: var(--color-primary-dark);">How do I pay from Saudi Arabia?</h3>
             <p>Payment details are shared on WhatsApp when you book your session.</p>
 
+            <h3 style="color: var(--color-primary-dark);">Can I use my health insurance?</h3>
+            <p>No. We don't accept insurance. Sessions are paid directly.</p>
+
             <h3 style="color: var(--color-primary-dark);">I searched for a Pakistani psychologist in Riyadh. Is this the same thing?</h3>
-            <p>Not quite. Attia Altaf is a UK-qualified (CPCAB) Integrative Psychotherapist, not a psychologist or a psychiatrist, and she doesn't prescribe medication. For talk therapy, such as anxiety, depression, trauma or marriage problems, a qualified psychotherapist is the right person to see.</p>
+            <p>Not quite. Attia Altaf is an Integrative Psychotherapist, not a psychologist or a psychiatrist, and she doesn't prescribe medication. For talk therapy, such as anxiety, depression, trauma or marriage problems, a qualified psychotherapist is the right person to see.</p>
 
             <h3 style="color: var(--color-primary-dark);">My wife and children are in Pakistan and I work in Saudi Arabia. Can I still get marriage counseling?</h3>
             <!-- TODO-HUMAN [A-3]: Attia to review -->
             <p>Yes. Marriage counseling with Attia is always one-to-one, so you attend on your own from Saudi Arabia and your wife does not need to join. You work on your side of the marriage: how you communicate, hold boundaries and respond to conflict, across the distance.</p>
 
+            <h3 style="color: var(--color-primary-dark);">What happens if the call drops?</h3>
+            <p>Attia is in Pakistan, and either side can lose power or internet, whether it is a camp connection in the Eastern Province or a power cut in Islamabad. If the call drops, you reconnect and carry on.</p>
+
+            <h3 style="color: var(--color-primary-dark);">When is online therapy the wrong place to start?</h3>
+            <!-- TODO-HUMAN [B-0]: Attia to confirm or replace these referral options -->
+            <p>When you are at risk of harming yourself or someone else, when you may need medication, or when you are not safe where you live. Attia doesn't prescribe; a psychiatrist, who is a medical doctor, does, so see a doctor in Saudi Arabia for that. In a crisis, use 997, or 937 for medical advice.</p>
+
             <div style="background: #fff4f4; border-left: 4px solid #c0392b; border-radius: 8px; padding: 1rem 1.25rem; margin-top: 2rem;">
-                <p style="margin: 0;"><strong>In an emergency:</strong> if you are thinking of harming yourself or are in danger, don't wait for a session. In Saudi Arabia, call <strong>997</strong> for an ambulance (the <a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2022.937202/full" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 500;">Saudi Red Crescent's national emergency number</a>) or go to the nearest hospital emergency department.</p>
+                <p style="margin: 0 0 0.5rem;"><strong>In an emergency:</strong> if you are thinking of harming yourself or are in danger, don't wait for a session. In Saudi Arabia:</p>
+                <ul style="line-height: 1.8; margin: 0;">
+                    <li><strong>997</strong> for an ambulance (the <a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2022.937202/full" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 500;">Saudi Red Crescent's national emergency number</a>), or go to the nearest hospital emergency department.</li>
+                    <li><strong>937</strong>: the Ministry of Health's call centre, answered <a href="https://www.moh.gov.sa/en/ministry/about/pages/contactus.aspx" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: 500;">24/7</a> for medical advice.</li>
+                    <!-- TODO-HUMAN [B-S2]: 920033360 (National Center for Mental Health Promotion counselling line, reported as Sunday to Thursday, 9am-3pm, never 24/7) not published: ncmh.org.sa/view/16/3th renders by JavaScript and its text could not be read on 24 Nov 2026. Owner to confirm number and hours on the site in a browser and by phone, then add it with those hours. -->
+                </ul>
             </div>
         </div>
     </section>
