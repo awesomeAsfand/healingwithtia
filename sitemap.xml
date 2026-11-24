@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- TODO-HUMAN [P3-2]: every lastmod of 2026-11-23 marks a page changed in phase 3; set them to the real deploy date. -->
   <!-- HOMEPAGE -->
   <url>
     <loc>https://www.healingwithattia.com/</loc>
@@ -11,19 +10,19 @@
   <!-- CORE PAGES -->
   <url>
     <loc>https://www.healingwithattia.com/therapy-dubai-uae.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/online-therapy-pakistanis-abroad.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/online-therapy-saudi-arabia.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -35,13 +34,13 @@
   </url>
   <url>
     <loc>https://www.healingwithattia.com/postnatal-depression-treatment-pakistan.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/anxiety-treatment-pakistan.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -53,13 +52,13 @@
   </url>
   <url>
     <loc>https://www.healingwithattia.com/depression-therapy-pakistan.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.healingwithattia.com/about.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -84,14 +83,14 @@
   <!-- BLOG INDEX -->
   <url>
     <loc>https://www.healingwithattia.com/blog.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- BLOG POSTS -->
   <url>
     <loc>https://www.healingwithattia.com/blog-postnatal-depression.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -127,7 +126,7 @@
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-parents-therapy.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -163,7 +162,7 @@
   </url>
   <url>
     <loc>https://www.healingwithattia.com/blog-emotional-hurt.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -182,7 +181,7 @@
   </url>
   <url>
     <loc>https://www.healingwithattia.com/online-therapy-uk.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
