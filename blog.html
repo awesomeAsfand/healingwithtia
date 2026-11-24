@@ -43,77 +43,6 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: #fff;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .blog-card-body {
-            padding: 1.4rem 1.5rem 1.6rem;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .blog-meta {
-            color: #999;
-            font-size: 0.82rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .blog-card-body h2 {
-            font-size: 1.1rem;
-            line-height: 1.45;
-            margin-bottom: 0.75rem;
-        }
-
-        .blog-card-body h2 a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .blog-card-body h2 a:hover {
-            color: var(--color-primary);
-        }
-
-        .blog-card-body p {
-            color: #666;
-            font-size: 0.92rem;
-            line-height: 1.65;
-            flex: 1;
-            margin-bottom: 1.2rem;
-        }
-
-        @media (max-width: 600px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -136,7 +65,7 @@
     <meta name="twitter:image"       content="https://www.healingwithattia.com/images/hero.webp">
 </head>
 
-<body>
+<body class="page-blog">
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
         <nav class="navbar">
         <div class="container nav-container">
@@ -163,7 +92,7 @@
         </div>
     </header>
 
-    <section class="section" style="background: var(--color-bg-soft, #f8f9fa);">
+    <section class="section u-bg-bg-soft-f8f9fa">
         <div class="container">
             <div class="blog-grid">
                 <!-- Healing from Trauma & Emotional Pain -->
@@ -343,15 +272,15 @@
     </main>
     <footer>
         <div class="container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div class="footer-grid"
+               >
                 <div>
                     <h3>Healing with Attia</h3>
                     <p>Empathy. Clarity. Healing.</p>
                 </div>
                 <div>
                     <h3>Quick Links</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services &amp; Pricing</a></li>
                         <li><a href="blog.html">Mental Health Blog</a></li>
@@ -360,7 +289,7 @@
                 </div>
                 <div>
                     <h3>Treatments</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
                         <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
                         <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
@@ -376,7 +305,7 @@
                 </div>
                 <div>
                     <h3>Locations</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
@@ -389,12 +318,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center"
-                style="border-top: 1px solid #ddd; padding-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+            <div class="text-center footer-bottom"
+               >
                 &copy; 2026 Healing with Attia. All rights reserved. |
-                <a href="privacy-policy.html" style="color: var(--color-text-light);">Privacy Policy</a> |
-                <a href="terms.html" style="color: var(--color-text-light);">Terms of Service</a> |
-                <a href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener" style="color: var(--color-text-light);">Made with ❤️ by PickMySaaS</a>
+                <a class="u-c-text-light" href="privacy-policy.html">Privacy Policy</a> |
+                <a class="u-c-text-light" href="terms.html">Terms of Service</a> |
+                <a class="u-c-text-light" href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener">Made with ❤️ by PickMySaaS</a>
             </div>
         </div>
     </footer>

@@ -50,29 +50,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <style>
-/* Marriage-counseling feature grid: stack on its own row on small phones
-   (global min-width:0 override at <=400px otherwise lets it overflow) */
-@media (max-width: 480px) {
-    .mc-feature-grid {
-        flex: 1 1 100% !important;
-        width: 100%;
-    }
-    .mc-feature-grid > div {
-        min-width: 0;
-    }
-}
-
-/* Meet Your Therapist: when the columns stack on mobile, show the heading/label
-   before the photo instead of after it — otherwise the hero image is immediately
-   followed by another photo with no heading in between. */
-@media (max-width: 768px) {
-    .meet-therapist-text {
-        order: -1;
-    }
-}
-
-    </style>
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -170,15 +147,15 @@
     <main>
 
     <!-- Hero Section -->
-    <header id="main-content" class="section"
-        style="padding-top: 4rem; padding-bottom: 4rem; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); border-bottom: 1px solid #e0e0e0;">
-        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
-            <div style="flex: 1; min-width: min(300px, 100%);" class="animate-on-scroll">
-                <h1 style="color: var(--color-text);">Professional Online Therapy & Counseling in Pakistan</h1>
-                <p style="font-size: 1.2rem; color: var(--color-text-light); margin-bottom: 2rem;">
+    <header id="main-content" class="section u-pt-4rem u-pb-4rem u-bg-4ee8f5 u-bb-1px-solid-e0e0e0"
+       >
+        <div class="container split-row">
+            <div class="animate-on-scroll col-300">
+                <h1 class="u-c-text">Professional Online Therapy & Counseling in Pakistan</h1>
+                <p class="u-fs-1_2rem u-c-text-light u-mb-2rem">
                     Private, confidential online therapy in Pakistan for anxiety, depression, OCD, trauma, and <strong>marriage counseling</strong> — by a UK-qualified (CPCAB) therapist. Sessions in Urdu &amp; English.
                 </p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div class="u-d-flex u-gap-1rem u-fwrap-wrap">
                     <a href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment"
                         class="btn btn-whatsapp" target="_blank" rel="noopener">
                         <i class="fab fa-whatsapp"></i> Book On WhatsApp
@@ -186,37 +163,37 @@
                     <a href="services.html" class="btn btn-outline">View Services</a>
                 </div>
             </div>
-            <div style="flex: 1; min-width: min(300px, 100%);" class="animate-on-scroll delay-200">
+            <div class="animate-on-scroll delay-200 col-300">
                 <!-- Placeholder for Hero Image -->
-                <img src="images/hero.webp" alt="Online Therapy Pakistan — Attia Altaf, Integrative Psychotherapist"
-                    style="width: 100%; height: auto; max-height: 520px; object-fit: cover; border-radius: var(--radius-lg); opacity: 0.9;" fetchpriority="high" width="1100" height="1100">
+                <img class="u-w-100pc u-h-auto u-maxh-520px u-of-cover u-radius-radius-lg u-opacity-0_9" src="images/hero.webp" alt="Online Therapy Pakistan — Attia Altaf, Integrative Psychotherapist"
+                    fetchpriority="high" width="1100" height="1100">
             </div>
         </div>
     </header>
 
     <!-- Section: Meet Your Therapist -->
-    <section class="section" style="background-color: #fff;">
+    <section class="section u-bgc-fff">
         <div class="container">
-            <div style="display: flex; gap: 3.5rem; align-items: center; flex-wrap: wrap; flex-direction: row-reverse;">
+            <div class="u-d-flex u-gap-3_5rem u-ai-center u-fwrap-wrap u-fdir-row-reverse">
 
                 <!-- Media Column: portrait + intro clip, side by side -->
-                <div style="flex: 1.25; min-width: min(340px, 100%);" class="animate-on-scroll meet-therapist-image">
+                <div class="animate-on-scroll meet-therapist-image u-flex-1_25 u-minw-min-340px-100pc">
                     <div class="mt-pair">
-                        <div
-                            style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--color-accent); border-radius: 50%; z-index: 0;">
+                        <div class="u-pos-absolute u-top-20px u-right-20px u-w-100px u-h-100px u-bg-accent u-radius-50pc u-z-0"
+                           >
                         </div>
 
                         <!-- Portrait -->
                         <div class="mt-photo">
-                            <img src="images/about/about2.webp"
+                            <img class="u-w-100pc u-h-100pc u-of-cover u-op-50pc-22pc u-radius-radius-lg u-shadow-shadow-lg u-d-block" src="images/about/about2.webp"
                                 alt="Attia Altaf — Online Therapist Pakistan | Healing with Attia"
                                 width="1424" height="745"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: block;">
-                            <a href="https://cpcab.co.uk" target="_blank" rel="noopener noreferrer" title="UK-qualified: CPCAB (UK) Level 3 and Level 4 counselling qualifications"
-                                style="position: absolute; bottom: 12px; right: 12px; width: 66px; height: 66px; background: #fff; border-radius: 50%; box-shadow: var(--shadow-lg); display: flex; align-items: center; justify-content: center; padding: 10px; z-index: 3;">
-                                <img src="images/badges/cpcab-logo.webp"
+                               >
+                            <a class="u-pos-absolute u-bottom-12px u-right-12px u-w-66px u-h-66px u-bg-fff u-radius-50pc u-shadow-shadow-lg u-d-flex u-ai-center u-jc-center u-p-10px u-z-3" href="https://cpcab.co.uk" target="_blank" rel="noopener noreferrer" title="UK-qualified: CPCAB (UK) Level 3 and Level 4 counselling qualifications"
+                               >
+                                <img class="u-w-100pc u-h-auto u-d-block" src="images/badges/cpcab-logo.webp"
                                     alt="CPCAB — Counselling &amp; Psychotherapy Central Awarding Body (UK)"
-                                    width="537" height="355" style="width: 100%; height: auto; display: block;">
+                                    width="537" height="355">
                             </a>
                         </div>
 
@@ -236,8 +213,8 @@
                             </button>
                         </div>
 
-                        <div
-                            style="position: absolute; bottom: -20px; left: -20px; width: 150px; height: 150px; border: 3px solid var(--color-primary); border-radius: 50%; z-index: 0; opacity: 0.3;">
+                        <div class="u-pos-absolute u-bottom-20px u-left-20px u-w-150px u-h-150px u-b-3px-solid-primary u-radius-50pc u-z-0 u-opacity-0_3"
+                           >
                         </div>
                     </div>
                     <p class="mt-podcast-link">
@@ -250,27 +227,27 @@
                 </div>
 
                 <!-- Text Column -->
-                <div style="flex: 1; min-width: min(300px, 100%);" class="animate-on-scroll delay-100 meet-therapist-text">
+                <div class="animate-on-scroll delay-100 meet-therapist-text col-300">
                     <p class="section-label">Meet Your Therapist</p>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Attia Altaf</h2>
-                    <p
-                        style="font-family: 'Inter', sans-serif; font-size: 1.2rem; color: #555; margin-bottom: 1.5rem; font-weight: 400;">
+                    <h2 class="u-fs-2_5rem u-mb-1_5rem">Attia Altaf</h2>
+                    <p class="u-ff-inter-sans-serif u-fs-1_2rem u-c-555 u-mb-1_5rem u-fw-400"
+                       >
                         Integrative Psychotherapist</p>
 
-                    <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8; color: #444;">
+                    <p class="u-mb-1_5rem u-fs-1_05rem u-lh-1_8 u-c-444">
                         "Healing is not about fixing you—it's about understanding you."
                     </p>
-                    <p style="margin-bottom: 2rem; color: #666; line-height: 1.7;">
+                    <p class="u-mb-2rem u-c-666 u-lh-1_7">
                         With 8+ years' experience in Pakistan's mental health landscape, I specialize in helping
                         individuals navigate anxiety, trauma, and relationship complexities. My goal is to provide a
                         safe, non-judgmental space where you can speak your heart out.
 
                     </p>
 
-                    <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                    <div class="u-d-flex u-gap-1rem u-ai-center u-fwrap-wrap">
                         <a href="about.html" class="btn btn-primary">Read Full Bio</a>
                         <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment"
-                            class="text-primary" style="font-weight: 600; margin-left: 1rem;">Book Consultation <i
+                            class="text-primary u-fw-600 u-ml-1rem">Book Consultation <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -282,139 +259,139 @@
     <!-- Who We Help Section -->
     <section class="section">
         <div class="container">
-            <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+            <div class="text-center u-maxw-800px u-m-0-auto-3rem">
                 <h2 class="animate-on-scroll">How We Can Help</h2>
-                <p class="animate-on-scroll" style="font-size: 1.1rem; color: var(--color-text-light);">
+                <p class="animate-on-scroll u-fs-1_1rem u-c-text-light">
                     You don't have to carry it alone — specialized support tailored to what you're going through.
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="u-d-grid u-cols-82d7b5 u-gap-1_5rem">
 
                 <!-- Item 1 -->
-                <a href="depression-therapy-pakistan.html" class="card animate-on-scroll"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div
-                        style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="depression-therapy-pakistan.html" class="card animate-on-scroll u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-shadow-0-6px-22px-rgba-0-0-0-0_09"
+                   >
+                    <div class="u-bg-accent u-c-primary-dark u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0"
+                       >
                         <i class="fas fa-wind"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">Depression & Low Mood</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Feeling empty, exhausted, or disconnected from life? Evidence-based depression treatment — online, in Urdu &amp; English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore depression treatment →</span>
+                        <h3 class="u-mb-0_5rem">Depression & Low Mood</h3>
+                        <p class="u-fs-0_95rem u-c-555">Feeling empty, exhausted, or disconnected from life? Evidence-based depression treatment — online, in Urdu &amp; English.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore depression treatment →</span>
                     </div>
                 </a>
 
                 <!-- Item 2 -->
-                <a href="postnatal-depression-treatment-pakistan.html" class="card animate-on-scroll delay-100"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div
-                        style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="postnatal-depression-treatment-pakistan.html" class="card animate-on-scroll delay-100 u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-shadow-0-6px-22px-rgba-0-0-0-0_09"
+                   >
+                    <div class="u-bg-accent u-c-primary-dark u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0"
+                       >
                         <i class="fas fa-cloud-rain"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">Postnatal Depression</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Struggling after having a baby? You are not a bad mother. Treatment built around new motherhood — online, in Urdu &amp; English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore PND treatment →</span>
+                        <h3 class="u-mb-0_5rem">Postnatal Depression</h3>
+                        <p class="u-fs-0_95rem u-c-555">Struggling after having a baby? You are not a bad mother. Treatment built around new motherhood — online, in Urdu &amp; English.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore PND treatment →</span>
                     </div>
                 </a>
 
                 <!-- Item 3 -->
-                <a href="blog-relationships-therapy.html" class="card animate-on-scroll delay-200"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; border: 1px solid var(--color-primary); position: relative; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div style="position: absolute; top: -10px; right: 12px; background: var(--color-primary); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 2px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Most Searched</div>
-                    <div
-                        style="background: var(--color-primary); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="blog-relationships-therapy.html" class="card animate-on-scroll delay-200 u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-b-1px-solid-primary u-pos-relative u-shadow-0-6px-22px-rgba-0-0-0-0_09"
+                   >
+                    <div class="u-pos-absolute u-top-10px u-right-12px u-bg-primary u-c-fff u-fs-0_7rem u-fw-700 u-p-2px-10px u-radius-20px u-tt-uppercase u-lsp-0_5px">Most Searched</div>
+                    <div class="u-bg-primary u-c-fff u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0"
+                       >
                         <i class="fas fa-heart"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem; color: var(--color-primary-dark);">Marriage Counseling</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Communication breakdown, joint family conflict, trust issues, pre-marital counseling — online, in Urdu &amp; English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore marriage counseling →</span>
+                        <h3 class="u-mb-0_5rem u-c-primary-dark">Marriage Counseling</h3>
+                        <p class="u-fs-0_95rem u-c-555">Communication breakdown, joint family conflict, trust issues, pre-marital counseling — online, in Urdu &amp; English.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore marriage counseling →</span>
                     </div>
                 </a>
 
                 <!-- Item 4 -->
-                <a href="trauma-therapy-pakistan.html" class="card animate-on-scroll" style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="trauma-therapy-pakistan.html" class="card animate-on-scroll u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-shadow-0-6px-22px-rgba-0-0-0-0_09">
+                    <div class="u-bg-accent u-c-primary-dark u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">Healing from Trauma &amp; Emotional Pain</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Hurt by someone you trusted — a partner, parent, or in-law? Trauma-informed therapy to process the pain and heal.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore trauma therapy →</span>
+                        <h3 class="u-mb-0_5rem">Healing from Trauma &amp; Emotional Pain</h3>
+                        <p class="u-fs-0_95rem u-c-555">Hurt by someone you trusted — a partner, parent, or in-law? Trauma-informed therapy to process the pain and heal.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore trauma therapy →</span>
                     </div>
                 </a>
 
                 <!-- Item 5 -->
-                <a href="anxiety-treatment-pakistan.html" class="card animate-on-scroll delay-100"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div
-                        style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="anxiety-treatment-pakistan.html" class="card animate-on-scroll delay-100 u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-shadow-0-6px-22px-rgba-0-0-0-0_09"
+                   >
+                    <div class="u-bg-accent u-c-primary-dark u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0"
+                       >
                         <i class="fas fa-brain"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">Anxiety & CBT Therapy</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Panic attacks, social anxiety, chronic worry — CBT is the gold-standard anxiety treatment, online in Urdu &amp; English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore anxiety treatment →</span>
+                        <h3 class="u-mb-0_5rem">Anxiety & CBT Therapy</h3>
+                        <p class="u-fs-0_95rem u-c-555">Panic attacks, social anxiety, chronic worry — CBT is the gold-standard anxiety treatment, online in Urdu &amp; English.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore anxiety treatment →</span>
                     </div>
                 </a>
 
                 <!-- Item 6 -->
-                <a href="ocd-treatment-pakistan.html" class="card animate-on-scroll delay-200"
-                    style="display: flex; align-items: start; gap: 1rem; padding: 1.5rem; text-decoration: none; color: inherit; box-shadow: 0 6px 22px rgba(0,0,0,0.09);">
-                    <div
-                        style="background: var(--color-accent); color: var(--color-primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <a href="ocd-treatment-pakistan.html" class="card animate-on-scroll delay-200 u-d-flex u-ai-start u-gap-1rem u-p-1_5rem u-tdec-none u-c-inherit u-shadow-0-6px-22px-rgba-0-0-0-0_09"
+                   >
+                    <div class="u-bg-accent u-c-primary-dark u-w-40px u-h-40px u-radius-50pc u-d-flex u-ai-center u-jc-center u-fshrink-0"
+                       >
                         <i class="fas fa-fire-alt"></i>
                     </div>
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">OCD & Intrusive Thoughts</h3>
-                        <p style="font-size: 0.95rem; color: #555;">Repetitive thoughts, compulsions, or religious OCD (waswasa)? ERP therapy breaks the cycle — online, in Urdu &amp; English.</p>
-                        <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 600;">Explore OCD treatment →</span>
+                        <h3 class="u-mb-0_5rem">OCD & Intrusive Thoughts</h3>
+                        <p class="u-fs-0_95rem u-c-555">Repetitive thoughts, compulsions, or religious OCD (waswasa)? ERP therapy breaks the cycle — online, in Urdu &amp; English.</p>
+                        <span class="u-fs-0_88rem u-c-primary u-fw-600">Explore OCD treatment →</span>
                     </div>
                 </a>
 
             </div>
 
             <!-- Subsection: What is Therapy? -->
-            <div style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid #eee;">
-                <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
-                    <div style="flex: 1; min-width: min(300px, 100%);" class="animate-on-scroll">
-                        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">What is Therapy, Really?</h2>
-                        <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">
-                            At its simplest, therapy is a series of private conversations that help you feel and function better. Think of it not as a hospital for the "sick," but as a <span class="text-primary" style="font-weight: 600;">gym for your mind</span> — a confidential space where we make sense of difficult thoughts and emotions and build practical tools for a lighter, more resilient life. In each session, you talk, I listen and ask questions, and together we find a way forward.
+            <div class="u-mt-5rem u-pt-3rem u-bt-1px-solid-eee">
+                <div class="u-d-flex u-fwrap-wrap u-gap-3rem u-ai-center">
+                    <div class="animate-on-scroll col-300">
+                        <h2 class="u-fs-2rem u-mb-1_5rem">What is Therapy, Really?</h2>
+                        <p class="u-mb-1_5rem u-fs-1_05rem u-lh-1_8">
+                            At its simplest, therapy is a series of private conversations that help you feel and function better. Think of it not as a hospital for the "sick," but as a <span class="text-primary u-fw-600">gym for your mind</span> — a confidential space where we make sense of difficult thoughts and emotions and build practical tools for a lighter, more resilient life. In each session, you talk, I listen and ask questions, and together we find a way forward.
                         </p>
-                        <p style="font-size: 1.05rem; line-height: 1.8;">
+                        <p class="u-fs-1_05rem u-lh-1_8">
                             In our culture, we are often told to "just pray" or "be strong." Therapy doesn't replace faith or resilience — it supports them. It simply gives you a judgment-free space to say the things you can't say to anyone else.
                         </p>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin-top: 2rem;">
-                            <div style="background: #f0faf4; border-radius: 12px; padding: 1.25rem 1.5rem;">
-                                <h4 style="color: var(--color-primary-dark); margin-bottom: 0.75rem;"><i class="fas fa-check-circle text-success" style="margin-right: 0.4rem;"></i>Therapy is</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #555; line-height: 1.4;">
-                                    <li style="margin-bottom: 0.4rem;">Confidential &amp; judgment-free</li>
-                                    <li style="margin-bottom: 0.4rem;">Practical, for everyday struggles</li>
-                                    <li style="margin-bottom: 0.4rem;">A partnership — you stay in control</li>
-                                    <li style="margin-bottom: 0.4rem;">A sign of strength, not weakness</li>
+                        <div class="u-d-grid u-cols-98ef4f u-gap-1_25rem u-mt-2rem">
+                            <div class="u-bg-f0faf4 u-radius-12px u-p-1_25rem-1_5rem">
+                                <h4 class="u-c-primary-dark u-mb-0_75rem"><i class="fas fa-check-circle text-success u-mr-0_4rem"></i>Therapy is</h4>
+                                <ul class="u-ls-none u-p-0 u-m-0 u-fs-0_95rem u-c-555 u-lh-1_4">
+                                    <li class="u-mb-0_4rem">Confidential &amp; judgment-free</li>
+                                    <li class="u-mb-0_4rem">Practical, for everyday struggles</li>
+                                    <li class="u-mb-0_4rem">A partnership — you stay in control</li>
+                                    <li class="u-mb-0_4rem">A sign of strength, not weakness</li>
                                 </ul>
                             </div>
-                            <div style="background: #fbf4f1; border-radius: 12px; padding: 1.25rem 1.5rem;">
-                                <h4 style="color: var(--color-primary-dark); margin-bottom: 0.75rem;"><i class="fas fa-times-circle" style="color: #c0795f; margin-right: 0.4rem;"></i>Therapy isn't</h4>
-                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #555; line-height: 1.4;">
-                                    <li style="margin-bottom: 0.4rem;">Only for "serious" mental illness</li>
-                                    <li style="margin-bottom: 0.4rem;">A replacement for faith</li>
-                                    <li style="margin-bottom: 0.4rem;">Being told what to do</li>
-                                    <li style="margin-bottom: 0.4rem;">Something that lasts forever</li>
+                            <div class="u-bg-fbf4f1 u-radius-12px u-p-1_25rem-1_5rem">
+                                <h4 class="u-c-primary-dark u-mb-0_75rem"><i class="fas fa-times-circle u-c-c0795f u-mr-0_4rem"></i>Therapy isn't</h4>
+                                <ul class="u-ls-none u-p-0 u-m-0 u-fs-0_95rem u-c-555 u-lh-1_4">
+                                    <li class="u-mb-0_4rem">Only for "serious" mental illness</li>
+                                    <li class="u-mb-0_4rem">A replacement for faith</li>
+                                    <li class="u-mb-0_4rem">Being told what to do</li>
+                                    <li class="u-mb-0_4rem">Something that lasts forever</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div style="flex: 1; min-width: min(300px, 100%); background-color: #f8fbfb; padding: 2.5rem; border-radius: 16px;"
-                        class="animate-on-scroll delay-100">
-                        <h3 style="margin-bottom: 1.5rem; color: var(--color-primary-dark);">Is Therapy Right For Me?
+                    <div
+                        class="animate-on-scroll delay-100 u-flex-1 u-minw-min-300px-100pc u-bgc-f8fbfb u-p-2_5rem u-radius-16px">
+                        <h3 class="u-mb-1_5rem u-c-primary-dark">Is Therapy Right For Me?
                         </h3>
-                        <ul class="fa-ul"
-                            style="margin-left: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <ul class="fa-ul u-ml-1_5rem u-d-flex u-fdir-column u-gap-1rem"
+                           >
                             <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Do you feel
                                 like you're carrying the weight of the world, but have to keep smiling?</li>
                             <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Is it hard to
@@ -426,17 +403,17 @@
                             <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Do you worry
                                 that seeking help makes you "ungrateful" or "weak"?</li>
                         </ul>
-                        <div style="margin-top: 2rem; text-align: center;">
-                            <p style="font-size: 0.95rem; margin-bottom: 1rem; font-style: italic;">If you said yes to even one of these, that's reason enough to reach out.</p>
+                        <div class="u-mt-2rem u-ta-center">
+                            <p class="u-fs-0_95rem u-mb-1rem u-fst-italic">If you said yes to even one of these, that's reason enough to reach out.</p>
                             <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=I+read+your+checklist+and+would+like+to+talk"
                                 class="btn btn-primary btn-sm">Let's Talk About It</a>
-                            <p style="font-size: 0.85rem; color: #888; margin-top: 1rem; margin-bottom: 0;">Sessions are 50 minutes, online, in Urdu &amp; English — no waiting list.</p>
+                            <p class="u-fs-0_85rem u-c-888 u-mt-1rem u-mb-0">Sessions are 50 minutes, online, in Urdu &amp; English — no waiting list.</p>
                         </div>
-                        <p style="font-size: 0.95rem; margin-top: 1.75rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-primary-dark); text-align: center;">New to therapy? These guides help you decide:</p>
-                        <ul style="line-height: 1.8; padding: 0; margin: 0; font-size: 0.92rem; list-style: none; text-align: center;">
-                            <li><a href="blog-online-vs-inperson-therapy.html" style="color: var(--color-primary);">Online therapy vs in-person therapy in Pakistan</a></li>
-                            <li><a href="blog-choose-a-therapist.html" style="color: var(--color-primary);">How to choose a therapist in Pakistan</a></li>
-                            <li><a href="blog-psychiatrist-vs-psychologist.html" style="color: var(--color-primary);">Psychiatrist vs psychologist vs psychotherapist</a></li>
+                        <p class="u-fs-0_95rem u-mt-1_75rem u-mb-0_5rem u-fw-600 u-c-primary-dark u-ta-center">New to therapy? These guides help you decide:</p>
+                        <ul class="u-lh-1_8 u-p-0 u-m-0 u-fs-0_92rem u-ls-none u-ta-center">
+                            <li><a class="u-c-primary" href="blog-online-vs-inperson-therapy.html">Online therapy vs in-person therapy in Pakistan</a></li>
+                            <li><a class="u-c-primary" href="blog-choose-a-therapist.html">How to choose a therapist in Pakistan</a></li>
+                            <li><a class="u-c-primary" href="blog-psychiatrist-vs-psychologist.html">Psychiatrist vs psychologist vs psychotherapist</a></li>
                         </ul>
                     </div>
                 </div>
@@ -446,65 +423,65 @@
 
 
     <!-- Research credibility band -->
-    <section class="section" style="background: #fbfaf7;">
+    <section class="section u-bg-fbfaf7">
         <div class="container">
-            <h2 class="text-center animate-on-scroll" style="margin-bottom: 2.5rem;">Is Online Therapy Effective? What the Research Says</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-                <div class="card text-center animate-on-scroll" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-size: 2.6rem; font-weight: 700; color: var(--color-primary); line-height: 1;">60+</div>
-                    <p style="margin-top: 0.75rem; color: #555;">peer-reviewed studies confirm online therapy is as effective as in-person for anxiety, depression &amp; PTSD</p>
+            <h2 class="text-center animate-on-scroll u-mb-2_5rem">Is Online Therapy Effective? What the Research Says</h2>
+            <div class="u-d-grid u-cols-98dafb u-gap-1_5rem u-maxw-1000px u-m-0-auto">
+                <div class="card text-center animate-on-scroll u-h-100pc u-d-flex u-fdir-column u-jc-center">
+                    <div class="u-fs-2_6rem u-fw-700 u-c-primary u-lh-1">60+</div>
+                    <p class="u-mt-0_75rem u-c-555">peer-reviewed studies confirm online therapy is as effective as in-person for anxiety, depression &amp; PTSD</p>
                 </div>
-                <div class="card text-center animate-on-scroll delay-100" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-size: 2.6rem; font-weight: 700; color: var(--color-primary); line-height: 1;">40+</div>
-                    <p style="margin-top: 0.75rem; color: #555;">studies show online therapy for depression works better than no treatment at all</p>
+                <div class="card text-center animate-on-scroll delay-100 u-h-100pc u-d-flex u-fdir-column u-jc-center">
+                    <div class="u-fs-2_6rem u-fw-700 u-c-primary u-lh-1">40+</div>
+                    <p class="u-mt-0_75rem u-c-555">studies show online therapy for depression works better than no treatment at all</p>
                 </div>
-                <div class="card text-center animate-on-scroll delay-200" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-size: 2.6rem; font-weight: 700; color: var(--color-primary); line-height: 1;">15&ndash;20</div>
-                    <p style="margin-top: 0.75rem; color: #555;">weekly sessions &mdash; after which half of people consider themselves recovered (APA)</p>
+                <div class="card text-center animate-on-scroll delay-200 u-h-100pc u-d-flex u-fdir-column u-jc-center">
+                    <div class="u-fs-2_6rem u-fw-700 u-c-primary u-lh-1">15&ndash;20</div>
+                    <p class="u-mt-0_75rem u-c-555">weekly sessions &mdash; after which half of people consider themselves recovered (APA)</p>
                 </div>
             </div>
-            <p class="text-center" style="margin-top: 1.5rem; font-size: 0.85rem; color: #888; font-style: italic;">Source: <a href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you" target="_blank" rel="noopener noreferrer" style="color: inherit;">UCLA Health &amp; the American Psychological Association</a></p>
+            <p class="text-center u-mt-1_5rem u-fs-0_85rem u-c-888 u-fst-italic">Source: <a class="u-c-inherit" href="https://www.uclahealth.org/news/article/is-online-therapy-right-for-you" target="_blank" rel="noopener noreferrer">UCLA Health &amp; the American Psychological Association</a></p>
         </div>
     </section>
 
     <!-- Featured: Marriage Counseling -->
-    <section class="section" style="background: linear-gradient(135deg, #f0faf4 0%, #fdfbfb 100%); border-top: 1px solid #e8f5e9; border-bottom: 1px solid #e8f5e9;">
+    <section class="section u-bg-45fddd u-bt-1px-solid-e8f5e9 u-bb-1px-solid-e8f5e9">
         <div class="container">
-            <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
-                <div style="flex: 1; min-width: min(280px, 100%);" class="animate-on-scroll">
-                    <p style="color: var(--color-primary); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Most Requested Service</p>
-                    <h2 style="margin-bottom: 1rem;">Marriage Counseling — Reconnect With Your Partner</h2>
-                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 1rem;">
+            <div class="u-d-flex u-fwrap-wrap u-gap-3rem u-ai-center">
+                <div class="animate-on-scroll col-280">
+                    <p class="u-c-primary u-fw-600 u-fs-0_9rem u-tt-uppercase u-lsp-1px u-mb-0_5rem">Most Requested Service</p>
+                    <h2 class="u-mb-1rem">Marriage Counseling — Reconnect With Your Partner</h2>
+                    <p class="u-fs-1_05rem u-c-555 u-lh-1_8 u-mb-1rem">
                         Marriage in Pakistan is complex — joint family pressure, communication breakdown, trust issues, and the weight of expectations. Professional marriage counseling helps you and your partner reconnect, communicate, and build the marriage you both want.
                     </p>
-                    <p style="font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
+                    <p class="u-fs-1_05rem u-c-555 u-lh-1_8 u-mb-1_5rem">
                         Online sessions via Zoom — in Urdu &amp; English — for clients across Lahore, Karachi, Islamabad, and all of Pakistan.
                     </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="u-d-flex u-gap-1rem u-fwrap-wrap">
                         <a href="blog-relationships-therapy.html" class="btn btn-primary"><i class="fas fa-heart"></i> Marriage Counseling in Pakistan</a>
                         <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Book a Session</a>
                     </div>
                 </div>
-                <div style="flex: 1; min-width: min(280px, 100%); display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;" class="mc-feature-grid animate-on-scroll delay-200">
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
-                        <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Communication</div>
-                        <div style="font-size: 0.85rem; color: #777;">Break the cycle of conflict</div>
+                <div class="mc-feature-grid animate-on-scroll delay-200 u-flex-1 u-minw-min-280px-100pc u-d-grid u-cols-repeat-2-1fr u-gap-1rem">
+                    <div class="u-bg-fff u-radius-10px u-p-1_2rem u-b-1px-solid-e0f2e9 u-ta-center u-d-flex u-fdir-column u-ai-center u-jc-flex-start">
+                        <i class="fas fa-comments u-fs-1_5rem u-c-primary u-mb-0_5rem"></i>
+                        <div class="u-fw-600 u-fs-0_95rem u-c-333">Communication</div>
+                        <div class="u-fs-0_85rem u-c-777">Break the cycle of conflict</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                        <i class="fas fa-home" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
-                        <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Joint Family</div>
-                        <div style="font-size: 0.85rem; color: #777;">Navigate in-law dynamics</div>
+                    <div class="u-bg-fff u-radius-10px u-p-1_2rem u-b-1px-solid-e0f2e9 u-ta-center u-d-flex u-fdir-column u-ai-center u-jc-flex-start">
+                        <i class="fas fa-home u-fs-1_5rem u-c-primary u-mb-0_5rem"></i>
+                        <div class="u-fw-600 u-fs-0_95rem u-c-333">Joint Family</div>
+                        <div class="u-fs-0_85rem u-c-777">Navigate in-law dynamics</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
-                        <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Trust Repair</div>
-                        <div style="font-size: 0.85rem; color: #777;">Rebuild after a difficult time</div>
+                    <div class="u-bg-fff u-radius-10px u-p-1_2rem u-b-1px-solid-e0f2e9 u-ta-center u-d-flex u-fdir-column u-ai-center u-jc-flex-start">
+                        <i class="fas fa-shield-alt u-fs-1_5rem u-c-primary u-mb-0_5rem"></i>
+                        <div class="u-fw-600 u-fs-0_95rem u-c-333">Trust Repair</div>
+                        <div class="u-fs-0_85rem u-c-777">Rebuild after a difficult time</div>
                     </div>
-                    <div style="background: #fff; border-radius: 10px; padding: 1.2rem; border: 1px solid #e0f2e9; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                        <i class="fas fa-ring" style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem;"></i>
-                        <div style="font-weight: 600; font-size: 0.95rem; color: #333;">Pre-marital</div>
-                        <div style="font-size: 0.85rem; color: #777;">Start on the right foundation</div>
+                    <div class="u-bg-fff u-radius-10px u-p-1_2rem u-b-1px-solid-e0f2e9 u-ta-center u-d-flex u-fdir-column u-ai-center u-jc-flex-start">
+                        <i class="fas fa-ring u-fs-1_5rem u-c-primary u-mb-0_5rem"></i>
+                        <div class="u-fw-600 u-fs-0_95rem u-c-333">Pre-marital</div>
+                        <div class="u-fs-0_85rem u-c-777">Start on the right foundation</div>
                     </div>
                 </div>
             </div>
@@ -513,15 +490,15 @@
 
     <section class="section bg-surface">
         <div class="container">
-            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+            <div class="text-center u-maxw-700px u-m-0-auto-3rem">
                 <h2 class="animate-on-scroll">Why Choose Healing with Attia?</h2>
                 <p class="animate-on-scroll">We understand the cultural nuances of mental health in Pakistan.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="u-d-grid u-cols-416c35 u-gap-2rem">
                 <!-- Benefit 1 -->
                 <div class="card text-center animate-on-scroll">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-user-md"></i>
                     </div>
                     <h3>UK-Qualified (CPCAB) Psychotherapist</h3>
@@ -530,7 +507,7 @@
 
                 <!-- Benefit 2 -->
                 <div class="card text-center animate-on-scroll delay-100">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-lock"></i>
                     </div>
                     <h3>100% Confidential</h3>
@@ -539,7 +516,7 @@
 
                 <!-- Benefit 3 -->
                 <div class="card text-center animate-on-scroll delay-200">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-tag"></i>
                     </div>
                     <h3>Affordable Pricing</h3>
@@ -548,7 +525,7 @@
 
                 <!-- Benefit 4 -->
                 <div class="card text-center animate-on-scroll delay-300">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-globe"></i>
                     </div>
                     <h3>Urdu & English</h3>
@@ -557,7 +534,7 @@
 
                 <!-- Benefit 5: Tailored Approach -->
                 <div class="card text-center animate-on-scroll">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-clipboard-list"></i>
                     </div>
                     <h3>Tailored Approach</h3>
@@ -567,7 +544,7 @@
 
                 <!-- Benefit 6: Easy Bookings -->
                 <div class="card text-center animate-on-scroll delay-100">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem;">
+                    <div class="icon-box u-m-0-auto-1_5rem">
                         <i class="fas fa-calendar-check"></i>
                     </div>
                     <h3>Easy Bookings</h3>
@@ -581,25 +558,25 @@
     <!-- Testimonials Section -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center animate-on-scroll" style="margin-bottom: 3rem;">What Our Clients Say</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <h2 class="text-center animate-on-scroll u-mb-3rem">What Our Clients Say</h2>
+            <div class="u-d-grid u-cols-82d7b5 u-gap-2rem">
 
                 <div class="card animate-on-scroll">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 1rem;"><i
+                    <div class="u-c-primary u-fs-1_5rem u-mb-1rem"><i
                             class="fas fa-quote-left"></i></div>
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"I was hesitant about online therapy, but
+                    <p class="u-fst-italic u-mb-1_5rem">"I was hesitant about online therapy, but
                         Attia
                         made me feel so safe. Being able to speak in Urdu about my family issues really helped. Highly
                         recommended."</p>
-                    <div style="font-weight: 600;">- Sarah A., Lahore</div>
+                    <div class="u-fw-600">- Sarah A., Lahore</div>
                 </div>
 
                 <div class="card animate-on-scroll delay-100">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 1rem;"><i
+                    <div class="u-c-primary u-fs-1_5rem u-mb-1rem"><i
                             class="fas fa-quote-left"></i></div>
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Affordable and professional. The sessions
+                    <p class="u-fst-italic u-mb-1_5rem">"Affordable and professional. The sessions
                         helped me manage my work stress significantly. The best part is I can do it from home."</p>
-                    <div style="font-weight: 600;">- Omar K., Karachi</div>
+                    <div class="u-fw-600">- Omar K., Karachi</div>
                 </div>
 
             </div>
@@ -610,7 +587,7 @@
     <section class="section bg-soft text-center">
         <div class="container animate-on-scroll">
             <h2>Ready to Start Your Journey?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">Book your first session today and take a step towards
+            <p class="u-mb-2rem u-fs-1_1rem">Book your first session today and take a step towards
                 clarity and healing.</p>
             <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hello%2C+I+would+like+to+book+an+appointment"
                 class="btn btn-whatsapp btn-lg">
@@ -623,30 +600,30 @@
     <!-- Areas We Serve -->
     <section class="section bg-surface">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 2.5rem;">
-                <h2 style="margin-bottom: 0.75rem;">Areas We Serve</h2>
-                <p style="color: var(--color-text-light); max-width: 620px; margin: 0 auto;">Every session is online — so it works from any city in Pakistan, and from anywhere the Pakistani diaspora lives.</p>
+            <div class="text-center u-mb-2_5rem">
+                <h2 class="u-mb-0_75rem">Areas We Serve</h2>
+                <p class="u-c-text-light u-maxw-620px u-m-0-auto">Every session is online — so it works from any city in Pakistan, and from anywhere the Pakistani diaspora lives.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+            <div class="u-d-grid u-cols-416c35 u-gap-2rem u-maxw-900px u-m-0-auto">
                 <div class="card animate-on-scroll">
                     <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3 style="margin-bottom: 0.5rem;">Across Pakistan</h3>
-                    <p style="color: #555; margin-bottom: 1rem;">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
-                    <p style="margin: 0; line-height: 2.2;">
-                        <a href="therapy-islamabad.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Islamabad →</a><br>
-                        <a href="therapy-lahore.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Lahore →</a><br>
-                        <a href="therapy-karachi.html" style="color: var(--color-primary); font-weight: 500;">Therapy in Karachi →</a>
+                    <h3 class="u-mb-0_5rem">Across Pakistan</h3>
+                    <p class="u-c-555 u-mb-1rem">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
+                    <p class="u-m-0 u-lh-2_2">
+                        <a class="link-primary" href="therapy-islamabad.html">Therapy in Islamabad →</a><br>
+                        <a class="link-primary" href="therapy-lahore.html">Therapy in Lahore →</a><br>
+                        <a class="link-primary" href="therapy-karachi.html">Therapy in Karachi →</a>
                     </p>
                 </div>
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-globe-asia"></i></div>
-                    <h3 style="margin-bottom: 0.5rem;">Living Abroad</h3>
-                    <p style="color: #555; margin-bottom: 1rem;">Urdu &amp; English therapy for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
-                    <p style="margin: 0; line-height: 2.2;">
-                        <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — UK →</a><br>
-                        <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Dubai &amp; UAE →</a><br>
-                        <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Saudi Arabia →</a><br>
-                        <a href="online-therapy-pakistanis-abroad.html" style="color: var(--color-primary); font-weight: 500;">Canada, Australia, Europe &amp; elsewhere →</a>
+                    <h3 class="u-mb-0_5rem">Living Abroad</h3>
+                    <p class="u-c-555 u-mb-1rem">Urdu &amp; English therapy for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
+                    <p class="u-m-0 u-lh-2_2">
+                        <a class="link-primary" href="online-therapy-uk.html">Pakistani Therapist — UK →</a><br>
+                        <a class="link-primary" href="therapy-dubai-uae.html">Pakistani Therapist — Dubai &amp; UAE →</a><br>
+                        <a class="link-primary" href="online-therapy-saudi-arabia.html">Pakistani Therapist — Saudi Arabia →</a><br>
+                        <a class="link-primary" href="online-therapy-pakistanis-abroad.html">Canada, Australia, Europe &amp; elsewhere →</a>
                     </p>
                 </div>
             </div>
@@ -657,12 +634,12 @@
     </main>
     <footer>
         <div class="container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div class="footer-grid"
+               >
                 <div>
                     <h3>Healing with Attia</h3>
                     <p>Empathy. Clarity. Healing.</p>
-                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                    <div class="u-mt-1rem u-d-flex u-gap-1rem">
                         <a href="https://www.youtube.com/channel/UC9RrIfOPmleHDTVgW5Hb0ow" class="text-primary"
                             target="_blank" rel="noopener noreferrer" aria-label="Healing with Attia on YouTube"><i class="fab fa-youtube fa-lg"></i></a>
                         <a href="https://www.instagram.com/healingwithattia/" class="text-primary" target="_blank"
@@ -674,7 +651,7 @@
                 </div>
                 <div>
                     <h3>Quick Links</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services & Pricing</a></li>
                         <li><a href="blog.html">Mental Health Blog</a></li>
@@ -682,7 +659,7 @@
                 </div>
                 <div>
                     <h3>Treatments</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
                         <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
                         <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
@@ -698,8 +675,8 @@
                 </div>
                 <div>
                     <h3>Locations</h3>
-                    <ul style="line-height: 2;">
-                        <li><span style="color: var(--color-primary-dark); font-weight: 500;">Online Therapy in Pakistan</span></li>
+                    <ul class="u-lh-2">
+                        <li><span class="u-c-primary-dark u-fw-500">Online Therapy in Pakistan</span></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
                         <li><a href="therapy-karachi.html">Therapy in Karachi</a></li>
@@ -711,12 +688,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center"
-                style="border-top: 1px solid #ddd; padding-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+            <div class="text-center footer-bottom"
+               >
                 &copy; 2026 Healing with Attia. All rights reserved. |
-                <a href="privacy-policy.html" style="color: var(--color-text-light);">Privacy Policy</a> |
-                <a href="terms.html" style="color: var(--color-text-light);">Terms of Service</a> |
-                <a href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener" style="color: var(--color-text-light);">Made with ❤️ by PickMySaaS</a>
+                <a class="u-c-text-light" href="privacy-policy.html">Privacy Policy</a> |
+                <a class="u-c-text-light" href="terms.html">Terms of Service</a> |
+                <a class="u-c-text-light" href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener">Made with ❤️ by PickMySaaS</a>
             </div>
         </div>
     </footer>

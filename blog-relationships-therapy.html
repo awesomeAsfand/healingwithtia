@@ -44,155 +44,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
 
-    <style>
-        .pillar-content {
-            max-width: 820px;
-            margin: 0 auto;
-            font-size: 1.08rem;
-            line-height: 1.85;
-            color: #444;
-        }
-        .pillar-content h2 {
-            color: var(--color-primary-dark);
-            margin-top: 2.8rem;
-            margin-bottom: 1rem;
-            font-family: 'Lora', serif;
-            font-size: 1.55rem;
-        }
-        .pillar-content h3 {
-            color: #333;
-            margin-top: 1.8rem;
-            margin-bottom: 0.6rem;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-        .pillar-content p { margin-bottom: 1.1rem; }
-        .pillar-content ul {
-            margin: 0.5rem 0 1.2rem 1.5rem;
-            line-height: 2;
-        }
-        .signs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.2rem;
-            margin: 1.5rem 0 2rem;
-        }
-        .sign-card {
-            padding: 1.2rem 1.4rem;
-            border-radius: 10px;
-            background: #f8fbfb;
-            border-left: 3px solid var(--color-primary);
-        }
-        .sign-card h4 {
-            margin-bottom: 0.4rem;
-            font-size: 1rem;
-            color: var(--color-primary-dark);
-        }
-        .sign-card p { margin: 0; font-size: 0.95rem; color: #555; }
-        .cta-inline {
-            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f5 100%);
-            border: 1px solid #c8e6c9;
-            padding: 2.2rem 2.5rem;
-            border-radius: 14px;
-            margin: 2.5rem 0;
-            text-align: center;
-        }
-        .cta-inline h3 { margin-top: 0; color: var(--color-primary-dark); font-size: 1.25rem; }
-        .cta-inline p { color: #555; margin-bottom: 1.4rem; }
-        .credentials-strip {
-            background: #f7f9fc;
-            border-radius: 12px;
-            padding: 1.5rem 2rem;
-            margin: 2.5rem 0;
-            border-top: 3px solid var(--color-primary);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        .credentials-strip .cred-photo {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-        .credentials-strip .cred-info { flex: 1; min-width: 200px; }
-        .credentials-strip .cred-info h4 { margin: 0 0 0.25rem; color: var(--color-primary-dark); font-size: 1rem; }
-        .credentials-strip .cred-info p { margin: 0; font-size: 0.88rem; color: #666; line-height: 1.6; }
-        .approach-steps {
-            counter-reset: step;
-            list-style: none;
-            padding: 0;
-            margin: 1rem 0 1.5rem;
-        }
-        .approach-steps li {
-            counter-increment: step;
-            padding: 1rem 1rem 1rem 3.5rem;
-            position: relative;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .approach-steps li:last-child { border-bottom: none; }
-        .approach-steps li::before {
-            content: counter(step);
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2rem;
-            height: 2rem;
-            background: var(--color-primary);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        .approach-steps li strong { display: block; color: #333; margin-bottom: 0.25rem; }
-        .approach-steps li span { font-size: 0.95rem; color: #666; }
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0 2rem;
-        }
-        .pricing-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            background: #fff;
-            border: 2px solid #e8e8e8;
-        }
-        .pricing-card.featured { border-color: var(--color-primary); }
-        .pricing-card h4 { margin: 0 0 0.5rem; color: var(--color-primary-dark); }
-        .pricing-card .price { font-size: 2rem; font-weight: 700; color: var(--color-primary-dark); display: block; margin: 0.5rem 0; }
-        .pricing-card .price-sub { font-size: 0.85rem; color: #888; margin-bottom: 1.2rem; }
-
-        /* ── Redesign additions ─────────────────────────────── */
-        .stat-band { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; max-width: 1000px; margin: 0 auto; }
-        .stat-card { text-align: center; padding: 1.4rem 1rem; background: #fff; border: 1px solid #e8f0f0; border-radius: 12px; }
-        .stat-card .stat-num { display: block; font-family: 'Lora', Georgia, serif; font-size: 2rem; font-weight: 600; color: var(--color-primary-dark); line-height: 1.1; margin-bottom: 0.4rem; }
-        .stat-card .stat-label { font-size: 0.92rem; color: #555; line-height: 1.45; }
-        .stat-card .stat-src { display: block; font-size: 0.75rem; color: #aab; margin-top: 0.5rem; }
-        .stat-card .stat-src a { color: #aab; }
-        .toc-box { background: #f8fbfb; border: 1px solid #e8f0f0; border-radius: 12px; padding: 1.2rem 1.5rem; margin: 0 0 2.5rem; }
-        .toc-box .toc-title { margin: 0 0 0.6rem; color: var(--color-primary-dark); font-size: 1rem; font-weight: 600; }
-        .toc-box ol { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 2rem; font-size: 0.92rem; }
-        .toc-box li { margin-bottom: 0.35rem; }
-        .toc-box a { color: var(--color-primary); text-decoration: none; }
-        .toc-box a:hover { text-decoration: underline; }
-        @media (max-width: 640px) { .toc-box ol { columns: 1; } }
-        .pull-quote { border-left: 4px solid var(--color-primary); background: #f8fbfb; padding: 1.2rem 1.5rem; margin: 1.8rem 0; font-family: 'Lora', Georgia, serif; font-size: 1.15rem; color: var(--color-primary-dark); border-radius: 0 12px 12px 0; }
-        .pull-quote .pq-src { display: block; font-family: 'Inter', Arial, sans-serif; font-size: 0.8rem; color: #889; margin-top: 0.5rem; }
-        .sources-box { font-size: 0.82rem; color: #778; background: #f8fbfb; border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 2.5rem; }
-        .sources-box h4 { font-size: 0.9rem; margin: 0 0 0.6rem; color: #556; }
-        .sources-box ul { margin: 0; padding-left: 1.1rem; }
-        .sources-box li { margin-bottom: 0.3rem; }
-        .sources-box a { color: var(--color-primary); }
-</style>
-
     <!-- Schema: Service -->
     <script type="application/ld+json">
 {
@@ -336,7 +187,7 @@
     <meta name="twitter:image"       content="https://www.healingwithattia.com/images/blog/relationshipss.webp">
 </head>
 
-<body>
+<body class="page-blog-relationships-therapy">
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
         <nav class="navbar">
         <div class="container nav-container">
@@ -359,17 +210,17 @@
     <!-- Hero -->
     <header id="main-content" class="section bg-soft text-center">
         <div class="container animate-on-scroll">
-            <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">
+            <p class="u-c-primary u-fw-500 u-mb-0_5rem">
                 <i class="fas fa-heart"></i> Marriage Counseling — Pakistan
             </p>
-            <h1 style="max-width: 860px; margin: 0 auto 1rem;">Marriage Counseling in Pakistan —<br>Online, Private &amp; in Urdu</h1>
-            <p style="font-size: 1.15rem; max-width: 640px; margin: 0 auto 1rem; color: #555;">
+            <h1 class="u-maxw-860px u-m-0-auto-1rem">Marriage Counseling in Pakistan —<br>Online, Private &amp; in Urdu</h1>
+            <p class="u-fs-1_15rem u-maxw-640px u-m-0-auto-1rem u-c-555">
                 Professional online marriage counseling by a UK-qualified (CPCAB) Integrative Psychotherapist. Individual sessions via Zoom in Urdu and English — available across Pakistan and worldwide.
             </p>
-            <p style="font-size: 1rem; max-width: 640px; margin: 0 auto 2rem; color: var(--color-primary-dark); font-weight: 500;">
+            <p class="u-fs-1rem u-maxw-640px u-m-0-auto-2rem u-c-primary-dark u-fw-500">
                 You don't need your spouse to agree to therapy to start improving your marriage. You can begin alone.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <div class="btn-row">
                 <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling"
                     class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Book Marriage Counseling</a>
                 <a href="services.html" class="btn btn-outline">View All Services</a>
@@ -386,23 +237,23 @@
     </header>
 
     <!-- Trust signals bar -->
-    <section style="background: #fff; border-bottom: 1px solid #eee; padding: 1.2rem 0;">
+    <section class="u-bg-fff u-bb-1px-solid-eee u-p-1_2rem-0">
         <div class="container">
-            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center; text-align: center;">
-                <div style="color: #555; font-size: 0.92rem;"><i class="fas fa-certificate text-primary" style="margin-right: 6px;"></i> UK-Qualified (CPCAB) Therapist</div>
-                <div style="color: #555; font-size: 0.92rem;"><i class="fas fa-video text-primary" style="margin-right: 6px;"></i> Sessions via Zoom</div>
-                <div style="color: #555; font-size: 0.92rem;"><i class="fas fa-language text-primary" style="margin-right: 6px;"></i> Urdu &amp; English</div>
-                <div style="color: #555; font-size: 0.92rem;"><i class="fas fa-lock text-primary" style="margin-right: 6px;"></i> Fully Confidential</div>
-                <div style="color: #555; font-size: 0.92rem;"><i class="fas fa-calendar-check text-primary" style="margin-right: 6px;"></i> 4pm–8pm PKT, Mon–Sat</div>
+            <div class="u-d-flex u-fwrap-wrap u-gap-1_5rem u-jc-center u-ai-center u-ta-center">
+                <div class="u-c-555 u-fs-0_92rem"><i class="fas fa-certificate text-primary u-mr-6px"></i> UK-Qualified (CPCAB) Therapist</div>
+                <div class="u-c-555 u-fs-0_92rem"><i class="fas fa-video text-primary u-mr-6px"></i> Sessions via Zoom</div>
+                <div class="u-c-555 u-fs-0_92rem"><i class="fas fa-language text-primary u-mr-6px"></i> Urdu &amp; English</div>
+                <div class="u-c-555 u-fs-0_92rem"><i class="fas fa-lock text-primary u-mr-6px"></i> Fully Confidential</div>
+                <div class="u-c-555 u-fs-0_92rem"><i class="fas fa-calendar-check text-primary u-mr-6px"></i> 4pm–8pm PKT, Mon–Sat</div>
             </div>
         </div>
     </section>
 
     <!-- Stat band: the numbers no one talks about -->
-    <section class="section" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+    <section class="section u-pt-2_5rem u-pb-2_5rem">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 0.5rem;">The Numbers No One Talks About</h2>
-            <p style="text-align: center; color: #667; max-width: 620px; margin: 0 auto 2rem;">Marriages in Pakistan are under more pressure than ever — and help works better, and earlier, than most people think.</p>
+            <h2 class="u-ta-center u-mb-0_5rem">The Numbers No One Talks About</h2>
+            <p class="u-ta-center u-c-667 u-maxw-620px u-m-0-auto-2rem">Marriages in Pakistan are under more pressure than ever — and help works better, and earlier, than most people think.</p>
             <div class="stat-band">
                 <div class="stat-card">
                     <span class="stat-num">100,000+</span>
@@ -429,7 +280,7 @@
     </section>
 
     <!-- Main Content -->
-    <section class="section" style="padding-top: 1.5rem;">
+    <section class="section u-pt-1_5rem">
         <div class="container pillar-content">
 
             <nav class="toc-box" aria-label="On this page">
@@ -454,31 +305,31 @@
             <p>At Healing with Attia, marriage counseling is conducted online via Zoom — in Urdu and English — making it accessible from anywhere in Pakistan and abroad. Sessions are <strong>individual</strong>: you attend on your own, work through what is happening in your marriage with a trained therapist, and apply what you learn at home. Your spouse never joins, and the work never depends on them agreeing to therapy.</p>
 
             <h2 id="signs">Signs Your Marriage May Benefit from Counseling</h2>
-            <p>Many people wait too long before seeking help — often until the relationship is in crisis. Research from The Gottman Institute found that couples wait an average of <a target="_blank" rel="noopener noreferrer" href="https://www.gottman.com/blog/were-on-the-brink/" style="color: var(--color-primary);">six years after problems begin</a> before reaching for support — six years in which negative patterns harden into habits. The same research program identified four communication patterns so corrosive that their presence predicted divorce with over 90% accuracy: criticism, contempt, defensiveness, and stonewalling. If you recognise any of the patterns below, it is time — not because your marriage is doomed, but because this is the window where change is easiest:</p>
+            <p>Many people wait too long before seeking help — often until the relationship is in crisis. Research from The Gottman Institute found that couples wait an average of <a class="u-c-primary" target="_blank" rel="noopener noreferrer" href="https://www.gottman.com/blog/were-on-the-brink/">six years after problems begin</a> before reaching for support — six years in which negative patterns harden into habits. The same research program identified four communication patterns so corrosive that their presence predicted divorce with over 90% accuracy: criticism, contempt, defensiveness, and stonewalling. If you recognise any of the patterns below, it is time — not because your marriage is doomed, but because this is the window where change is easiest:</p>
 
             <div class="signs-grid">
                 <div class="sign-card">
-                    <h4><i class="fas fa-comment-slash text-primary" style="margin-right: 6px;"></i> Criticism Has Replaced Complaints</h4>
+                    <h4><i class="fas fa-comment-slash text-primary u-mr-6px"></i> Criticism Has Replaced Complaints</h4>
                     <p>"You never..." and "You always..." — attacking your spouse's character instead of raising a specific issue. The first of Gottman's four warning patterns.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-angry text-primary" style="margin-right: 6px;"></i> Contempt: Eye-Rolling &amp; Taunts</h4>
+                    <h4><i class="fas fa-angry text-primary u-mr-6px"></i> Contempt: Eye-Rolling &amp; Taunts</h4>
                     <p>Sarcasm, mockery, speaking down to each other. In Gottman's research, contempt was the single strongest predictor of divorce — and the most urgent to address.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-shield-alt text-primary" style="margin-right: 6px;"></i> Defensiveness on Both Sides</h4>
+                    <h4><i class="fas fa-shield-alt text-primary u-mr-6px"></i> Defensiveness on Both Sides</h4>
                     <p>Every complaint is met with a counter-complaint. Nobody feels heard, and every conversation becomes a case being argued rather than a problem being solved.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-user-times text-primary" style="margin-right: 6px;"></i> Stonewalling &amp; Silence</h4>
+                    <h4><i class="fas fa-user-times text-primary u-mr-6px"></i> Stonewalling &amp; Silence</h4>
                     <p>One of you shuts down, walks out, or goes silent for days. Withdrawal feels safer than conflict — but it slowly turns a marriage into coexistence between strangers.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-home text-primary" style="margin-right: 6px;"></i> Joint Family Tension</h4>
+                    <h4><i class="fas fa-home text-primary u-mr-6px"></i> Joint Family Tension</h4>
                     <p>In-law interference, lack of boundaries, and feeling caught between your spouse and your parents — one of the most common causes of marital stress in Pakistan.</p>
                 </div>
                 <div class="sign-card">
-                    <h4><i class="fas fa-balance-scale text-primary" style="margin-right: 6px;"></i> Thinking About Separation</h4>
+                    <h4><i class="fas fa-balance-scale text-primary u-mr-6px"></i> Thinking About Separation</h4>
                     <p>If divorce or khula is being considered, counseling is not a last resort — it is the most important step before making any irreversible decision.</p>
                 </div>
             </div>
@@ -495,7 +346,7 @@
 
             <h2 id="alone">Your Spouse Won't Come to Counseling? Start Anyway</h2>
             <p>This is the single most common reason people in Pakistan never get help: one spouse is ready, the other refuses. "Counseling? Hum pagal nahi hain." So nothing happens — for years.</p>
-            <p>Here is what that waiting looks like at a national scale: family courts across Pakistan registered over <a target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025" style="color: var(--color-primary);">100,000 divorce and khula cases in 2025</a>, and khula filings by women now outnumber talaq filings by men by roughly 25%. Behind most of those filings is not a marriage where counseling failed — it is a marriage where counseling was never tried, usually because one partner wouldn't go.</p>
+            <p>Here is what that waiting looks like at a national scale: family courts across Pakistan registered over <a class="u-c-primary" target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025">100,000 divorce and khula cases in 2025</a>, and khula filings by women now outnumber talaq filings by men by roughly 25%. Behind most of those filings is not a marriage where counseling failed — it is a marriage where counseling was never tried, usually because one partner wouldn't go.</p>
             <p>That is why counseling at Healing with Attia is built as <strong>individual marriage counseling</strong>. A marriage is a system: your patterns and your spouse's patterns feed each other. When one person learns to raise issues without criticism, hold boundaries with in-laws calmly, stop rewarding stonewalling with escalation, and respond instead of react — the entire dynamic shifts. Your spouse ends up in a different marriage, whether or not they ever attend a session.</p>
             <div class="pull-quote">
                 "Couples wait an average of six years after serious problems begin before seeking help."
@@ -515,7 +366,7 @@
             <p>One of the most common things people say after starting counseling: <em>"We have been feeling this way for years but never knew how to say it."</em> That is exactly what a trained therapist helps you do.</p>
 
             <h3>The Stigma Problem</h3>
-            <p>In Pakistan, seeking marriage counseling still carries stigma — the assumption that something must be "seriously wrong" or that you are about to get divorced. The scale of the problem is stark: an estimated <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full" style="color: var(--color-primary);">90% of Pakistanis who need mental-health support never receive it</a>, in a country with roughly 0.19 psychiatrists per 100,000 people. Stigma and access failures — not lack of need — keep people struggling alone.</p>
+            <p>In Pakistan, seeking marriage counseling still carries stigma — the assumption that something must be "seriously wrong" or that you are about to get divorced. The scale of the problem is stark: an estimated <a class="u-c-primary" target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full">90% of Pakistanis who need mental-health support never receive it</a>, in a country with roughly 0.19 psychiatrists per 100,000 people. Stigma and access failures — not lack of need — keep people struggling alone.</p>
             <p>Online marriage counseling removes the social risk entirely. There is no clinic, no waiting room, no risk of someone recognising your car. Just a private Zoom session from your own home — and because it is individual, no one even needs to know you are working on your marriage.</p>
 
             <h2 id="how-it-works">How Marriage Counseling Works — Session by Session</h2>
@@ -555,7 +406,7 @@
 
             <!-- Credentials strip -->
             <div class="credentials-strip">
-                <img src="images/about/about1.webp" width="896" height="1195" alt="Attia Altaf, marriage counselor Pakistan" class="cred-photo" loading="lazy" decoding="async" style="object-position: top center; box-shadow: 0 12px 30px rgba(0,0,0,0.15);">
+                <img src="images/about/about1.webp" width="896" height="1195" alt="Attia Altaf, marriage counselor Pakistan" class="cred-photo u-op-top-center u-shadow-0-12px-30px-rgba-0-0-0-0_15" loading="lazy" decoding="async">
                 <div class="cred-info">
                     <h4>Attia Altaf — Integrative Psychotherapist</h4>
                     <p>
@@ -565,42 +416,42 @@
                         Sessions in Urdu, English &amp; Punjabi
                     </p>
                 </div>
-                <a href="about.html" style="color: var(--color-primary); font-weight: 500; align-self: center; white-space: nowrap;">Full profile →</a>
+                <a class="u-c-primary u-fw-500 u-as-center u-ws-nowrap" href="about.html">Full profile →</a>
             </div>
 
             <h2 id="islamic">Marriage Counseling with Islamic & Cultural Sensitivity</h2>
             <p>For many Pakistani clients, faith is central to who they are and how they approach their marriage. Attia's approach to marriage counseling is fully respectful of Islamic values — the sanctity of nikah, the importance of family, the roles and responsibilities a husband and wife hold, and the expectation that marriage is a lifelong commitment worth working for.</p>
             <p>This is not secular Western therapy being applied awkwardly to Muslim marriages. Sessions are conducted with full cultural and religious sensitivity. Attia understands the weight of Islamic expectations on a husband and a wife, and works within that context rather than against it.</p>
             <p>If you are looking for marriage counseling that understands concepts like <em>sabr</em>, <em>haq mehr</em>, joint family obligations, or the specific dynamics of arranged versus love marriages — this is that space.</p>
-            <p>Read the full guide: <a href="blog-muslim-marriage-counseling.html" style="color: var(--color-primary); font-weight: 500;">Muslim Marriage Counseling in Pakistan →</a><br>
-            Related reading: <a href="blog-rishta-stress.html" style="color: var(--color-primary);">Navigating Rishta Stress &amp; the Arranged Marriage Process →</a></p>
+            <p>Read the full guide: <a class="link-primary" href="blog-muslim-marriage-counseling.html">Muslim Marriage Counseling in Pakistan →</a><br>
+            Related reading: <a class="u-c-primary" href="blog-rishta-stress.html">Navigating Rishta Stress &amp; the Arranged Marriage Process →</a></p>
 
             <h2 id="online">Does Online Marriage Counseling Actually Work?</h2>
-            <p>The honest answer, from the research: yes — and it is not close to a compromise. A <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.773030/full" style="color: var(--color-primary);">2021 study published in Frontiers in Psychology</a> found therapy delivered by videoconference produced improvements in relationship satisfaction, mental health, and the therapist–client relationship comparable to face-to-face sessions, and a meta-analysis of more than 4,300 clients found video-delivered therapy <a target="_blank" rel="noopener noreferrer" href="https://www.tandfonline.com/doi/abs/10.1080/10503307.2023.2256465" style="color: var(--color-primary);">largely equivalent to in-person care</a> across outcomes.</p>
+            <p>The honest answer, from the research: yes — and it is not close to a compromise. A <a class="u-c-primary" target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.773030/full">2021 study published in Frontiers in Psychology</a> found therapy delivered by videoconference produced improvements in relationship satisfaction, mental health, and the therapist–client relationship comparable to face-to-face sessions, and a meta-analysis of more than 4,300 clients found video-delivered therapy <a class="u-c-primary" target="_blank" rel="noopener noreferrer" href="https://www.tandfonline.com/doi/abs/10.1080/10503307.2023.2256465">largely equivalent to in-person care</a> across outcomes.</p>
             <p>For Pakistani clients, online is often <em>better</em> than in-person: complete privacy (no clinic, no waiting room), no travel through city traffic, access to a qualified therapist regardless of which city — or country — you live in, and the comfort of speaking from your own space. All sessions run on Zoom, every day, 4pm to 8pm PKT.</p>
 
             <h3>Living Abroad? Counseling Reaches You Too</h3>
             <p>A large share of marriage counseling clients live outside Pakistan — in the UK, the UAE, Saudi Arabia, the US, and Canada. Overseas marriages carry their own pressures: distance from family support, cross-border rishtas where one spouse is in Dubai and the other in Lahore, and the isolation of working through marriage problems far from home. Time zones are handled easily, and sessions run in Urdu or English with a therapist who understands the Pakistani context you come from.</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 900px; margin: 2rem auto;">
+            <div class="u-d-grid u-cols-416c35 u-gap-2rem u-maxw-900px u-m-2rem-auto">
                 <div class="card animate-on-scroll">
                     <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3 style="margin-bottom: 0.5rem;">Across Pakistan</h3>
-                    <p style="color: #555; margin-bottom: 1rem;">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
-                    <p style="margin: 0; line-height: 2.2;">
-                        <a href="therapy-lahore.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Lahore →</a><br>
-                        <a href="therapy-karachi.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Karachi →</a><br>
-                        <a href="therapy-islamabad.html" style="color: var(--color-primary); font-weight: 500;">Marriage Counseling in Islamabad →</a>
+                    <h3 class="u-mb-0_5rem">Across Pakistan</h3>
+                    <p class="u-c-555 u-mb-1rem">Sessions via Zoom from any city — no commute, no waiting room, no one seeing you walk into a clinic.</p>
+                    <p class="u-m-0 u-lh-2_2">
+                        <a class="link-primary" href="therapy-lahore.html">Marriage Counseling in Lahore →</a><br>
+                        <a class="link-primary" href="therapy-karachi.html">Marriage Counseling in Karachi →</a><br>
+                        <a class="link-primary" href="therapy-islamabad.html">Marriage Counseling in Islamabad →</a>
                     </p>
                 </div>
                 <div class="card animate-on-scroll delay-100">
                     <div class="icon-box"><i class="fas fa-globe-asia"></i></div>
-                    <h3 style="margin-bottom: 0.5rem;">Living Abroad</h3>
-                    <p style="color: #555; margin-bottom: 1rem;">Urdu &amp; English marriage counseling for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
-                    <p style="margin: 0; line-height: 2.2;">
-                        <a href="online-therapy-uk.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — UK →</a><br>
-                        <a href="therapy-dubai-uae.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Dubai &amp; UAE →</a><br>
-                        <a href="online-therapy-saudi-arabia.html" style="color: var(--color-primary); font-weight: 500;">Pakistani Therapist — Saudi Arabia →</a>
+                    <h3 class="u-mb-0_5rem">Living Abroad</h3>
+                    <p class="u-c-555 u-mb-1rem">Urdu &amp; English marriage counseling for the Pakistani diaspora — culturally fluent, faith-aware, and in your timezone.</p>
+                    <p class="u-m-0 u-lh-2_2">
+                        <a class="link-primary" href="online-therapy-uk.html">Pakistani Therapist — UK →</a><br>
+                        <a class="link-primary" href="therapy-dubai-uae.html">Pakistani Therapist — Dubai &amp; UAE →</a><br>
+                        <a class="link-primary" href="online-therapy-saudi-arabia.html">Pakistani Therapist — Saudi Arabia →</a>
                     </p>
                 </div>
             </div>
@@ -614,11 +465,11 @@
                     <span class="price" data-price-pk="PKR 5,000" data-price-intl="PKR 8,000" data-nosnippet>PKR 5,000</span>
                     <p class="price-sub">50 minutes · Via Zoom · Urdu or English</p>
                     <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+booking+marriage+counseling"
-                        class="btn btn-primary" style="width: 100%; display: block;">Book via WhatsApp</a>
+                        class="btn btn-primary u-w-100pc u-d-block">Book via WhatsApp</a>
                 </div>
             </div>
 
-            <p style="font-size: 0.9rem; color: #888; text-align: center; margin-top: -0.5rem;">
+            <p class="u-fs-0_9rem u-c-888 u-ta-center u-mt-0_5rem-2">
                 Payment via EasyPaisa · Bank Transfer &nbsp;|&nbsp; Mon–Sat, 4pm–8pm PKT &nbsp;|&nbsp; No waiting list
             </p>
 
@@ -626,36 +477,36 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" style="background: #f8fbfb; padding-top: 2rem; padding-bottom: 3rem;">
+    <section class="section u-bg-f8fbfb u-pt-2rem u-pb-3rem">
         <div class="container pillar-content">
-            <h2 style="margin-top: 0;" id="faq-heading">Frequently Asked Questions</h2>
+            <h2 class="u-mt-0" id="faq-heading">Frequently Asked Questions</h2>
 
-            <h3 style="color: var(--color-primary-dark);">What is marriage counseling and what happens in a session?</h3>
+            <h3 class="u-c-primary-dark">What is marriage counseling and what happens in a session?</h3>
             <p>Marriage counseling is professional therapy where a trained therapist works with you to improve communication, resolve conflict, rebuild trust, and strengthen your marriage. At Healing with Attia, marriage counseling is always one-to-one — you attend on your own and work on your side of the marriage. Your spouse never joins. Sessions are 50 minutes. The therapist acts as a neutral guide — not a judge — helping you work through what is happening in a structured, safe environment.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Can marriage counseling help if my spouse refuses to attend?</h3>
+            <h3 class="u-c-primary-dark">Can marriage counseling help if my spouse refuses to attend?</h3>
             <p>Yes. Counseling here is designed for exactly this situation — sessions are individual by default. A marriage is a system: when one person changes how they communicate, set boundaries, and respond to conflict, the dynamic between both partners shifts. Many clients start alone and see meaningful change in the relationship without their spouse ever attending.</p>
 
-            <h3 style="color: var(--color-primary-dark);">How much does marriage counseling cost in Pakistan?</h3>
+            <h3 class="u-c-primary-dark">How much does marriage counseling cost in Pakistan?</h3>
             <p>At Healing with Attia, marriage counseling sessions are <strong><span class="price" data-price-pk="PKR 5,000" data-price-intl="PKR 8,000" data-nosnippet>PKR 5,000</span> per 50-minute session</strong>. Payment is via EasyPaisa or bank transfer. There are no hidden charges or registration fees.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Does online marriage counseling work as well as in-person?</h3>
+            <h3 class="u-c-primary-dark">Does online marriage counseling work as well as in-person?</h3>
             <p>Yes. A randomized clinical trial and a 2021 meta-analysis covering more than 4,300 clients found therapy delivered by video call equivalent to in-person therapy in outcomes, client satisfaction, and the quality of the therapeutic relationship. For Pakistani clients, online sessions add privacy benefits: no clinic, no waiting room, no travel. Sessions are via Zoom in Urdu and English.</p>
 
-            <h3 style="color: var(--color-primary-dark);">What is the success rate of marriage counseling?</h3>
+            <h3 class="u-c-primary-dark">What is the success rate of marriage counseling?</h3>
             <p>Research on relationship-focused therapy consistently shows the majority of clients experience meaningful improvement. Outcomes are strongest when help is sought early — research from The Gottman Institute found that couples wait an average of six years after problems begin before seeking help, which makes negative patterns harder (but not impossible) to change.</p>
 
-            <h3 style="color: var(--color-primary-dark);">How many marriage counseling sessions will I need?</h3>
+            <h3 class="u-c-primary-dark">How many marriage counseling sessions will I need?</h3>
             <p>Most clients see meaningful improvement in 8–12 sessions. Addressing a specific issue such as communication may show changes in as few as 6 sessions. Situations involving long-standing conflict or trust repair may take longer. You are never locked into a fixed number — progress is reviewed throughout and you decide when to continue or conclude.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Can I do marriage counseling in Urdu?</h3>
+            <h3 class="u-c-primary-dark">Can I do marriage counseling in Urdu?</h3>
             <p>Yes. Attia conducts marriage counseling sessions in Urdu and English. You can switch languages at any point during the session. Many clients find it easier to express deep emotions — especially around family, intimacy, or personal expectations — in Urdu.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Is this counseling appropriate for Muslim clients?</h3>
+            <h3 class="u-c-primary-dark">Is this counseling appropriate for Muslim clients?</h3>
             <p>Yes. Attia's approach is fully culturally and religiously sensitive. She understands the Islamic values around marriage, family, and the importance of working through difficulty before considering separation. Sessions are conducted with complete respect for your beliefs and cultural context.</p>
 
-            <h3 style="color: var(--color-primary-dark);">Is marriage counseling available in Lahore and Karachi?</h3>
-            <p>Yes — see our dedicated pages on <a href="therapy-lahore.html" style="color: var(--color-primary);">marriage counseling in Lahore</a>, <a href="therapy-karachi.html" style="color: var(--color-primary);">marriage counseling in Karachi</a>, and <a href="therapy-islamabad.html" style="color: var(--color-primary);">marriage counseling in Islamabad</a>.</p>
+            <h3 class="u-c-primary-dark">Is marriage counseling available in Lahore and Karachi?</h3>
+            <p>Yes — see our dedicated pages on <a class="u-c-primary" href="therapy-lahore.html">marriage counseling in Lahore</a>, <a class="u-c-primary" href="therapy-karachi.html">marriage counseling in Karachi</a>, and <a class="u-c-primary" href="therapy-islamabad.html">marriage counseling in Islamabad</a>.</p>
 
             <div class="sources-box">
                 <h4>Sources &amp; further reading</h4>
@@ -666,22 +517,22 @@
                     <li>The Express Tribune (2025) — <a target="_blank" rel="noopener noreferrer" href="https://tribune.com.pk/story/2554231/family-disputes-hit-record-high-in-2025">family disputes hit record high in Pakistan</a>.</li>
                     <li>Frontiers in Health Services (2024) — <a target="_blank" rel="noopener noreferrer" href="https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2024.1471528/full">closing the mental health gap in Pakistan</a>.</li>
                 </ul>
-                <p style="margin: 0.8rem 0 0; font-size: 0.78rem; color: #99a;">Written by Attia Altaf, Integrative Psychotherapist (CPCAB, UK) · Last reviewed: July 2026</p>
+                <p class="u-m-0_8rem-0-0 u-fs-0_78rem u-c-99a">Written by Attia Altaf, Integrative Psychotherapist (CPCAB, UK) · Last reviewed: July 2026</p>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
     <section class="section bg-soft text-center">
-        <div class="container animate-on-scroll" style="max-width: 680px; margin: 0 auto;">
+        <div class="container animate-on-scroll u-maxw-680px u-m-0-auto">
             <h2>Your Marriage Is Worth Fighting For</h2>
-            <p style="font-size: 1.1rem; color: #555; margin-bottom: 0.5rem;">
+            <p class="u-fs-1_1rem u-c-555 u-mb-0_5rem">
                 Those who seek help are not the ones failing — they are the ones choosing their relationship. Take the first step today.
             </p>
-            <p style="font-size: 0.95rem; color: #888; margin-bottom: 2rem;">No waiting list · Sessions in Urdu &amp; English · Fully confidential</p>
+            <p class="u-fs-0_95rem u-c-888 u-mb-2rem">No waiting list · Sessions in Urdu &amp; English · Fully confidential</p>
             <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923285694209?text=Hi%2C+I%27m+interested+in+marriage+counseling+and+would+like+to+book+a+session"
                 class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Book Marriage Counseling</a>
-            <p style="margin-top: 1.2rem; font-size: 0.88rem; color: #999;">Or browse <a href="services.html" style="color: var(--color-primary);">all therapy services →</a></p>
+            <p class="u-mt-1_2rem u-fs-0_88rem u-c-999">Or browse <a class="u-c-primary" href="services.html">all therapy services →</a></p>
         </div>
     </section>
 
@@ -689,19 +540,19 @@
     <!-- Related Articles -->
     <section class="section bg-soft">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Explore More</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
-                <a href="blog-muslim-marriage-counseling.html" class="card" style="display: block; text-decoration: none; color: inherit;">
-                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Muslim Marriage Counseling</h3>
-                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">Culturally sensitive marriage counseling that respects Islamic values and Pakistani family structures.</p>
+            <h2 class="u-ta-center u-mb-2rem">Explore More</h2>
+            <div class="u-d-grid u-cols-2412e9 u-gap-1_5rem u-maxw-900px u-m-0-auto">
+                <a href="blog-muslim-marriage-counseling.html" class="card link-card">
+                    <h3 class="u-c-primary-dark u-fs-1_1rem">Muslim Marriage Counseling</h3>
+                    <p class="u-c-555 u-fs-0_9rem u-mt-0_5rem">Culturally sensitive marriage counseling that respects Islamic values and Pakistani family structures.</p>
                 </a>
-                <a href="blog-premarital-counseling.html" class="card" style="display: block; text-decoration: none; color: inherit;">
-                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Pre-Marital Counseling Before Nikah</h3>
-                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">The conversations you have before marriage shape everything that comes after. Start here.</p>
+                <a href="blog-premarital-counseling.html" class="card link-card">
+                    <h3 class="u-c-primary-dark u-fs-1_1rem">Pre-Marital Counseling Before Nikah</h3>
+                    <p class="u-c-555 u-fs-0_9rem u-mt-0_5rem">The conversations you have before marriage shape everything that comes after. Start here.</p>
                 </a>
-                <a href="faq.html" class="card" style="display: block; text-decoration: none; color: inherit;">
-                    <h3 style="color: var(--color-primary-dark); font-size: 1.1rem;">Marriage &amp; Relationships FAQ</h3>
-                    <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">Answers to the most common questions about marriage counseling in Pakistan.</p>
+                <a href="faq.html" class="card link-card">
+                    <h3 class="u-c-primary-dark u-fs-1_1rem">Marriage &amp; Relationships FAQ</h3>
+                    <p class="u-c-555 u-fs-0_9rem u-mt-0_5rem">Answers to the most common questions about marriage counseling in Pakistan.</p>
                 </a>
             </div>
         </div>
@@ -712,14 +563,14 @@
 
     <footer>
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div class="footer-grid">
                 <div>
                     <h3>Healing with Attia</h3>
                     <p>Empathy. Clarity. Healing.</p>
                 </div>
                 <div>
                     <h3>Quick Links</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services &amp; Pricing</a></li>
                         <li><a href="blog.html">Mental Health Blog</a></li>
@@ -728,7 +579,7 @@
                 </div>
                 <div>
                     <h3>Treatments</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="depression-therapy-pakistan.html">Depression Therapy</a></li>
                         <li><a href="anxiety-treatment-pakistan.html">Anxiety Treatment</a></li>
                         <li><a href="ocd-treatment-pakistan.html">OCD Treatment</a></li>
@@ -744,7 +595,7 @@
                 </div>
                 <div>
                     <h3>Locations</h3>
-                    <ul style="line-height: 2;">
+                    <ul class="u-lh-2">
                         <li><a href="/">Online Therapy in Pakistan</a></li>
                         <li><a href="therapy-islamabad.html">Therapy in Islamabad</a></li>
                         <li><a href="therapy-lahore.html">Therapy in Lahore</a></li>
@@ -757,11 +608,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="text-center" style="border-top: 1px solid #ddd; padding-top: 2rem; color: var(--color-text-light); font-size: 0.9rem;">
+            <div class="text-center footer-bottom">
                 &copy; 2026 Healing with Attia. All rights reserved. |
-                <a href="privacy-policy.html" style="color: var(--color-text-light);">Privacy Policy</a> |
-                <a href="terms.html" style="color: var(--color-text-light);">Terms of Service</a> |
-                <a href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener" style="color: var(--color-text-light);">Made with ❤️ by PickMySaaS</a>
+                <a class="u-c-text-light" href="privacy-policy.html">Privacy Policy</a> |
+                <a class="u-c-text-light" href="terms.html">Terms of Service</a> |
+                <a class="u-c-text-light" href="https://www.pickmysaas.com/" target="_blank" rel="nofollow noopener">Made with ❤️ by PickMySaaS</a>
             </div>
         </div>
     </footer>
