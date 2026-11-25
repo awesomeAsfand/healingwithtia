@@ -1,0 +1,95 @@
+# Tell Bing (and the other IndexNow engines: Yandex, Seznam, Naver, Yep)
+# which pages changed, as soon as GitHub Pages has published them.
+#
+# - On push to main: submits only the changed .html pages that are listed in
+#   sitemap.xml (so redirect stubs and mockups are never submitted).
+# - Run manually (Actions tab > IndexNow > Run workflow): submits every URL in
+#   sitemap.xml. Use this once after first setup.
+#
+# The key file at the site root (<key>.txt) proves we own the domain.
+# If you ever change the key, rename that file and update INDEXNOW_KEY below.
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: read
+
+env:
+  HOST: www.healingwithattia.com
+  INDEXNOW_KEY: e1b2a680efffb050b759e1ea6ef4818a
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Work out which URLs to submit
+        id: urls
+        run: |
+          # Every URL in the sitemap
+          grep -oP '(?<=<loc>)[^<]+' sitemap.xml | sort -u > sitemap-urls.txt
+
+          BEFORE="${{ github.event.before }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+             || [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            cp sitemap-urls.txt submit.txt
+          else
+            git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- '*.html' \
+              | grep -v '/' \
+              | sed -e 's#^index\.html$##' -e "s#^#https://$HOST/#" \
+              | sort -u > changed.txt
+            # Keep only changed pages that are actually in the sitemap
+            comm -12 changed.txt sitemap-urls.txt > submit.txt
+          fi
+
+          echo "URLs to submit:"; cat submit.txt
+          echo "count=$(wc -l < submit.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for GitHub Pages to publish this commit
+        if: steps.urls.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 40); do
+            read -r status commit < <(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '"\(.status) \(.commit)"')
+            echo "Pages build: $status ($commit)"
+            if [ "$status" = "built" ] && [ "$commit" = "${{ github.sha }}" ]; then exit 0; fi
+            if [ "$status" = "errored" ] && [ "$commit" = "${{ github.sha }}" ]; then echo "Pages build failed"; exit 1; fi
+            sleep 15
+          done
+          echo "Pages did not publish this commit within 10 minutes; submitting anyway."
+
+      - name: Check the key file is live
+        if: steps.urls.outputs.count != '0'
+        run: |
+          got=$(curl -fsSL "https://$HOST/$INDEXNOW_KEY.txt")
+          [ "$got" = "$INDEXNOW_KEY" ] || { echo "Key file not served correctly: '$got'"; exit 1; }
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          jq -n --arg host "$HOST" --arg key "$INDEXNOW_KEY" --rawfile urls submit.txt '{
+            host: $host,
+            key: $key,
+            keyLocation: "https://\($host)/\($key).txt",
+            urlList: ($urls | split("\n") | map(select(length > 0)))
+          }' > payload.json
+          cat payload.json
+
+          code=$(curl -s -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @payload.json)
+          echo "IndexNow responded HTTP $code"; cat response.txt; echo
+          # 200 = accepted, 202 = accepted, key validation pending
+          [ "$code" = "200" ] || [ "$code" = "202" ]
